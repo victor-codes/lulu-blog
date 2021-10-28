@@ -24,7 +24,12 @@
 
   --project-accent-color: #6d6d6d;
 
-  --footer-bg-color: #F6F6F6;
+  --footer-bg-color: #f6f6f6;
+
+  --blur-effect: url(../../assets/home-ellipse-1.png),
+    url(../../assets/home-ellipse-2.png);
+
+  --blur-effect-position: bottom -500px right 0px, bottom -150px right 55px;
 }
 
 [data-theme="dark"] {
@@ -50,7 +55,11 @@
   --paginate-primary-color: #f1f1f1;
   --paginate-secondary-color: #a5a5a5;
 
-  --project-accent-color: #D2D2D2;
+  --project-accent-color: #d2d2d2;
 
   --footer-bg-color: #070809;
+
+  --blur-effect: url(../../assets/home-ellipse-1.png);
+
+  --blur-effect-position: bottom -650px right 0px;
 }

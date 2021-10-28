@@ -5,8 +5,8 @@ footer {
     display: flex;
     width: 100%;
     max-width: 1268px;
-    padding: 0 24px;
-    margin: 0 auto 90px;
+    padding: 44px 24px 0;
+    margin: 0 auto 54px;
 
     // .about {
     //   margin-top: 60px;
@@ -49,14 +49,13 @@ footer {
     // }
 
     .projects_support {
-      margin-bottom: 64px;
       width: 100%;
       max-width: 576px;
 
       .header {
         display: flex;
         flex-direction: row;
-        margin: 46px 0 24px;
+        margin: 0 0 24px;
         align-items: center;
         .hr {
           width: 100%;
@@ -172,6 +171,7 @@ footer {
 @media screen and (max-width: 768px) {
   .about_container {
     // flex-direction: column;
+    background: #121212;
     padding: 0 33px !important;
     margin: 0 !important;
     // .about {
@@ -190,7 +190,7 @@ footer {
       display: none;
     }
     .projects_support {
-      margin-top: 88px !important;
+      // margin-top: 88px !important;
       .header {
         h2 {
           width: 222% !important;

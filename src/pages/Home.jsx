@@ -92,7 +92,7 @@ const Home = () => {
           </p>
           <div
             onClick={() => {
-              return window.scrollTo(100, 0);
+              return window.scrollTo(0, 1000);
             }}
           >
             <Scroll />
