@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+* {
+  font-family: "Cabinet Grotesk", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+  font-size: 100%;
+  font-style: normal;
+  font-kerning: normal;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

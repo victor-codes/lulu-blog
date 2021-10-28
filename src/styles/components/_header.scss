@@ -1,0 +1,81 @@
+header {
+  padding: 18px 0;
+  div {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-4;
+    justify-content: space-between;
+  }
+
+  width: 100%;
+  max-width: 1220px;
+  margin: auto !important;
+
+  svg {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    .active {
+      font-weight: 700;
+    }
+    a {
+      font-size: $font-size-6;
+      line-height: 20px;
+      letter-spacing: -0.03em;
+      color: #000000;
+      padding: 10px;
+      margin-left: 36px;
+    }
+  }
+
+  hr {
+    border-top: none;
+    border-color: #000000;
+  }
+}
+
+.logo {
+  font-family: "Clash Grotesk", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.05em;
+  color: #000000;
+}
+
+@media screen and (max-width: 540px) {
+  header {
+    padding: 23px 43px !important;
+
+    div {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 1259px) {
+  header {
+    padding: 23px 24px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .hidden {
+    display: none !important;
+  }
+
+  svg {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    padding: 23px 24px;
+  }
+}

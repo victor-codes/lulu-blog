@@ -1,0 +1,21 @@
+.Button {
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: fit-content;
+  white-space: nowrap;
+  align-items: center;
+  color: #ffffff;
+  display: inline-flex;
+  text-decoration: none;
+  justify-content: center;
+  transition-duration: 250ms;
+  font-weight: $font-weight-3;
+  padding: $spacing-8 $spacing-0;
+  background-color: #1c1c1c;
+
+  svg {
+    stroke: #ffffff;
+    margin-right: 16px;
+  }
+}
