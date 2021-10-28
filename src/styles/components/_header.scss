@@ -28,7 +28,7 @@ header {
       font-size: $font-size-6;
       line-height: 20px;
       letter-spacing: -0.03em;
-      color: #000000;
+      color: var(--header-text-color);
       padding: 10px;
       margin-left: 36px;
     }
@@ -36,7 +36,7 @@ header {
 
   hr {
     border-top: none;
-    border-color: #000000;
+    border-color: var(--header-line-color);
   }
 }
 
@@ -47,7 +47,7 @@ header {
   font-size: 30px;
   line-height: 37px;
   letter-spacing: -0.05em;
-  color: #000000;
+  color: var(--logo-color);
 }
 
 @media screen and (max-width: 540px) {

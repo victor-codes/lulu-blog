@@ -56,11 +56,11 @@ footer {
       .header {
         display: flex;
         flex-direction: row;
-        margin-bottom: 24px;
+        margin: 46px 0 24px;
         align-items: center;
         .hr {
           width: 100%;
-          border: 1px solid #f3f3f3;
+          border-bottom: 1px solid var(--suppport-line-color);
           margin-left: $spacing-4;
         }
         h2 {
@@ -71,7 +71,7 @@ footer {
           max-width: fit-content;
           line-height: 26px;
           letter-spacing: 0.03em;
-          color: #1c1c1c;
+          color: var(--article-primary-color);
         }
       }
       .projects {
@@ -91,7 +91,7 @@ footer {
             font-size: $font-size-6;
             line-height: 26px;
             letter-spacing: -0.03em;
-            color: #1c1c1c;
+            color: var(--article-primary-color);
           }
           span {
             letter-spacing: -0.03em;
@@ -115,11 +115,14 @@ footer {
           font-size: $font-size-6;
           line-height: 26px;
           letter-spacing: -0.03em;
-          color: #1c1c1c;
+          color: var(--article-primary-color);
         }
         span {
           letter-spacing: -0.03em;
+          color: var(--article-secondary-color);
+
           a {
+            color: var(--article-accent-color);
             font-weight: bold;
 
             text-decoration: underline;
@@ -132,7 +135,7 @@ footer {
   .menu_bg {
     display: flex;
     justify-content: center;
-    background: #fdf9ff;
+    background: var(--footer-bg-color);
     .menu {
       display: flex;
       //   padding: 55px 130px 55px 90px;
@@ -149,6 +152,7 @@ footer {
         padding: 10px 8px;
         text-decoration: underline;
         margin-right: 36px;
+        color: var(--paginate-primary-color);
       }
       a:last-child {
         margin-right: 0px;
@@ -158,7 +162,7 @@ footer {
         line-height: 20px;
         text-align: center;
         letter-spacing: -0.03em;
-        color: #000000;
+        color: var(--paginate-primary-color);
         padding: 10px 17.5px;
       }
     }

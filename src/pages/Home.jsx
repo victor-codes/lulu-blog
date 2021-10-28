@@ -75,14 +75,14 @@ const Home = () => {
 
   return (
     <>
-    <Helmet>
-      <title>Blog - Lulu Nwenyi</title>
-    </Helmet>
+      <Helmet>
+        <title>Blog - Lulu Nwenyi</title>
+      </Helmet>
       <Header />
-      <div className="max_width ">
+      <div className=" ">
         {" "}
         <div className="blur_effect"></div>
-        <main className="home_hero">
+        <main className="home_hero max_width">
           <h2>Learn. Share. Grow.</h2>
           <p>
             Hello! Welcome to my blog. On here, you can find articles on{" "}
@@ -95,96 +95,99 @@ const Home = () => {
             Scroll to continue
           </div>
         </main>
-        <div className="article_container">
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-          <Post
-            tag="FLASK, DOCKER"
-            title="How to get started with Flask, Docker and AWS forsfh"
-            timestamp="Jan 20, 2021"
-            body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-          />
-        </div>
-        <div className="paginate">
-          <button
-            className="inline_flex"
-            // onClick={() => {
-            //   // history.push(prevPage(page));
-            // }}
-          >
-            <ArrowLeft className="left" /> PREVIOUS
-          </button>
-          <div className="link">
-            <NavLink activeClassName="page" to={`/home/1`}>
-              1
-            </NavLink>
-            <NavLink activeClassName="page" to={`/home/2`}>
-              2
-            </NavLink>
-            <NavLink activeClassName="page" to={`/home/3`}>
-              3
-            </NavLink>
-            <span>•••</span>
-            <NavLink activeClassName="page" to="/home/12">
-              12
-            </NavLink>
+        <div className="bg_color_article">
+          <div className="article_container max_width">
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
+            <Post
+              tag="FLASK, DOCKER"
+              title="How to get started with Flask, Docker and AWS forsfh"
+              timestamp="Jan 20, 2021"
+              body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
+            />
           </div>
-          <button
-            // onClick={() => {
-            //   // history.push(nextPage(page, 12));
-            // }}
-            className="inline_flex"
-          >
-            NEXT <ArrowRight />
-          </button>
+          <div className="paginate">
+            <button
+              className="inline_flex"
+              // onClick={() => {
+              //   // history.push(prevPage(page));
+              // }}
+            >
+              <ArrowLeft className="left" /> PREVIOUS
+            </button>
+            <div className="link">
+              <NavLink activeClassName="page" to={`/home/1`}>
+                1
+              </NavLink>
+              <NavLink activeClassName="page" to={`/home/2`}>
+                2
+              </NavLink>
+              <NavLink activeClassName="page" to={`/home/3`}>
+                3
+              </NavLink>
+              <span>•••</span>
+              <NavLink activeClassName="page" to="/home/12">
+                12
+              </NavLink>
+            </div>
+            <button
+              // onClick={() => {
+              //   // history.push(nextPage(page, 12));
+              // }}
+              className="inline_flex"
+            >
+              NEXT <ArrowRight />
+            </button>
+          </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

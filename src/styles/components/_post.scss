@@ -8,14 +8,14 @@
       font-size: 12px;
       line-height: 15px;
       letter-spacing: 0.1em;
-      color: #bb66ef;
+      color: var(--article-tag-color);
     }
     h3 {
       font-style: normal;
       font-weight: normal;
       font-size: 24px;
       line-height: 30px;
-      color: #1c1c1c;
+      color: var(--article-primary-color);
       margin: 4px 0;
     }
     .timestamp {
@@ -25,7 +25,7 @@
       line-height: 15px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #525a61;
+      color: var(--article-accent-color);
     }
   }
   p {
@@ -35,7 +35,7 @@
     line-height: 24px;
     /* or 162% */
 
-    color: #6d6d6d;
+    color: var(--article-secondary-color);
     margin: 12px 0 24px;
   }
   a {
@@ -48,14 +48,15 @@
     letter-spacing: 0.03em;
     text-decoration-line: underline;
 
-    color: #1c1c1c;
+    color: var(--article-primary-color);
     svg {
       margin-left: 8px;
+      stroke: var(--article-primary-color) !important;
     }
   }
   .line_divider {
     padding-top: 36px;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid var(--article-line-color);
   }
 }
 

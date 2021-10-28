@@ -8,6 +8,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  transition: 300ms all ease $transition-1;
 }
 
 html,
@@ -25,6 +26,7 @@ body {
   font-size: 100%;
   font-style: normal;
   font-kerning: normal;
+  background: var(--primary-background);
 }
 
 ::-webkit-scrollbar {
@@ -57,7 +59,7 @@ a {
   top: 0px;
   left: 0px;
   width: 100vw;
-  height: 504px;
+  height: 520px;
   background-image: url(../../assets/home-ellipse-1.png),
     url(../../assets/home-ellipse-2.png);
   background-position: bottom -500px right 0px, bottom -150px right 55px;

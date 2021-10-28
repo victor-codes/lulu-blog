@@ -88,7 +88,7 @@ const Footer = () => {
                       href="https://www.buymeacoffee.com/lulunwenyi"
                     >
                       {" "}
-                      buymeacoffee{" "}
+                      buymeacoffee
                     </a>
                     .
                   </span>
