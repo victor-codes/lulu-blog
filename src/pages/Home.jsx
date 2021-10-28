@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import { ReactComponent as Scroll } from "../assets/scroll.svg";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
@@ -74,6 +75,9 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Blog - Lulu Nwenyi</title>
+    </Helmet>
       <Header />
       <div className="max_width ">
         {" "}
