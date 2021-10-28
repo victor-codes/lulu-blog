@@ -109,7 +109,7 @@
   text-align: center;
   letter-spacing: 0.03em;
 
-  color:  var(--paginate-primary-color) !important;
+  color: var(--paginate-primary-color) !important;
 
   text-shadow: 0px 2px 50px rgba(0, 0, 0, 0.34);
 }
@@ -121,6 +121,12 @@
 }
 
 @media screen and (max-width: 500px) {
+  .home_hero {
+    h2 {
+      font-size: 30px;
+      line-height: 49px;
+    }
+  }
   .max_width {
     padding: 47px 33px 0 !important;
   }

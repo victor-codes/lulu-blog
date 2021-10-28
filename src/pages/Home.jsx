@@ -90,12 +90,16 @@ const Home = () => {
             <Link to="category/backend">Backend Development</Link>,
             <Link to="category/writing"> Technical Writing</Link>, and More.
           </p>
-          <div>
+          <div
+            onClick={() => {
+              return window.scrollTo(100, 0);
+            }}
+          >
             <Scroll />
             Scroll to continue
           </div>
         </main>
-        <div className="bg_color_article">
+        <section className="bg_color_article">
           <div className="article_container max_width">
             <Post
               tag="FLASK, DOCKER"
@@ -185,7 +189,7 @@ const Home = () => {
               NEXT <ArrowRight />
             </button>
           </div>
-        </div>
+        </section>
       </div>
 
       <Footer />
