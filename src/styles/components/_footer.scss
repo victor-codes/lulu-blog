@@ -171,7 +171,7 @@ footer {
 @media screen and (max-width: 768px) {
   .about_container {
     // flex-direction: column;
-    background: #121212;
+    background: var(--secondary-background);
     padding: 0 33px !important;
     margin: 0 !important;
     // .about {
