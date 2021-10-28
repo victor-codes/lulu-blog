@@ -15,9 +15,12 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Redirect to="/home" />
+            <Redirect to="/home/1" />
           </Route>
           <Route exact path="/home">
+            <Redirect to="/home/1" />
+          </Route>
+          <Route exact path="/home/:page">
             <Home />
           </Route>
           <Route exact path="/design">

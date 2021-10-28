@@ -4,7 +4,8 @@ footer {
   .about_container {
     display: flex;
     width: 100%;
-    max-width: 1220px;
+    max-width: 1268px;
+    padding: 0 24px;
     margin: 0 auto 90px;
 
     // .about {
@@ -48,7 +49,6 @@ footer {
     // }
 
     .projects_support {
-      margin-top: 70px;
       margin-bottom: 64px;
       width: 100%;
       max-width: 576px;
@@ -136,10 +136,10 @@ footer {
     .menu {
       display: flex;
       //   padding: 55px 130px 55px 90px;
-      padding: 55px 0;
+      padding: 55px 24px;
       justify-content: space-between;
       width: 100%;
-      max-width: 1220px;
+      max-width: 1268px;
       align-items: center;
       a {
         font-weight: 500;
@@ -166,36 +166,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .menu {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center !important;
-    padding: 20.47px 0 !important;
-
-    p {
-      padding: 10px 21.5px;
-    }
-
-    .menu_items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
-      a {
-        text-align: center;
-        margin-right: 16px !important;
-      }
-
-      a:last-child {
-        margin-right: 0px !important;
-      }
-    }
-  }
-
   .about_container {
     // flex-direction: column;
-    padding: 0 33px;
+    padding: 0 33px !important;
     margin: 0 !important;
     // .about {
     //   .about_header {
@@ -245,5 +218,39 @@ footer {
     div {
       margin: 12px 0 0 !important;
     }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .menu {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center !important;
+    padding: 20.47px 0 !important;
+
+    p {
+      padding: 10px 21.5px;
+    }
+
+    .menu_items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-align: center;
+        margin-right: 16px !important;
+      }
+
+      a:last-child {
+        margin-right: 0px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 849px) {
+  .menu_items {
+    margin-bottom: 10px;
   }
 }

@@ -45,3 +45,21 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.inline_flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.blur_effect {
+  position: absolute;
+  z-index: -10;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 504px;
+  background-image: url(../../assets/home-ellipse-1.png),
+    url(../../assets/home-ellipse-2.png);
+  background-position: bottom -500px right 0px, bottom -150px right 55px;
+  background-repeat: no-repeat;
+}
