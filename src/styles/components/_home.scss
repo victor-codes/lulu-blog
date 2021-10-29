@@ -22,12 +22,14 @@
       text-decoration: underline;
     }
   }
-  div {
+  .scroll {
     cursor: pointer;
     display: inline-flex;
     align-items: center;
+    color: var(--header-text-color);
     svg {
       margin-right: 12px;
+      stroke: var(--header-text-color);
     }
   }
 }
@@ -130,11 +132,17 @@
       line-height: 49px;
     }
   }
+  .bg_color_article {
+    background: var(--mobile-article-background);
+  }
   .max_width {
     padding: 47px 33px 0 !important;
   }
   .link {
     gap: 8px !important;
+  }
+  .scroll {
+    font-size: 0.75rem !important;
   }
   .left {
     margin: 0 8px 0 0 !important;

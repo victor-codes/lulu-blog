@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import Header from "../components/Header";
@@ -7,8 +7,19 @@ import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { Link, NavLink, useParams, useHistory } from "react-router-dom";
 import Post from "../components/Post";
+import MobileNav from "../components/mobileNav";
 
 const Home = () => {
+  const history = useHistory();
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    const articleTop = document
+      .querySelector(".bg_color_article")
+      .getBoundingClientRect().top;
+    setScroll(articleTop);
+    console.log(articleTop);
+  }, [scroll]);
   // const { page } = useParams();
   // const pageToString = parseInt(page, 10);
 
@@ -90,16 +101,17 @@ const Home = () => {
             <Link to="category/backend">Backend Development</Link>,
             <Link to="category/writing"> Technical Writing</Link>, and More.
           </p>
-          <div
+          <div className="scroll"
             onClick={() => {
-              return window.scrollTo(0, 1000);
+              return window.scrollTo(0, scroll);
             }}
           >
             <Scroll />
             Scroll to continue
           </div>
         </main>
-        <section className="bg_color_article">
+        <MobileNav />
+        <section id="articles" className="bg_color_article">
           <div className="article_container max_width">
             <Post
               tag="FLASK, DOCKER"

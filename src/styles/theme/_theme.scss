@@ -30,6 +30,13 @@
     url(../../assets/home-ellipse-2.png);
 
   --blur-effect-position: bottom -500px right 0px, bottom -150px right 55px;
+
+  --mobile-article-background: #FBFBFB;
+  --mobile-nav-background: #ffffff;
+  --mobile-nav-line-color: #f3f3f3;
+
+  --mobile-nav-btn-bg-color: #F8F8F8;--mobile-nav-text-color: #77848B;
+  --mobile-nav-text-color: #77848B;
 }
 
 [data-theme="dark"] {
@@ -62,4 +69,12 @@
   --blur-effect: url(../../assets/home-ellipse-1.png);
 
   --blur-effect-position: bottom -650px right 0px;
+  --mobile-article-background: #121212;
+  --mobile-nav-background: #161616;
+  --mobile-nav-line-color: #272727;
+
+  --mobile-nav-btn-bg-color: rgba(54, 54, 54, 0.9);
+
+  --mobile-nav-text-color: #989FA3;
+
 }

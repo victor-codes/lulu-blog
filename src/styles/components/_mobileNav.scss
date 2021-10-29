@@ -1,0 +1,55 @@
+.mobile_nav {
+  background: var(--mobile-nav-background);
+//   position: sticky;
+//   top: -10px;
+  //   height: 80px;
+  margin-top: 42px;
+  padding: 0 44px 0 33px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-bottom: 0.5px solid var(--mobile-nav-line-color);
+
+  .container {
+    padding: 27px 0px 24px;
+
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    align-items: flex-end;
+    a {
+      padding: 4.5px 16px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--mobile-nav-text-color);
+      /* identical to box height */
+
+      text-align: center;
+    }
+    .active {
+      color: var(--primary-text-color);
+    }
+  }
+  .more_btn {
+    position: absolute;
+    top: 27px;
+    right: 42px;
+    padding: 3px;
+    border-radius: 50%;
+    background: var(--mobile-nav-btn-bg-color);
+    svg {
+      stroke: var(--primary-text-color);
+      fill: var(--primary-text-color);
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 580px) {
+  .mobile_nav {
+    display: none;
+  }
+}

@@ -258,3 +258,9 @@ footer {
     margin-bottom: 10px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .about_container {
+    background: var(--mobile-article-background);
+  }
+}
