@@ -1,9 +1,8 @@
 .mobile_nav {
   background: var(--mobile-nav-background);
-//   position: sticky;
-//   top: -10px;
+  //   position: sticky;
+  //   top: -10px;
   //   height: 80px;
-  margin-top: 42px;
   padding: 0 44px 0 33px;
   display: flex;
   position: relative;
@@ -11,13 +10,17 @@
   border-bottom: 0.5px solid var(--mobile-nav-line-color);
 
   .container {
-    padding: 27px 0px 24px;
+    width: 100%;
+    max-width: 1268px;
+    margin: auto;
+    padding: 27px 24px 24px;
 
     display: flex;
     overflow: hidden;
     overflow-x: scroll;
     align-items: flex-end;
     a {
+      margin-right: 16px;
       padding: 4.5px 16px;
       font-style: normal;
       font-weight: normal;
@@ -52,6 +55,20 @@
 
 @media screen and (min-width: 580px) {
   .mobile_nav {
-    display: none;
+    .container {
+      padding: 27px 0px 24px !important;
+    }
+    .more_btn {
+      display: none;
+    }
+    // padding-left: 90px;// display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .mobile_nav {
+    .container {
+      padding: 27px 0px 24px !important;
+    }
+    // padding-left: 90px;// display: none;
   }
 }

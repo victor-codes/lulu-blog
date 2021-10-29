@@ -1,10 +1,16 @@
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import "./App.css";
 import "./styles/main.scss";
 
 import Home from "./pages/Home";
 import { Helmet } from "react-helmet";
 import PageNotFound from "./pages/PageNotFound";
+import Category from "./pages/Category";
 
 function App() {
   return (
@@ -23,21 +29,36 @@ function App() {
           <Route exact path="/home/:page">
             <Home />
           </Route>
-          <Route exact path="/design">
-            <Home />
+
+          {/* categories */}
+
+          <Route exact path="/category/design">
+            <Redirect to="/category/design/all" />
           </Route>
-          <Route exact path="/dev">
-            <Home />
+          <Route exact path="/category/design/all">
+            <Category name="Design" />
           </Route>
-          <Route exact path="/writing">
-            <Home />
+
+          <Route exact path="/category/dev">
+            <Redirect to="/category/dev/all" />
           </Route>
+          
+          <Route exact path="/category/dev/all">
+            <Category name="Dev" />
+          </Route>
+
+          <Route exact path="/category/writing">
+            <Category name="Writing" />
+          </Route>
+
           <Route exact path="/resources">
             <Home />
           </Route>
+
           <Route exact path="/sponsor">
             <Home />
           </Route>
+
           <Route exact path="*">
             <PageNotFound />
           </Route>

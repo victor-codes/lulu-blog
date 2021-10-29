@@ -24,11 +24,11 @@ const Header = () => {
         >
           LN
         </h1>
-        <nav className="menu-items hidden">
+        <nav className="menu-items hide">
           <NavLink to="/home">Home</NavLink>
-          <NavLink to="/design">Design</NavLink>
-          <NavLink to="/dev">{`Dev </> `}</NavLink>
-          <NavLink to="/writing">Writing</NavLink>
+          <NavLink to="/category/design">Design</NavLink>
+          <NavLink to="/category/dev">{`Dev </> `}</NavLink>
+          <NavLink to="/category/writing">Writing</NavLink>
           <NavLink to="/resources">Resources</NavLink>
           <NavLink to="/sponsor">Sponsor</NavLink>
         </nav>

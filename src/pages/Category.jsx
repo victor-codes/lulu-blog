@@ -5,101 +5,39 @@ import Header from "../components/Header";
 // import { ReactComponent as Scroll } from "../assets/scroll.svg";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
+import { ReactComponent as ChervonRight } from "../assets/chervon-right.svg";
 import { Link, NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 
-const Home = () => {
-  const [scroll, setScroll] = useState(0);
+const Category = ({ name }) => {
+  const [subName, setSubName] = useState("All");
 
-  useEffect(() => {
-    const articleTop = document
-      .querySelector(".bg_color_article")
-      .getBoundingClientRect().top;
-    setScroll(articleTop);
-    console.log(articleTop);
-  }, [scroll]);
-  // const { page } = useParams();
-  // const pageToString = parseInt(page, 10);
-
-  // function selizerNext(page) {
-  //   let fixedPage;
-  //   if (page === 12) {
-  //     fixedPage = "";
-  //   } else {
-  //     fixedPage = page + 1;
-  //   }
-  //   return fixedPage;
-  // }
-  // function selizer(page) {
-  //   let fixedPage;
-  //   if (page === 12) {
-  //     fixedPage = "";
-  //   }
-  //   return fixedPage;
-  // }
-  // function selizerPrev(page) {
-  //   let fixedPage;
-
-  //   if (page === 1) {
-  //     fixedPage = "";
-  //   } else {
-  //     fixedPage = page - 1;
-  //   }
-
-  //   return fixedPage;
-  // }
-
-  // const [pageList, setPageList] = useState({
-  //   one: selizerPrev(pageToString),
-  //   two: selizer(pageToString),
-  //   three: selizerNext(pageToString),
-  // });
-  // const history = useHistory();
-
-  // const prevPage = (page) => {
-  //   let newPage = parseInt(page, 10);
-  //   if (newPage > 1) {
-  //     newPage -= 1;
-  //     if (newPage < 1) {
-  //       setPageList({ one: "", two: newPage, three: newPage + 1 });
-  //     } else {
-  //       setPageList({ one: newPage - 1, two: newPage, three: newPage + 1 });
-  //     }
-
-  //     return String(newPage);
-  //   } else return String(newPage);
-  // };
-  // const nextPage = (page, total) => {
-  //   let newPage = parseInt(page, 10);
-  //   if (total > newPage) {
-  //     newPage += 1;
-  //     if (newPage === 12) {
-  //       setPageList({ one: newPage - 1, two: newPage, three: "" });
-  //     } else {
-  //       setPageList({ one: newPage - 1, two: newPage, three: newPage + 1 });
-  //     }
-  //     return String(newPage);
-  //   } else return String(newPage);
-  // };
-
+  function handleClick(name) {
+    setSubName(name);
+  }
   return (
     <>
       <Helmet>
-        <title>Blog - Lulu Nwenyi</title>
+        <title>{name} - Lulu Nwenyi</title>
       </Helmet>
       <Header />
       <div>
         {" "}
-        <div className="blur_effect"></div>
-        <main className="home_hero max_width">
-          <h2>Learn. Share. Grow.</h2>
-          <p>
+        {/* <div className="blur_effect"></div> */}
+        <main className="category_hero max_width">
+          <h2>
+            {name}{" "}
+            <div>
+              <ChervonRight /> <span>{subName}</span>
+            </div>
+          </h2>
+          {/* <p>
             Hello! Welcome to my blog. On here, you can find articles on{" "}
             <Link to="category/design">Design</Link>,{" "}
             <Link to="category/backend">Backend Development</Link>,
             <Link to="category/writing"> Technical Writing</Link>, and More.
-          </p>
+          </p> */}
           {/* <div className="scroll noselect"
             onClick={() => {
               return window.scrollTo(0, scroll);
@@ -109,9 +47,7 @@ const Home = () => {
             Scroll to continue
           </div> */}
         </main>
-        <div className="home_subcategory">
-          <SubCategory name="home" />
-        </div>
+        <SubCategory name={name} handleClick={handleClick} />
         <section id="articles" className="bg_color_article">
           <div className="article_container max_width">
             <Post
@@ -210,4 +146,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Category;

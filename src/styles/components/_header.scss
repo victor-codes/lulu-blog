@@ -13,6 +13,8 @@ header {
 
   svg {
     display: none;
+    stroke: var(--logo-color);
+    fill: var(--logo-color);
   }
 
   nav {
@@ -69,8 +71,8 @@ header {
     padding: 23px 24px;
   }
 }
-@media screen and (max-width: 680px) {
-  .hidden {
+@media screen and (max-width: 700px) {
+  .hide {
     display: none !important;
   }
 
