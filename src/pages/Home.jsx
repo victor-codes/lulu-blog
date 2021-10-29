@@ -5,12 +5,11 @@ import Header from "../components/Header";
 import { ReactComponent as Scroll } from "../assets/scroll.svg";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
-import { Link, NavLink, useParams, useHistory } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import MobileNav from "../components/mobileNav";
 
 const Home = () => {
-  const history = useHistory();
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -101,7 +100,7 @@ const Home = () => {
             <Link to="category/backend">Backend Development</Link>,
             <Link to="category/writing"> Technical Writing</Link>, and More.
           </p>
-          <div className="scroll"
+          <div className="scroll noselect"
             onClick={() => {
               return window.scrollTo(0, scroll);
             }}
