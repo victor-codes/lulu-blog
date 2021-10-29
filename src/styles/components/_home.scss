@@ -131,6 +131,9 @@
       font-size: 30px;
       line-height: 49px;
     }
+    p {
+      margin-top: 0px !important;
+    }
   }
   .bg_color_article {
     background: var(--mobile-article-background);
