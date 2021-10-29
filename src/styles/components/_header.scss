@@ -57,6 +57,7 @@ header {
     div {
       margin-bottom: 0px;
       svg {
+        stroke: var(--logo-color);
         fill: var(--logo-color);
       }
     }
