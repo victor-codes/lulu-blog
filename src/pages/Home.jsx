@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import Header from "../components/Header";
-import { ReactComponent as Scroll } from "../assets/scroll.svg";
+// import { ReactComponent as Scroll } from "../assets/scroll.svg";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { Link, NavLink } from "react-router-dom";
@@ -100,14 +100,14 @@ const Home = () => {
             <Link to="category/backend">Backend Development</Link>,
             <Link to="category/writing"> Technical Writing</Link>, and More.
           </p>
-          <div className="scroll noselect"
+          {/* <div className="scroll noselect"
             onClick={() => {
               return window.scrollTo(0, scroll);
             }}
           >
             <Scroll />
             Scroll to continue
-          </div>
+          </div> */}
         </main>
         <MobileNav />
         <section id="articles" className="bg_color_article">

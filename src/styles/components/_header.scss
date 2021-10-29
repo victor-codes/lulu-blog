@@ -56,6 +56,9 @@ header {
 
     div {
       margin-bottom: 0px;
+      svg {
+        fill: var(--logo-color);
+      }
     }
   }
 }

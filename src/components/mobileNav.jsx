@@ -6,7 +6,7 @@ const MobileNav = () => {
   return (
     <section className="mobile_nav">
       <div className="container">
-        <NavLink activeClassName="active" to="/">
+        <NavLink activeClassName="active" to="all">
           All
         </NavLink>
         <NavLink activeClassName="active" to="category1">

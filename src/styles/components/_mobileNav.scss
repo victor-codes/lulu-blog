@@ -30,6 +30,7 @@
     }
     .active {
       color: var(--primary-text-color);
+      font-weight: bold;
     }
   }
   .more_btn {
@@ -39,7 +40,7 @@
     padding: 3px;
     border-radius: 50%;
     background: var(--mobile-nav-btn-bg-color);
-    
+
     svg {
       stroke: var(--primary-text-color);
       fill: var(--primary-text-color);
