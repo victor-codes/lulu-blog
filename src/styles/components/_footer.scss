@@ -103,6 +103,9 @@ footer {
         }
       }
       .support {
+        svg {
+          stroke: var(--secondary-text-color);
+        }
         display: flex;
         align-items: center;
         div {
