@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { ReactComponent as ChervonRight } from "../assets/chervon-right.svg";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 
@@ -51,54 +51,63 @@ const Category = ({ name }) => {
         <section id="articles" className="bg_color_article">
           <div className="article_container max_width">
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"
               body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
             />
             <Post
+              category={name}
               tag="FLASK, DOCKER"
               title="How to get started with Flask, Docker and AWS forsfh"
               timestamp="Jan 20, 2021"

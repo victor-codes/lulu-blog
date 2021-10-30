@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow-right.svg";
 import { stringToLink, truncateString } from "../utils/helperFunction";
 
-const Post = ({ tag, title, timestamp, body }) => {
-  //49
-  //150
-
+const Post = ({ tag, title, timestamp, body, category }) => {
   return (
     <article className="post_article">
       <div className="info">
@@ -15,7 +12,7 @@ const Post = ({ tag, title, timestamp, body }) => {
         <span className="timestamp">{timestamp}</span>
       </div>
       <p>{truncateString(body, 150)}</p>
-      <Link to={`/post/${stringToLink(title)}`}>
+      <Link to={`/${stringToLink(category)}/post/${stringToLink(title)}`}>
         READ MORE <Arrow />{" "}
       </Link>
       <div className="line_divider"></div>

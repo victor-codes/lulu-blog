@@ -15,6 +15,7 @@ const SinglePost = () => {
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const posEl = document.querySelector(".link").getBoundingClientRect().top;
     setScroll(posEl);
   }, []);

@@ -22,33 +22,33 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Redirect to="/home/1" />
+            <Redirect to="/home" />
           </Route>
+          {/* <Route exact path="/home">
+            <Redirect to="/home/1" />
+          </Route> */}
           <Route exact path="/home">
-            <Redirect to="/home/1" />
-          </Route>
-          <Route exact path="/home/:page">
             <Home />
           </Route>
 
           {/* categories */}
 
-          <Route exact path="/category/design">
-            <Redirect to="/category/design/all" />
+          <Route exact path="/design">
+            <Redirect to="/design/all" />
           </Route>
-          <Route exact path="/category/design/all">
+          <Route exact path="/design/all">
             <Category name="Design" />
           </Route>
 
-          <Route exact path="/category/dev">
-            <Redirect to="/category/dev/all" />
+          <Route exact path="/dev">
+            <Redirect to="/dev/all" />
           </Route>
 
-          <Route exact path="/category/dev/all">
+          <Route exact path="/dev/all">
             <Category name="Dev" />
           </Route>
 
-          <Route exact path="/category/writing">
+          <Route exact path="/writing">
             <Category name="Writing" />
           </Route>
 
@@ -60,7 +60,7 @@ function App() {
             <Home />
           </Route>
 
-          <Route exact path="/post/:slug">
+          <Route exact path="/:category/post/:slug">
             <SinglePost />
           </Route>
 

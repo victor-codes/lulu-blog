@@ -1,9 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { useHistory } from "react-router";
 import Button from "../components/Button";
 import Header from "../components/Header";
 
 const PageNotFound = () => {
+  const history = useHistory();
   return (
     <>
       <Helmet>
@@ -18,7 +20,14 @@ const PageNotFound = () => {
             Sorryyyyyy! The page you’re looking for does not exist. Consider
             checking the URL for typos or continue your search by going back.
           </p>
-          <Button startIcon={true}>GO BACK</Button>
+          <Button
+            startIcon={true}
+            onClick={() => {
+              history.goBack();
+            }}
+          >
+            GO BACK
+          </Button>
         </div>
       </main>
     </>
