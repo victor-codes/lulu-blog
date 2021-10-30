@@ -81,13 +81,12 @@ const Footer = () => {
                   <p>Become a Sponsor.</p>
                   <span>
                     If you enjoy any of my projects or articles, you can support
-                    my content using
+                    my content using 
                     <a
                       rel="noreferrer noopener"
                       target="_blank"
                       href="https://www.buymeacoffee.com/lulunwenyi"
                     >
-                      {" "}
                       buymeacoffee
                     </a>
                     .

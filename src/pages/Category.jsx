@@ -6,9 +6,10 @@ import Header from "../components/Header";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { ReactComponent as ChervonRight } from "../assets/chervon-right.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
+import PageNotFound from "./PageNotFound";
 
 const dummyJson = [
   "ewq",
@@ -22,12 +23,34 @@ const dummyJson = [
   "ewq",
 ];
 
+const categories = {
+  home: ["All", "Category 1", "Category 2", "Category 3"],
+  design: ["All", "UX Writing", "Category 1", "Category 2"],
+  dev: ["All", "Backend", "Category 1", "Category 2"],
+  writing: ["All", "Category 1", "Category 2", "Category 3"],
+};
+
 const Category = ({ name }) => {
+  const { subcategory } = useParams();
+
   const [subName, setSubName] = useState("All");
+
+  const convertCategoriesToLowercase = categories[name.toLowerCase()].map(
+    (item) => {
+      return item.toLowerCase();
+    }
+  );
+
+  const subcategoryToString = subcategory.split("-").join(" ");
 
   function handleClick(name) {
     setSubName(name);
   }
+  
+  if (!convertCategoriesToLowercase.includes(subcategoryToString)) {
+    return <PageNotFound />;
+  }
+
   return (
     <>
       <Helmet>
@@ -35,11 +58,10 @@ const Category = ({ name }) => {
       </Helmet>
       <Header />
       <div>
-        {" "}
         {/* <div className="blur_effect"></div> */}
         <main className="category_hero max_width">
           <h2>
-            {name}{" "}
+            {name}
             <div>
               <ChervonRight /> <span>{subName}</span>
             </div>
@@ -53,7 +75,10 @@ const Category = ({ name }) => {
             Scroll to continue
           </div> */}
         </main>
-        <SubCategory name={name} handleClick={handleClick} />
+        <SubCategory
+          name={name}
+          handleClick={handleClick}
+        />
         <section id="articles" className="bg_color_article">
           <div className="article_container max_width">
             {dummyJson.map((item) => (

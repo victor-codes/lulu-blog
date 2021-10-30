@@ -11,6 +11,11 @@ import SubCategory from "../components/SubCategory";
 
 const Home = () => {
   const [scroll, setScroll] = useState(0);
+  const [subName, setSubName] = useState("All");
+
+  function handleClick(name) {
+    setSubName(name);
+  }
 
   useEffect(() => {
     const articleTop = document
@@ -121,7 +126,7 @@ const Home = () => {
           </div> */}
         </main>
         <div className="home_subcategory">
-          <SubCategory name="home" />
+          <SubCategory name="Home" handleClick={handleClick} />
         </div>
         <section id="articles" className="bg_color_article">
           <div className="article_container max_width">

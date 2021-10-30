@@ -4,15 +4,15 @@ import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
 import { stringToLink } from "../utils/helperFunction";
 
 const SubCategory = ({ name, handleClick }) => {
-  const category = name.toLowerCase();
+  
   const categories = {
-    design: ["All", "UX Writing", "Category", "Category"],
-    dev: ["All", "Backend", "Category", "Categry"],
-    writing: ["All", "Category", "Category", "Category"],
-    home: ["All", "Category", "Category", "Category"],
+    home: ["All", "Category 1", "Category 2", "Category 3"],
+    design: ["All", "UX Writing", "Category 1", "Category 2"],
+    dev: ["All", "Backend", "Category 1", "Category 2"],
+    writing: ["All", "Category 1", "Category 2", "Category 3"],
   };
 
-  console.log(categories[name]);
+  const category = name.toLowerCase();
 
   return (
     <section className="mobile_nav">
