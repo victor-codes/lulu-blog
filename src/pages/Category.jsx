@@ -46,7 +46,7 @@ const Category = ({ name }) => {
   function handleClick(name) {
     setSubName(name);
   }
-  
+
   if (!convertCategoriesToLowercase.includes(subcategoryToString)) {
     return <PageNotFound />;
   }
@@ -58,7 +58,6 @@ const Category = ({ name }) => {
       </Helmet>
       <Header />
       <div>
-        {/* <div className="blur_effect"></div> */}
         <main className="category_hero max_width">
           <h2>
             {name}
@@ -66,6 +65,11 @@ const Category = ({ name }) => {
               <ChervonRight /> <span>{subName}</span>
             </div>
           </h2>
+          <div className="blur-effect">
+            <div>
+              <div className="circle_1"></div>
+            </div>
+          </div>
           {/* <div className="scroll noselect"
             onClick={() => {
               return window.scrollTo(0, scroll);
@@ -75,10 +79,7 @@ const Category = ({ name }) => {
             Scroll to continue
           </div> */}
         </main>
-        <SubCategory
-          name={name}
-          handleClick={handleClick}
-        />
+        <SubCategory name={name} handleClick={handleClick} />
         <section id="articles" className="bg_color_article">
           <div className="article_container max_width">
             {dummyJson.map((item) => (

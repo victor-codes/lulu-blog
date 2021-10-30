@@ -1,6 +1,9 @@
 .category_hero {
   margin-top: 95px !important;
   padding: 109px 24px 87px !important;
+  main {
+      position: relative;
+  }
   h2 {
     display: flex;
     align-items: center;
