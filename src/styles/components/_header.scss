@@ -1,44 +1,51 @@
 header {
-  padding: 18px 0;
-  div {
-    display: flex;
-    align-items: center;
-    margin-bottom: $spacing-4;
-    justify-content: space-between;
-  }
-
-  width: 100%;
-  max-width: 1220px;
-  margin: auto !important;
-
-  svg {
-    display: none;
-    stroke: var(--logo-color);
-    fill: var(--logo-color);
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-
-    .active {
-      font-weight: 700;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 10;
+  background-color: var(--primary-background-blur);
+  .header_container {
+    padding: 38px 0 0;
+    div {
+      display: flex;
+      align-items: center;
+      margin-bottom: $spacing-4;
+      justify-content: space-between;
     }
-    a {
-      font-size: $font-size-6;
-      line-height: 20px;
-      letter-spacing: -0.03em;
-      color: var(--header-text-color);
-      padding: 10px;
-      margin-left: 36px;
-    }
-  }
 
-  hr {
-    border-top: none;
-    border-color: var(--header-line-color);
+    width: 100%;
+    max-width: 1220px;
+    margin: auto !important;
+
+    svg {
+      display: none;
+      stroke: var(--logo-color);
+      fill: var(--logo-color);
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+
+      .active {
+        font-weight: 700;
+      }
+      a {
+        font-size: $font-size-6;
+        line-height: 20px;
+        letter-spacing: -0.03em;
+        color: var(--header-text-color);
+        padding: 10px;
+        margin-left: 36px;
+      }
+    }
+
+    hr {
+      border-top: none;
+      border-color: var(--header-line-color);
+    }
   }
 }
 
@@ -54,7 +61,16 @@ header {
 
 @media screen and (max-width: 540px) {
   header {
-    padding: 23px 43px !important;
+    padding: 0 43px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header_container {
+      padding: 0px;
+      div {
+        margin: 0;
+      }
+    }
 
     div {
       margin-bottom: 0px;
@@ -74,6 +90,10 @@ header {
 @media screen and (max-width: 700px) {
   .hide {
     display: none !important;
+  }
+  header {
+    height: 100%;
+    max-height: 83px;
   }
 
   svg {

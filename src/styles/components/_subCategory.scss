@@ -1,8 +1,5 @@
 .mobile_nav {
   background: var(--mobile-nav-background);
-  //   position: sticky;
-  //   top: -10px;
-  //   height: 80px;
   padding: 0 44px 0 33px;
   display: flex;
   position: relative;
@@ -27,8 +24,6 @@
       font-size: 16px;
       line-height: 20px;
       color: var(--mobile-nav-text-color);
-      /* identical to box height */
-
       text-align: center;
     }
     .active {
@@ -61,7 +56,6 @@
     .more_btn {
       display: none;
     }
-    // padding-left: 90px;// display: none;
   }
 }
 @media screen and (max-width: 580px) {

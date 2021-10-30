@@ -1,4 +1,5 @@
 .home_hero {
+  margin-top: 95px !important;
   padding: 110px 24px !important;
   h2 {
     font-style: normal;
@@ -35,7 +36,7 @@
 }
 
 .home_subcategory {
-  display: none !important;
+  display: none;
 }
 
 .max_width {
@@ -124,6 +125,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .home_hero {
+    margin-top: 83px !important;
+  }
   .article_container {
     grid-template-columns: repeat(2, minmax(auto, 394px));
   }

@@ -10,6 +10,7 @@
   --suppport-line-color: #f3f3f3;
 
   --primary-background: #ffffff;
+  --primary-background-blur: rgba(255, 255, 255, 1);
   --secondary-background: #ffffff;
 
   --article-primary-color: #1c1c1c;
@@ -59,7 +60,9 @@
   --secondary-text-color: #f6f6f6;
   --tertary-text-color: #bdbdbd;
 
-  --primary-background: #070809;
+  --primary-background: rgb(7, 8, 9);
+  --primary-background-blur: rgba(7, 8, 9, 1);
+
   --secondary-background: #121212;
 
   --article-primary-color: #f1f1f1;

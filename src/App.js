@@ -22,12 +22,12 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Redirect to="/home" />
+            <Redirect to="/home/all" />
           </Route>
-          {/* <Route exact path="/home">
-            <Redirect to="/home/1" />
-          </Route> */}
           <Route exact path="/home">
+            <Redirect to="/home/all" />
+          </Route>
+          <Route exact path="/home/all">
             <Home />
           </Route>
 
@@ -49,6 +49,9 @@ function App() {
           </Route>
 
           <Route exact path="/writing">
+            <Redirect to="/writing/all" />
+          </Route>
+          <Route exact path="/writing/all">
             <Category name="Writing" />
           </Route>
 

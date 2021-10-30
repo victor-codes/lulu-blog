@@ -1,4 +1,5 @@
 .category_hero {
+  margin-top: 95px !important;
   padding: 109px 24px 87px !important;
   h2 {
     display: flex;
@@ -12,8 +13,8 @@
     div {
       margin-left: 12px;
       svg {
-          fill: var(--mobile-nav-text-color);
-          stroke: var(--mobile-nav-text-color);
+        fill: var(--mobile-nav-text-color);
+        stroke: var(--mobile-nav-text-color);
       }
       //   margin-left: 4px;
       display: flex;
@@ -139,6 +140,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .category_hero {
+        margin-top: 83px !important;
+    }
   .article_container {
     grid-template-columns: repeat(2, minmax(auto, 394px));
   }

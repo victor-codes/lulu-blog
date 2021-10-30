@@ -14,6 +14,7 @@ const PageNotFound = () => {
       <Header />
       <div className="absolute"></div>
       <main className="not_found">
+        
         <div>
           <h2>Oops! Something’s wrong :(</h2>
           <p>

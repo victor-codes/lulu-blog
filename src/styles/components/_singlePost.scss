@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
   .single_post {
-    margin-top: 53px !important;
+    margin-top: 136px !important;
     margin-bottom: 41px !important;
 
     .post_info {
@@ -39,7 +39,7 @@
   width: 100%;
   max-width: 1273px;
   padding: 0 24px;
-  margin: 81px auto 24px;
+  margin: 184px auto 24px;
 
   .post_info {
     span:first-child {
@@ -218,10 +218,11 @@ figure {
   }
 }
 
-// .single_post_footer_bg {
-//   footer {
-//     .about_container {
-//     //   background: none;
-//     }
-//   }
-// }
+.single_post_footer_bg {
+  margin-top: 95px !important;
+  // footer {
+  //   .about_container {
+  //   //   background: none;
+  //   }
+  // }
+}
