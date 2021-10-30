@@ -32,12 +32,6 @@ const Category = ({ name }) => {
               <ChervonRight /> <span>{subName}</span>
             </div>
           </h2>
-          {/* <p>
-            Hello! Welcome to my blog. On here, you can find articles on{" "}
-            <Link to="category/design">Design</Link>,{" "}
-            <Link to="category/backend">Backend Development</Link>,
-            <Link to="category/writing"> Technical Writing</Link>, and More.
-          </p> */}
           {/* <div className="scroll noselect"
             onClick={() => {
               return window.scrollTo(0, scroll);

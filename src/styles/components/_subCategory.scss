@@ -18,8 +18,8 @@
     align-items: flex-end;
     a {
       margin-right: 16px;
-      padding: 4.5px 16px;
-      font-style: normal;
+      padding: 0 16px;
+      white-space: nowrap;
       font-weight: normal;
       font-size: 16px;
       line-height: 20px;
@@ -33,17 +33,16 @@
   }
   .more_btn {
     position: absolute;
-    top: 27px;
     right: 42px;
     padding: 3px;
     border-radius: 50%;
     background: var(--mobile-nav-btn-bg-color);
 
     svg {
+      path {
+        fill: var(--primary-text-color);
+      }
       stroke: var(--primary-text-color);
-      fill: var(--primary-text-color);
-      width: 24px;
-      height: 24px;
     }
   }
 }
@@ -63,6 +62,5 @@
     .container {
       padding: 27px 0px 24px !important;
     }
-    // padding-left: 90px;// display: none;
   }
 }

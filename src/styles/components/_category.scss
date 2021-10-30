@@ -13,7 +13,9 @@
     div {
       margin-left: 12px;
       svg {
-        fill: var(--mobile-nav-text-color);
+        path {
+          fill: var(--mobile-nav-text-color);
+        }
         stroke: var(--mobile-nav-text-color);
       }
       //   margin-left: 4px;
@@ -140,9 +142,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    .category_hero {
-        margin-top: 83px !important;
-    }
+  .category_hero {
+    margin-top: 83px !important;
+  }
   .article_container {
     grid-template-columns: repeat(2, minmax(auto, 394px));
   }

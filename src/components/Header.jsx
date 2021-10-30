@@ -1,28 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
 import { ReactComponent as Menu } from ".././assets/menu.svg";
 
 const Header = () => {
+  const localTheme = localStorage.getItem("mode");
+
+  const [mode, setMode] = useState(localTheme);
+
+  useEffect(() => {
+    if (mode === null) {
+      setMode("light");
+      return localStorage.setItem("mode", "light");
+    } else document.body.setAttribute("data-theme", mode);
+  }, [mode]);
+
+  function theme() {
+    if (mode === "light") {
+      setMode("dark");
+      localStorage.setItem("mode", "dark");
+    } else {
+      setMode("light");
+      localStorage.setItem("mode", "light");
+    }
+  }
   return (
     <header>
       <div className="header_container">
         <div>
-          <h1
-            className="logo"
-            onClick={() => {
-              if (document.body.getAttribute("data-theme") === "light") {
-                return document.body.setAttribute("data-theme", "dark");
-              } else if (document.body.getAttribute("data-theme") === "dark") {
-                return document.body.setAttribute("data-theme", "light");
-              } else if (document.body.getAttribute("data-theme") === "") {
-                return document.body.setAttribute("data-theme", "light");
-              } else {
-                return document.body.setAttribute("data-theme", "light");
-              }
-            }}
-          >
+          <h1 className="logo" onClick={theme}>
             LN
           </h1>
           <nav className="menu-items hide">
