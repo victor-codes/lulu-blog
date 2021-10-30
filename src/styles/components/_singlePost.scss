@@ -1,0 +1,227 @@
+@media screen and (max-width: 768px) {
+  .single_post {
+    margin-top: 53px !important;
+    margin-bottom: 41px !important;
+
+    .post_info {
+      h2 {
+        font-size: 28px !important;
+        line-height: 120% !important;
+        letter-spacing: -0.03em !important;
+        margin: 4px 0;
+      }
+    }
+  }
+  .post__details {
+    padding-top: 35px !important;
+    background: var(--secondary-background);
+    padding-bottom: 64px !important;
+  }
+  .contributions {
+    margin-top: 48px !important;
+  }
+  .contributions_bg_color {
+    flex-direction: column;
+    align-items: flex-start !important;
+    p {
+      margin: 4px 0 0 !important;
+    }
+  }
+  .none {
+    display: none;
+  }
+}
+
+.single_post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1273px;
+  padding: 0 24px;
+  margin: 81px auto 24px;
+
+  .post_info {
+    span:first-child {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.05em;
+      color: #bb66ef;
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 65px;
+      letter-spacing: -0.03em;
+      width: 100%;
+      max-width: 1046px;
+      color: var(--paginate-primary-color);
+    }
+    span:last-child {
+      font-size: 14px;
+      line-height: 23px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      color: var(--single-post-accent-color);
+    }
+  }
+  div:last-child {
+    a {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      margin-right: 8px;
+      text-decoration-line: underline;
+
+      color: var(--paginate-primary-color);
+    }
+    svg {
+      stroke: var(--paginate-primary-color);
+    }
+  }
+}
+
+figure {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 36px;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+  figcaption {
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+    color: #7c7676;
+    margin-top: 4px;
+    text-align: center;
+  }
+}
+.post_content {
+  p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 32px;
+    /* or 188% */
+
+    color: var(--blog-post-primary-text-color);
+  }
+
+  .hr {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid var(--suppport-line-color);
+  }
+  .share_link {
+    div:first-child {
+      display: flex;
+      align-items: center;
+      p {
+        color: var(--blog-post-secondary-color);
+        width: 100%;
+        margin-right: 16px;
+        max-width: fit-content;
+      }
+    }
+    .link {
+      flex-wrap: wrap;
+      width: 100%;
+      max-width: 621px;
+      padding: 0 24px;
+      display: flex;
+      justify-content: space-between;
+      margin: 31px auto;
+    }
+    margin-top: 48px;
+    span {
+      color: #d9d9d9;
+    }
+    a {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 19px;
+      letter-spacing: 0.03em;
+      text-decoration-line: underline;
+      color: var(--paginate-primary-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+.contributions {
+  display: flex;
+  margin-top: 100px;
+  align-items: center;
+  p {
+    color: var(--blog-post-secondary-color);
+    margin-right: 16px;
+    width: 100%;
+    max-width: fit-content;
+  }
+}
+.read {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 618px;
+  margin: auto;
+  a {
+    svg {
+      stroke: var(--paginate-primary-color);
+    }
+    color: var(--paginate-primary-color);
+    font-weight: bold;
+    display: inline-grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 8px;
+    text-decoration: underline;
+    align-items: center;
+  }
+}
+.contributions_bg_color {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: var(--blog-contributions-bg-color);
+  max-width: 612px;
+  margin: 33px auto 64px;
+  padding: 24px 20px;
+  p {
+    color: var(--blog-contributions-text-color);
+    margin-left: 24px;
+  }
+}
+
+.post__details {
+  padding: 0 24px;
+  width: 100%;
+  max-width: 876px;
+  margin: auto;
+}
+
+@media screen and (max-width: 1020px) {
+  .single_post {
+    flex-direction: column;
+    align-items: flex-start;
+    .share {
+      margin-top: 24px;
+    }
+  }
+}
+
+.single_post_footer_bg {
+  footer {
+    .about_container {
+      background: none;
+    }
+  }
+}

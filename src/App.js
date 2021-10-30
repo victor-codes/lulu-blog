@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import { Helmet } from "react-helmet";
 import PageNotFound from "./pages/PageNotFound";
 import Category from "./pages/Category";
+import SinglePost from "./pages/SinglePost";
 
 function App() {
   return (
@@ -42,7 +43,7 @@ function App() {
           <Route exact path="/category/dev">
             <Redirect to="/category/dev/all" />
           </Route>
-          
+
           <Route exact path="/category/dev/all">
             <Category name="Dev" />
           </Route>
@@ -57,6 +58,10 @@ function App() {
 
           <Route exact path="/sponsor">
             <Home />
+          </Route>
+
+          <Route exact path="/post/:slug">
+            <SinglePost />
           </Route>
 
           <Route exact path="*">

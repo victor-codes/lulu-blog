@@ -31,12 +31,21 @@
 
   --blur-effect-position: bottom -500px right 0px, bottom -150px right 55px;
 
-  --mobile-article-background: #FBFBFB;
+  --mobile-article-background: #fbfbfb;
   --mobile-nav-background: #ffffff;
   --mobile-nav-line-color: #f3f3f3;
 
-  --mobile-nav-btn-bg-color: #F8F8F8;--mobile-nav-text-color: #77848B;
-  --mobile-nav-text-color: #77848B;
+  --mobile-nav-btn-bg-color: #f8f8f8;
+  --mobile-nav-text-color: #77848b;
+  --mobile-nav-text-color: #77848b;
+
+  --single-post-accent-color: #7c7676;
+  --blog-post-primary-text-color: #313131;
+  --blog-post-secondary-color: #464646;
+  --blog-contributions-bg-color: #fafafa;
+  --blog-contributions-text-color: #464646;
+
+
 }
 
 [data-theme="dark"] {
@@ -75,6 +84,14 @@
 
   --mobile-nav-btn-bg-color: rgba(54, 54, 54, 0.9);
 
-  --mobile-nav-text-color: #989FA3;
+  --mobile-nav-text-color: #989fa3;
+
+  --single-post-accent-color: #d2d2d2;
+
+  --blog-post-primary-text-color: #a5a5a5;
+  --blog-post-secondary-color: #f3f3f3;
+
+  --blog-contributions-bg-color: #1E1E1E;
+  --blog-contributions-text-color: #F1F1F1;
 
 }

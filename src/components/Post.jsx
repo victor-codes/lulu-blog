@@ -15,7 +15,7 @@ const Post = ({ tag, title, timestamp, body }) => {
         <span className="timestamp">{timestamp}</span>
       </div>
       <p>{truncateString(body, 150)}</p>
-      <Link to={`/${stringToLink(title)}`}>
+      <Link to={`/post/${stringToLink(title)}`}>
         READ MORE <Arrow />{" "}
       </Link>
       <div className="line_divider"></div>
