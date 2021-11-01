@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
-import Header from "../components/Header";
 // import { ReactComponent as Scroll } from "../assets/scroll.svg";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
@@ -10,6 +9,8 @@ import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Home = () => {
   const [scroll, setScroll] = useState(0);
@@ -101,6 +102,27 @@ const Home = () => {
   //     return String(newPage);
   //   } else return String(newPage);
   // };
+
+  // gsap.registerPlugin(ScrollTrigger);
+
+  // gsap.to(".trigger", {
+  //   scrollTrigger: {
+  //     trigger: ".trigger",
+  //     start: "top 13px",
+  //     markers: true,
+  //     // pin: true,
+  //     scrub: true,
+  //     end: () => {
+  //       return (
+  //         document.body.scrollX
+  //       );
+  //     },
+  //   },
+  //   // position: "sticky",
+  //   top: 83,
+  //   zIndex: 5,
+  // });
+
   const { ref, inView } = useInView({
     threshold: 1,
   });
@@ -112,16 +134,14 @@ const Home = () => {
     window.addEventListener("scroll", () => {
       let scrollY = window.scrollY;
       // setScrollY(window.scrollY);
-      console.log(scrollY);
+      // console.log(scrollY);
       if (window.scrolly === 0) {
         setStylesArt("");
         setStyles("static_style");
       } else if (inView && scrollY === 0) {
         setStyles("static_style");
         setStylesArt("");
-        console.log("static");
       } else if (scrollY > 264) {
-        console.log(">83");
         setStylesArt("articles_fixed");
         return setStyles("fixed_style");
       }
@@ -139,11 +159,11 @@ const Home = () => {
         <title>Blog - Lulu Nwenyi</title>
       </Helmet>
       <div>
-        <motion.div
+        <div
           ref={ref}
           animate={animation}
           transition={{ duration: 0.03 }}
-          className={`fixed hero_fixed ${styles}`}
+          className={`fixed hero_fixed trigger ${styles}`}
         >
           <div className="blur_fect"></div>
           <main className="home_hero max_width">
@@ -155,11 +175,13 @@ const Home = () => {
               <Link to="category/writing"> Technical Writing</Link>, and More.
             </p>
           </main>
-          <div className="home_subcategory">
-            <SubCategory name="Home" handleClick={handleClick} />
-          </div>
-        </motion.div>
-        <section id="articles" className={`bg_color_article ${stylesArt}`}>
+          <div className="home_subcategory"></div>
+        </div>
+        <section
+          id="articles"
+          className={`article_trigger bg_color_article ${stylesArt}`}
+        >
+          <SubCategory name="Home" handleClick={handleClick} />
           <div className="article_container max_width">
             {dummyJson.map((item, id) => (
               <Post

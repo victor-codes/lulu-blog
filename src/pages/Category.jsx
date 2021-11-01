@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
-import Header from "../components/Header";
-// import { ReactComponent as Scroll } from "../assets/scroll.svg";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { ReactComponent as ChervonRight } from "../assets/chervon-right.svg";

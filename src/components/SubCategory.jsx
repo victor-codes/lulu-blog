@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
+import { ReactComponent as ChrevonLeft } from "../assets/chervon-left.svg";
 import { stringToLink } from "../utils/helperFunction";
+import { motion } from "framer-motion";
 
 const SubCategory = ({ name, handleClick }) => {
   const categories = {
@@ -12,7 +14,7 @@ const SubCategory = ({ name, handleClick }) => {
   };
 
   const category = name.toLowerCase();
-
+  const [scrollX, setScrollX] = useState(true);
   return (
     <section className="mobile_nav">
       <div className="container">
@@ -30,16 +32,31 @@ const SubCategory = ({ name, handleClick }) => {
             </NavLink>
           ))}
       </div>
-      <div
-        className="more_btn"
-        onClick={() => {
-          const scroll = document.getElementsByClassName(
-            ".mobile_nav .container"
-          );
-          scroll.scrollTo(100, 0);
-        }}
-      >
-        <ChrevonRight />
+      <div className="less_btn">
+        {!scrollX ? (
+          <ChrevonLeft
+            onClick={() => {
+              const scroll = document.querySelector(".mobile_nav .container");
+              const width = scroll.clientWidth;
+              scroll.scrollBy(-width, 0);
+              return setScrollX(true);
+            }}
+          />
+        ) : (
+          ""
+        )}
+      </div>
+      <div className="more_btn">
+        {scrollX && (
+          <ChrevonRight
+            onClick={() => {
+              const scroll = document.querySelector(".mobile_nav .container");
+              const width = scroll.clientWidth;
+              scroll.scrollBy(width, 0);
+              return setScrollX(false);
+            }}
+          />
+        )}
       </div>
     </section>
   );
