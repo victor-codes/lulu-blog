@@ -2,7 +2,7 @@
   margin-top: 95px !important;
   padding: 109px 24px 87px !important;
   main {
-      position: relative;
+    position: relative;
   }
   h2 {
     display: flex;
@@ -192,5 +192,38 @@
   .article_container {
     grid-template-columns: repeat(1, 1fr);
     gap: 24px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .fixed {
+    // position: sticky;
+    // right: 0px;
+    // left: 0px;
+    // top: 83px;
+    background: var(--primary-background-blur);
+    backdrop-filter: blur(16px);
+    .category_hero {
+      margin-top: 0 !important;
+    }
+  }
+  #articles {
+    // margin-top: 264px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .fixed_category {
+    position: fixed;
+    right: 0px;
+    left: 0px;
+    top: 83px;
+    background: var(--primary-background-blur);
+    backdrop-filter: blur(16px);
+    .category_hero {
+      margin-top: 0 !important;
+    }
+  }
+  .article__catergory {
+    margin-top: 264px;
   }
 }

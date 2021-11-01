@@ -8,6 +8,8 @@ import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { Link, NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 
 const Home = () => {
   const [scroll, setScroll] = useState(0);
@@ -99,39 +101,69 @@ const Home = () => {
   //     return String(newPage);
   //   } else return String(newPage);
   // };
+  const { ref, inView } = useInView({
+    threshold: 1,
+  });
+  const animation = useAnimation();
+  const [styles, setStyles] = useState("");
+  const [stylesArt, setStylesArt] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      // setScrollY(window.scrollY);
+      console.log(scrollY);
+      if (window.scrolly === 0) {
+        setStylesArt("");
+        setStyles("static_style");
+      } else if (inView && scrollY === 0) {
+        setStyles("static_style");
+        setStylesArt("");
+        console.log("static");
+      } else if (scrollY > 264) {
+        console.log(">83");
+        setStylesArt("articles_fixed");
+        return setStyles("fixed_style");
+      }
+    });
+  });
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //   }); background: var(--primary-background-blur);
+  // }, [scrollY]);
 
   return (
     <>
       <Helmet>
         <title>Blog - Lulu Nwenyi</title>
       </Helmet>
-      <Header />
       <div>
-        <div className="blur_effect"></div>
-        <main className="home_hero max_width">
-          <h2>Learn. Share. Grow.</h2>
-          <p>
-            Hello! Welcome to my blog. On here, you can find articles on{" "}
-            <Link to="category/design">Design</Link>,{" "}
-            <Link to="category/backend">Backend Development</Link>,
-            <Link to="category/writing"> Technical Writing</Link>, and More.
-          </p>
-          {/* <div className="scroll noselect"
-            onClick={() => {
-              return window.scrollTo(0, scroll);
-            }}
-          >
-            <Scroll />
-            Scroll to continue
-          </div> */}
-        </main>
-        <div className="home_subcategory">
-          <SubCategory name="Home" handleClick={handleClick} />
-        </div>
-        <section id="articles" className="bg_color_article">
+        <motion.div
+          ref={ref}
+          animate={animation}
+          transition={{ duration: 0.03 }}
+          className={`fixed hero_fixed ${styles}`}
+        >
+          <div className="blur_effect"></div>
+          <main className="home_hero max_width">
+            <h2>Learn. Share. Grow.</h2>
+            <p>
+              Hello! Welcome to my blog. On here, you can find articles on{" "}
+              <Link to="category/design">Design</Link>,{" "}
+              <Link to="category/backend">Backend Development</Link>,
+              <Link to="category/writing"> Technical Writing</Link>, and More.
+            </p>
+          </main>
+          <div className="home_subcategory">
+            <SubCategory name="Home" handleClick={handleClick} />
+          </div>
+        </motion.div>
+        <section id="articles" className={`bg_color_article ${stylesArt}`}>
           <div className="article_container max_width">
-            {dummyJson.map((item) => (
+            {dummyJson.map((item, id) => (
               <Post
+                key={id}
                 category={item}
                 tag="FLASK, DOCKER"
                 title="How to get started with Flask, Docker and AWS forsfh"

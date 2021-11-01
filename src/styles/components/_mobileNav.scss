@@ -1,0 +1,36 @@
+.mobile__nav {
+  position: fixed;
+  background-color: var(--primary-background-blur);
+  backdrop-filter: blur(10px);
+
+  top: 82px;
+  z-index: 20;
+  left: 0px;
+  width: 100vw;
+  overflow-y: hidden;
+  height: calc(100vh - 83px);
+  nav {
+    display: grid;
+    gap: 40px;
+    padding: 0 33px;
+    flex-direction: column;
+    margin-top: 168px;
+    a {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: -0.05em;
+      color: rgba(111, 111, 111, 0.6);;
+    }
+    .mobile_nav_active {
+      color: var(--header-text-color);
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .mobile__nav {
+    display: none;
+  }
+}

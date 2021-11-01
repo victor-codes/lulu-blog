@@ -11,7 +11,6 @@ const PageNotFound = () => {
       <Helmet>
         <title> Page not found - Lulu Nwenyi</title>
       </Helmet>
-      <Header />
       <div className="absolute"></div>
       <main className="not_found">
         

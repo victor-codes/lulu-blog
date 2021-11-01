@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import { ReactComponent as Menu } from ".././assets/menu.svg";
+import MobileNav from "./MobileNav";
+import { ReactComponent as Close } from "../assets/close.svg";
+import { AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const localTheme = localStorage.getItem("mode");
@@ -25,26 +28,43 @@ const Header = () => {
       localStorage.setItem("mode", "light");
     }
   }
+  const [mobileNav, setMobileNav] = useState(false);
+
+  function handleClick() {
+    setMobileNav(!mobileNav);
+  }
   return (
-    <header>
-      <div className="header_container">
-        <div>
-          <h1 className="logo" onClick={theme}>
-            LN
-          </h1>
-          <nav className="menu-items hide">
-            <NavLink to="/home">Home</NavLink>
-            <NavLink to="/design">Design</NavLink>
-            <NavLink to="/dev">{`Dev </> `}</NavLink>
-            <NavLink to="/writing">Writing</NavLink>
-            <NavLink to="/resources">Resources</NavLink>
-            <NavLink to="/sponsor">Sponsor</NavLink>
-          </nav>
-          <Menu />
+    <>
+      <header>
+        <div className="header_container">
+          <div>
+            <h1 className="logo" onClick={theme}>
+              LN
+            </h1>
+            <nav className="menu-items hide">
+              <NavLink to="/home">Home</NavLink>
+              <NavLink to="/design">Design</NavLink>
+              <NavLink to="/dev">{`Dev </> `}</NavLink>
+              <NavLink to="/writing">Writing</NavLink>
+              <NavLink to="/resources">Resources</NavLink>
+              <NavLink to="/sponsor">Sponsor</NavLink>
+            </nav>
+            {mobileNav && <Close onClick={handleClick} />}
+            {!mobileNav && <Menu onClick={handleClick} />}
+          </div>
+          <hr className="hidden" />
         </div>
-        <hr className="hidden" />
-      </div>
-    </header>
+      </header>
+      <AnimatePresence exitBeforeEnter >
+        
+          <MobileNav
+            key="overlay"
+            hide={(e) => setMobileNav(e)}
+            show={mobileNav}
+          />
+        
+      </AnimatePresence>
+    </>
   );
 };
 

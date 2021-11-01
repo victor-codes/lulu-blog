@@ -56,34 +56,36 @@ const Category = ({ name }) => {
       <Helmet>
         <title>{name} - Lulu Nwenyi</title>
       </Helmet>
-      <Header />
       <div>
-        <main className="category_hero max_width">
-          <h2>
-            {name}
-            <div>
-              <ChervonRight /> <span>{subName}</span>
+        <div className="fixed_category">
+          <main className="category_hero max_width">
+            <h2>
+              {name}
+              <div>
+                <ChervonRight /> <span>{subName}</span>
+              </div>
+            </h2>
+            <div className="blur-effect">
+              <div>
+                <div className="circle_1"></div>
+              </div>
             </div>
-          </h2>
-          <div className="blur-effect">
-            <div>
-              <div className="circle_1"></div>
-            </div>
-          </div>
-          {/* <div className="scroll noselect"
+            {/* <div className="scroll noselect"
             onClick={() => {
               return window.scrollTo(0, scroll);
             }}
           >
-            <Scroll />
-            Scroll to continue
-          </div> */}
-        </main>
-        <SubCategory name={name} handleClick={handleClick} />
-        <section id="articles" className="bg_color_article">
+          <Scroll />
+          Scroll to continue
+        </div> */}
+          </main>
+          <SubCategory name={name} handleClick={handleClick} />
+        </div>
+        <section id="articles" className="bg_color_article article__catergory">
           <div className="article_container max_width">
-            {dummyJson.map((item) => (
+            {dummyJson.map((item, id) => (
               <Post
+                key={id}
                 category={name}
                 tag="FLASK, DOCKER"
                 title="How to get started with Flask, Docker and AWS for beginners"

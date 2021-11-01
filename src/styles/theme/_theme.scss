@@ -1,4 +1,4 @@
-:root {
+[data-theme="light"] {
   --logo-color: #000000;
   --header-text-color: #000;
   --header-line-color: #000000;
@@ -14,7 +14,7 @@
   --secondary-background: #ffffff;
 
   --article-primary-color: #1c1c1c;
-  --article-line-color: #676767;
+  --article-line-color: #F3F3F3;
   --article-background: #ffffff;
   --article-tag-color: #bb66ef;
   --article-accent-color: #525a61;
@@ -27,8 +27,8 @@
 
   --footer-bg-color: #f6f6f6;
 
-  --blur-effect: url(../../assets/home-ellipse-1.png),
-    url(../../assets/home-ellipse-2.png);
+  // --blur-effect: url(../../assets/home-ellipse-1.png),
+    // url(../../assets/home-ellipse-2.png);
 
   --blur-effect-position: bottom -500px right 0px, bottom -150px right 55px;
 
@@ -45,8 +45,6 @@
   --blog-post-secondary-color: #464646;
   --blog-contributions-bg-color: #fafafa;
   --blog-contributions-text-color: #464646;
-
-
 }
 
 [data-theme="dark"] {
@@ -78,9 +76,9 @@
 
   --footer-bg-color: #070809;
 
-  --blur-effect: url(../../assets/home-ellipse-1.png);
+  // --blur-effect: url(../../assets/home-ellipse-1.png);
 
-  --blur-effect-position: bottom -650px right 0px;
+  // --blur-effect-position: bottom -650px right 0px;
   --mobile-article-background: #121212;
   --mobile-nav-background: #161616;
   --mobile-nav-line-color: #272727;
@@ -94,7 +92,6 @@
   --blog-post-primary-text-color: #a5a5a5;
   --blog-post-secondary-color: #f3f3f3;
 
-  --blog-contributions-bg-color: #1E1E1E;
-  --blog-contributions-text-color: #F1F1F1;
-
+  --blog-contributions-bg-color: #1e1e1e;
+  --blog-contributions-text-color: #f1f1f1;
 }

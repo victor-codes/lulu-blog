@@ -103,56 +103,54 @@ figure {
     text-align: center;
   }
 }
-.post_content {
-  p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    line-height: 32px;
-    /* or 188% */
+p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 32px;
+  /* or 188% */
 
-    color: var(--blog-post-primary-text-color);
-  }
+  color: var(--blog-post-primary-text-color);
+}
 
-  .hr {
-    width: 100%;
-    height: 0;
-    border-bottom: 1px solid var(--suppport-line-color);
-  }
-  .share_link {
-    div:first-child {
-      display: flex;
-      align-items: center;
-      p {
-        color: var(--blog-post-secondary-color);
-        width: 100%;
-        margin-right: 16px;
-        max-width: fit-content;
-      }
-    }
-    .link {
-      flex-wrap: wrap;
+.hr {
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid var(--suppport-line-color);
+}
+.share_link {
+  div:first-child {
+    display: flex;
+    align-items: center;
+    p {
+      color: var(--blog-post-secondary-color);
       width: 100%;
-      max-width: 621px;
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      margin: 31px auto;
+      margin-right: 16px;
+      max-width: fit-content;
     }
-    margin-top: 48px;
-    span {
-      color: #d9d9d9;
-    }
-    a {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 19px;
-      letter-spacing: 0.03em;
-      text-decoration-line: underline;
-      color: var(--paginate-primary-color);
-      text-decoration: underline;
-    }
+  }
+  .link {
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 621px;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    margin: 31px auto;
+  }
+  margin-top: 48px;
+  span {
+    color: #d9d9d9;
+  }
+  a {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: var(--paginate-primary-color);
+    text-decoration: underline;
   }
 }
 

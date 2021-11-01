@@ -17,6 +17,7 @@
     overflow-x: scroll;
     align-items: flex-end;
     a {
+      transition: none;
       margin-right: 16px;
       padding: 0 16px;
       white-space: nowrap;
@@ -27,6 +28,7 @@
       text-align: center;
     }
     .active {
+      transition: none;
       color: var(--primary-text-color);
       font-weight: bold;
     }

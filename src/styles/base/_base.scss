@@ -90,9 +90,20 @@ a {
       width: 384.97px;
       height: 363.28px;
       border-radius: 50%;
-      background: rgba(161, 54, 188, 0.8);
+      // background: rgba(161, 54, 188, 0.8);
       // background: #753e7d;
       filter: blur(180px);
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .blur-effect {
+    div {
+      div {
+        width: 260.06px  !important;
+        height: 189.94px  !important;
+      }
     }
   }
 }

@@ -4,9 +4,8 @@ import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
 import { stringToLink } from "../utils/helperFunction";
 
 const SubCategory = ({ name, handleClick }) => {
-  
   const categories = {
-    home: ["All", "Category 1", "Category 2", "Category 3"],
+    home: ["All", "Design", "Dev", "Writing"],
     design: ["All", "UX Writing", "Category 1", "Category 2"],
     dev: ["All", "Backend", "Category 1", "Category 2"],
     writing: ["All", "Category 1", "Category 2", "Category 3"],

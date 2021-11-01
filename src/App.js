@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet";
 import PageNotFound from "./pages/PageNotFound";
 import Category from "./pages/Category";
 import SinglePost from "./pages/SinglePost";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <title>Home - Lulu Nwenyi</title>
       </Helmet>
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/">
             <Redirect to="/home/all" />
@@ -27,6 +29,15 @@ function App() {
           <Route exact path="/home">
             <Redirect to="/home/all" />
           </Route>
+          {/* <Route exact path="/home/design">
+            <Redirect to="design" />
+          </Route>
+          <Route exact path="/home/dev">
+            <Redirect to="dev" />
+          </Route>
+          <Route exact path="/home/writing">
+            <Redirect to="writing" />
+          </Route> */}
           <Route exact path="/home/:subcategory">
             <Home />
           </Route>

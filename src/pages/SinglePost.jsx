@@ -6,6 +6,8 @@ import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import Image from "../assets/post-image.jpg";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
+// import content from "../components/Content.md";
+import ReactMarkdown from "react-markdown";
 
 const SinglePost = () => {
   const { slug } = useParams();
@@ -25,13 +27,12 @@ const SinglePost = () => {
 
     return window.scrollTo(0, scroll);
   }
-
+// console.log(content);
   return (
     <div className="single_post_footer_bg">
       <Helmet>
         <title>{title} - Lulu Nwenyi</title>
       </Helmet>
-      <Header />
       <div className="single_post">
         <div className="post_info">
           <span children="tag">DESIGN , UI/UX RESEARCH</span>
@@ -51,6 +52,7 @@ const SinglePost = () => {
             <img src={Image} alt="" />
             <figcaption>Image alt text</figcaption>
           </figure>
+          {/* <ReactMarkdown source={content} /> */}
           <div className="post_content">
             <p>
               To design user-oriented products, it’s important that you carry
@@ -72,30 +74,30 @@ const SinglePost = () => {
               products, it’s important that you carry out research. User
               Research is a method used to understand the behaviors.
             </p>
-            <div className="share_link">
-              <div>
-                <p>SHARE TO</p>
-                <div className="hr"></div>
-              </div>
-              <div className="link">
-                <a href="/">TWITTER</a> <span>•</span>
-                <a href="/">FACEBOOK</a>
-                <span>•</span>
-                <a href="/">LINKEDIN</a>
-                <span className="none">•</span>
-                <a className="none" href="/">
-                  WHATSAPP
-                </a>
-                <span className="none">•</span>
-                <a className="none" href="/">
-                  EMAIL
-                </a>
-              </div>
-            </div>
-            <div className="contributions">
-              <p>CONTRIBUTIONS</p>
+          </div>
+          <div className="share_link">
+            <div>
+              <p>SHARE TO</p>
               <div className="hr"></div>
             </div>
+            <div className="link">
+              <a href="/">TWITTER</a> <span>•</span>
+              <a href="/">FACEBOOK</a>
+              <span>•</span>
+              <a href="/">LINKEDIN</a>
+              <span className="none">•</span>
+              <a className="none" href="/">
+                WHATSAPP
+              </a>
+              <span className="none">•</span>
+              <a className="none" href="/">
+                EMAIL
+              </a>
+            </div>
+          </div>
+          <div className="contributions">
+            <p>CONTRIBUTIONS</p>
+            <div className="hr"></div>
           </div>
           <div className="contributions_bg_color">
             📌
