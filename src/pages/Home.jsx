@@ -145,7 +145,7 @@ const Home = () => {
           transition={{ duration: 0.03 }}
           className={`fixed hero_fixed ${styles}`}
         >
-          <div className="blur_effect"></div>
+          <div className="blur_fect"></div>
           <main className="home_hero max_width">
             <h2>Learn. Share. Grow.</h2>
             <p>
