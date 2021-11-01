@@ -19,6 +19,9 @@ header {
     margin: auto !important;
 
     svg {
+      path {
+        stroke: var(--logo-color);
+      }
       display: none;
       stroke: var(--logo-color);
       fill: var(--logo-color);
