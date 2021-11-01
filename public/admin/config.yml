@@ -13,12 +13,17 @@ collections:
     folder: "posts"
     create: true
     slug: "{{title}}"
-     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - { label: 'Tags', name: 'tags', widget: 'string' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - {label: "Body", name: "body", widget: "markdown"}
-      - { label: 'Description', name: description, widget: text, required: false }
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Description",
+          name: description,
+          widget: text,
+          required: false,
+        }
