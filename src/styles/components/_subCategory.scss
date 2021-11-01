@@ -47,6 +47,20 @@
       stroke: var(--primary-text-color);
     }
   }
+  .less_btn {
+    position: absolute;
+    left: 24px;
+    padding: 3px;
+    border-radius: 50%;
+    background: var(--mobile-nav-btn-bg-color);
+
+    svg {
+      path {
+        fill: var(--primary-text-color);
+      }
+      stroke: var(--primary-text-color);
+    }
+  }
 }
 
 @media screen and (min-width: 580px) {

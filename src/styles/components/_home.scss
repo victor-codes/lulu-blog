@@ -184,7 +184,18 @@
       padding: 30px 33px 0px !important;
       margin: 0 !important;
       p {
-        display: none;
+        // height: 0px !important;
+        // overflow: hidden;
+        // clip: rect(0 0 0 0);
+        // clip-path: inset(50%);
+        // height: 1px;
+        // overflow: hidden;
+        // position: absolute;
+        // white-space: nowrap;
+        // width: 1px;
+        height: 0px;
+        margin: 0 !important;
+        // display: none;
       }
     }
   }
