@@ -8,18 +8,7 @@ import { NavLink, useParams } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import PageNotFound from "./PageNotFound";
-
-const dummyJson = [
-  "ewq",
-  "wqerqw",
-  "ewq",
-  "wqerqw",
-  "ewq",
-  "wqerqw",
-  "ewq",
-  "wqerqw",
-  "ewq",
-];
+import postList from "../data/posts.json";
 
 const categories = {
   home: ["All", "Category 1", "Category 2", "Category 3"],
@@ -29,6 +18,8 @@ const categories = {
 };
 
 const Category = ({ name }) => {
+  const [postEmpty, setPostEmpty] = useState(false);
+
   const { subcategory } = useParams();
 
   const [subName, setSubName] = useState("All");
@@ -48,6 +39,14 @@ const Category = ({ name }) => {
   if (!convertCategoriesToLowercase.includes(subcategoryToString)) {
     return <PageNotFound />;
   }
+
+  const filteredPost = postList.filter((post) => {
+    if (name === post.category) {
+      return post;
+    } else {
+      return null;
+    }
+  });
 
   return (
     <>
@@ -81,17 +80,13 @@ const Category = ({ name }) => {
         </div>
         <section id="articles" className="bg_color_article article__catergory">
           <div className="article_container max_width">
-            {dummyJson.map((item, id) => (
-              <Post
-                key={id}
-                category={name}
-                tag="FLASK, DOCKER"
-                title="How to get started with Flask, Docker and AWS for beginners"
-                timestamp="Jan 20, 2021"
-                body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-              />
-            ))}
+            {filteredPost.length > 0
+              ? filteredPost.map((post, id) => <Post key={id} post={post} />)
+              : () => {
+                  return setPostEmpty(true);
+                }}
           </div>
+          {postEmpty && <div>No post yet, come back later</div>}
           <div className="paginate">
             <button
               className="inline_flex"

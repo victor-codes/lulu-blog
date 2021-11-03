@@ -27,7 +27,7 @@ collections:
       - {
           label: "Category",
           name: "category",
-          widget: "string",
+          widget: "string",As you may or may not know; In python, a variable is created the
           required: true,
         }
       - { label: "Slug", name: "slug", widget: "string" }

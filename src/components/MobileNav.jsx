@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -8,9 +8,9 @@ const MobileNav = ({ show, hide }) => {
     enter: { x: 0 },
     leave: { x: "-100vw" },
   };
-  function handleClick() {
-    hide(false);
-  }
+  // function handleClick() {
+  //   hide(false);
+  // }
   return (
     <motion.div
       key="1"

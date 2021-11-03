@@ -8,9 +8,13 @@
     "@testing-library/user-event": "^12.1.10",
     "framer-motion": "4.1.17",
     "global": "^4.4.0",
+    "gray-matter": "^4.0.3",
     "gsap": "^3.8.0",
     "highlight.js": "^11.3.1",
+    "js-yaml": "^4.1.0",
+    "markdown-json": "^1.6.0",
     "node-sass": "4.14.1",
+    "path": "^0.12.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
@@ -24,11 +28,11 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "node public/main.js && react-scripts start",
-    "build": "node public/main.js && react-scripts build",
+    "start": "node src/utils/main.js && react-scripts start",
+    "build": "node src/utils/main.js && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node public/main.js"
+    "server": "node src/utils/main.js"
   },
   "eslintConfig": {
     "extends": [

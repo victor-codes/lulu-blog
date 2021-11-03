@@ -3,15 +3,21 @@ import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow-right.svg";
 import { stringToLink, truncateString } from "../utils/helperFunction";
 
-const Post = ({ tag, title, timestamp, body, category }) => {
+const Post = ({ post }) => {
+  const { tags, title, publishDate, description, category } = post;
+
   return (
     <article className="post_article">
       <div className="info">
-        <span className="tag">{tag}</span>
+        <div className="tag">
+          {tags.map((tag, i) => (
+            <span key={i}>{tag.toUpperCase()}</span>
+          ))}
+        </div>
         <h3>{truncateString(title, 49)}</h3>
-        <span className="timestamp">{timestamp}</span>
+        <span className="timestamp">{publishDate}</span>
       </div>
-      <p>{truncateString(body, 150)}</p>
+      <p>{truncateString(description, 150)}</p>
       <Link to={`/${stringToLink(category)}/post/${stringToLink(title)}`}>
         READ MORE <Arrow />{" "}
       </Link>

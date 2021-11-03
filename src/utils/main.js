@@ -1,7 +1,8 @@
 const path = require("path");
 const fs = require("fs");
+const matter = require("gray-matter");
 
-const dirPath = path.join(__dirname, "../posts");
+const dirPath = path.join(__dirname, "../../posts");
 let postlist = [];
 
 const months = {
@@ -20,13 +21,15 @@ const months = {
 };
 
 const formatDate = (date) => {
-  const datetimeArray = date.split("T");
-  const dateArray = datetimeArray[0].split("-");
+  
+  const datetimeArray = date.toString().split("T");
+  const dateArray = datetimeArray[0].split(" ");
   const timeArray = datetimeArray[1].split(":");
+  
   const month = dateArray[1];
   const monthName = months[dateArray[1]];
   const day = dateArray[2];
-  const year = dateArray[0];
+  const year = dateArray[3];
   const time = `${timeArray[0]}:${timeArray[1]}`;
 
   return {
@@ -43,62 +46,50 @@ const getPosts = () => {
     if (err) {
       return console.log("Failed to list contents of directory: " + err);
     }
+
     let ilist = [];
+
     files.forEach((file, i) => {
       let obj = {};
       let post;
+
       fs.readFile(`${dirPath}/${file}`, "utf8", (err, contents) => {
-        const getMetadataIndices = (acc, elem, i) => {
-          if (/^---/.test(elem)) {
-            acc.push(i);
-          }
-          return acc;
-        };
-        const parseMetadata = ({ lines, metadataIndices }) => {
-          if (metadataIndices.length > 0) {
-            let metadata = lines.slice(
-              metadataIndices[0] + 1,
-              metadataIndices[1]
-            );
-            metadata.forEach((line) => {
-              obj[line.split(": ")[0]] = line.split(": ")[1];
-            });
-            return obj;
-          }
-        };
+        const output = matter(contents);
 
-        const parseContent = ({ lines, metadataIndices }) => {
-          if (metadataIndices.length > 0) {
-            lines = lines.slice(metadataIndices[1] + 1, lines.length);
-          }
-          return lines.join("\n");
-        };
-        const lines = contents.split("\n");
-        const metadataIndices = lines.reduce(getMetadataIndices, []);
-        const metadata = parseMetadata({ lines, metadataIndices });
+        let metadata = output.data;
 
-        const content = parseContent({ lines, metadataIndices });
-        const parsedDate = metadata.date
-          ? formatDate(metadata.date)
+        let content = output.content;
+        let dateString = output.data.date;
+
+        const parsedDate = dateString
+          ? formatDate(dateString)
           : new Date();
-        const publishedDate = `${parsedDate["monthName"]} ${parsedDate["day"]}, ${parsedDate["year"]}`;
+
+        const publishedDate = `${parsedDate["month"]} ${parsedDate["day"]}, ${parsedDate["year"]}`;
+
         const datestring = `${parsedDate["year"]}-${parsedDate["month"]}-${parsedDate["day"]}T${parsedDate["time"]}:00`;
-        const date = new Date(datestring);
+
+        const date = new Date(dateString);
+
         const timestamp = date.getTime() / 1000;
+
         post = {
           id: timestamp,
           title: metadata.title ? metadata.title : "No title given",
+          time1: datestring,
           author: metadata.author ? metadata.author : "No author given",
-          date: publishedDate ? publishedDate : "No date given",
+          publishDate: publishedDate ? publishedDate : "No date given",
           time: parsedDate["time"],
           thumbnail: metadata.thumbnail,
-          credit: metadata.credit,
+          category: metadata.category,
           content: content ? content : "No content given",
           slug: metadata.slug ? metadata.slug : "404",
           tags: metadata.tags ? metadata.tags.split(",") : null,
           description: metadata.description,
         };
+
         postlist.push(post);
+
         ilist.push(i);
         if (ilist.length === files.length) {
           const sortedList = postlist.sort((a, b) => {

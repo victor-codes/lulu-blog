@@ -81,7 +81,7 @@ const Footer = () => {
                   <p>Become a Sponsor.</p>
                   <span>
                     If you enjoy any of my projects or articles, you can support
-                    my content using 
+                    my content using
                     <a
                       rel="noreferrer noopener"
                       target="_blank"
@@ -101,12 +101,36 @@ const Footer = () => {
       <div className="menu_bg">
         <div className="menu">
           <nav className="menu_items">
-            <Link to="/">Twitter</Link>
-            <Link to="/">LinkedIn</Link>
-            <Link to="/">Instagram</Link>
-            <Link to="/">Email</Link>
-            <Link to="/">Resources</Link>
-            <Link to="/">Sponsor</Link>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://www.twitter.com/luluNwenyi"
+            >
+              Twitter
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://www.linkedIn.com"
+            >
+              LinkedIn
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://www.instagram.com"
+            >
+              Instagram
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="mailto:dev@lulunwenyi.com"
+            >
+              Email
+            </a>
+            <Link to="/resources">Resources</Link>
+            <Link to="/sponsor">Sponsor</Link>
           </nav>
           <p className="copyright">
             Copyrights &#169; 2021, Lulu Nwenyi. All rights reserved.

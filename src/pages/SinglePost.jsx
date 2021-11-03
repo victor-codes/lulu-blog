@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
-import Image from "../assets/post-image.jpg";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import Markdown from "react-markdown";
@@ -17,8 +16,7 @@ const SinglePost = () => {
   const { slug } = useParams();
   const titleSlug = slug.split("-").join(" ");
   const title = titleSlug.charAt(0).toUpperCase() + titleSlug.slice(1);
-  hljs.registerLanguage("python", python);
-
+  
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
@@ -35,6 +33,8 @@ const SinglePost = () => {
 
   hljs.registerLanguage("css", css);
   hljs.registerLanguage("xml", xml);
+  hljs.registerLanguage("python", python);
+
   let fetchedData = postData[0];
 
   let content = fetchedData.content;
@@ -46,16 +46,18 @@ const SinglePost = () => {
     });
   }, [codeRef]);
 
+  const shareTwitter = `https://twitter.com/share?url=${window.location.href}&text=I just read ${fetchedData.title} by @LuluNwenyi`;
+
   return (
     <div className="single_post_footer_bg">
       <Helmet>
-        <title>{title} - Lulu Nwenyi</title>
+        <title>{fetchedData.title} - Lulu Nwenyi</title>
       </Helmet>
       <div className="single_post">
         <div className="post_info">
           <span children="tag">DESIGN , UI/UX RESEARCH</span>
-          <h2>{title}</h2>
-          <span>Jan 20, 2021</span>
+          <h2>{fetchedData.title}</h2>
+          <span>J{fetchedData.date}</span>
         </div>
         <div className="inline_flex share">
           <Link onClick={handleScroll} to="/">
@@ -67,7 +69,7 @@ const SinglePost = () => {
       <div className="post_bg_color">
         <div className="post__details">
           <figure>
-            <img src={Image} alt="" />
+            <img src={fetchedData.thumbnail} alt="" />
             <figcaption>Image alt text</figcaption>
           </figure>
           <article ref={codeRef} className="post_content">
@@ -100,16 +102,33 @@ const SinglePost = () => {
               <div className="hr"></div>
             </div>
             <div className="link">
-              <a href="/">TWITTER</a> <span>•</span>
-              <a href="/">FACEBOOK</a>
+              <a href={shareTwitter} target="_blank" rel="noreferrer noopener">
+                TWITTER
+              </a>{" "}
               <span>•</span>
-              <a href="/">LINKEDIN</a>
+              <a href="/" target="_blank" rel="noreferrer noopener">
+                FACEBOOK
+              </a>
+              <span>•</span>
+              <a href="/" target="_blank" rel="noreferrer noopener">
+                LINKEDIN
+              </a>
               <span className="none">•</span>
-              <a className="none" href="/">
+              <a
+                className="none"
+                href="/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 WHATSAPP
               </a>
               <span className="none">•</span>
-              <a className="none" href="/">
+              <a
+                className="none"
+                href="/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 EMAIL
               </a>
             </div>

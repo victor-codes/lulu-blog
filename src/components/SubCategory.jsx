@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
 import { ReactComponent as ChrevonLeft } from "../assets/chervon-left.svg";
 import { stringToLink } from "../utils/helperFunction";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const SubCategory = ({ name, handleClick }) => {
   const categories = {

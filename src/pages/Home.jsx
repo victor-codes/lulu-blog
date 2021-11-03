@@ -8,9 +8,13 @@ import { Link, NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+// import { useAnimation } from "framer-motion";
+// import gsap from "gsap";
+// import ScrollTrigger from "gsap/ScrollTrigger";
+
+import postList from "../data/posts.json";
+// import { fetchPostContent } from "../utils/main";
+// import { fetchPostContent, PostContent } from "../utils/main";
 
 const Home = () => {
   const [scroll, setScroll] = useState(0);
@@ -25,20 +29,8 @@ const Home = () => {
       .querySelector(".bg_color_article")
       .getBoundingClientRect().top;
     setScroll(articleTop);
-    console.log(articleTop);
   }, [scroll]);
 
-  const dummyJson = [
-    "dev",
-    "design",
-    "writing",
-    "writing",
-    "dev",
-    "dev",
-    "design",
-    "design",
-    "dev",
-  ];
   // const { page } = useParams();
   // const pageToString = parseInt(page, 10);
 
@@ -60,6 +52,8 @@ const Home = () => {
   // }
   // function selizerPrev(page) {
   //   let fixedPage;
+
+  // console.log(PostContent);
 
   //   if (page === 1) {
   //     fixedPage = "";
@@ -126,7 +120,7 @@ const Home = () => {
   const { ref, inView } = useInView({
     threshold: 1,
   });
-  const animation = useAnimation();
+  // const animation = useAnimation();
   const [styles, setStyles] = useState("");
   const [stylesArt, setStylesArt] = useState("");
 
@@ -142,11 +136,12 @@ const Home = () => {
         setStyles("static_style");
         setStylesArt("");
       } else if (scrollY > 264) {
-        setStylesArt("articles_fixed");
+        setStylesArt(`articles_fixed ${subName}`);
         return setStyles("fixed_style");
       }
     });
   });
+  // fetchPostContent()
 
   // useEffect(() => {
   //   window.addEventListener("scroll", () => {
@@ -159,12 +154,7 @@ const Home = () => {
         <title>Blog - Lulu Nwenyi</title>
       </Helmet>
       <div>
-        <div
-          ref={ref}
-          animate={animation}
-          transition={{ duration: 0.03 }}
-          className={`fixed hero_fixed trigger ${styles}`}
-        >
+        <div ref={ref} className={`fixed hero_fixed trigger ${styles}`}>
           <div className="blur_fect"></div>
           <main className="home_hero max_width">
             <h2>Learn. Share. Grow.</h2>
@@ -183,15 +173,8 @@ const Home = () => {
         >
           <SubCategory name="Home" handleClick={handleClick} />
           <div className="article_container max_width">
-            {dummyJson.map((item, id) => (
-              <Post
-                key={id}
-                category={item}
-                tag="FLASK, DOCKER"
-                title="How to get started with Flask, Docker and AWS forsfh"
-                timestamp="Jan 20, 2021"
-                body="To design user-oriented products, it’s important that you carry out research. User Research is a method used to understand the behaviours derstand thedfs"
-              />
+            {postList.map((post, id) => (
+              <Post post={post} key={id} />
             ))}
           </div>
           <div className="paginate">
