@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "src/image"
-src_folder: "/image"
+media_folder: "public/image"
+public_folder: "/image"
 
 collections:
   - name: "posts"
@@ -23,12 +23,12 @@ collections:
           required: true,
         }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Featured Image alt text", name: "thumbnail alt text", widget: "string" }
+      - { label: "Featured Image alt text", name: "thumbnail alt text", widget: "string", required: true}
       - { label: "Tags", name: "tags", widget: "string", required: true }
       - {
           label: "Category",
           name: "category",
-          widget: "string",As you may or may not know; In python, a variable is created the
+          widget: "string",
           required: true,
         }
       - { label: "Slug", name: "slug", widget: "string" }
