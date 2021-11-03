@@ -10,9 +10,7 @@ const Post = ({ post }) => {
     <article className="post_article">
       <div className="info">
         <div className="tag">
-          {tags.map((tag, i) => (
-            <span key={i}>{tag.toUpperCase()}</span>
-          ))}
+          <span>{tags.toUpperCase()}</span>
         </div>
         <h3>{truncateString(title, 49)}</h3>
         <span className="timestamp">{publishDate}</span>

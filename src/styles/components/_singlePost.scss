@@ -108,8 +108,6 @@ p {
   font-weight: normal;
   font-size: 17px;
   line-height: 32px;
-  /* or 188% */
-
   color: var(--blog-post-primary-text-color);
 }
 
@@ -218,11 +216,6 @@ p {
 
 .single_post_footer_bg {
   margin-top: 95px !important;
-  // footer {
-  //   .about_container {
-  //   //   background: none;
-  //   }
-  // }
 }
 
 .post_content {
@@ -231,7 +224,7 @@ p {
     font-weight: bold;
     font-size: 40px;
     line-height: 65px;
-    color: #161616;
+    color: var(--blog-header-color);
   }
   h2 {
     font-style: normal;
@@ -239,11 +232,7 @@ p {
     font-size: 32px;
     line-height: 52px;
     margin: 24px 0 16px;
-    /* identical to box height, or 162% */
-
-    /* dark/100 */
-
-    color: #161616;
+    color: var(--blog-header-color);
   }
   h3 {
     margin: 16px 0 12px;
@@ -251,59 +240,79 @@ p {
     font-weight: bold;
     font-size: 28px;
     line-height: 45px;
-    /* identical to box height, or 162% */
-
-    /* dark/100 */
-
-    color: #161616;
+    color: var(--blog-header-color);
   }
   h4 {
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 39px;
-    /* identical to box height, or 162% */
-
-    color: #313131;
+    color: var(--blog-header-2-color);
   }
   h5 {
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 32px;
-    /* identical to box height, or 162% */
-
-    color: #313131;
+    color: var(--blog-header-2-color);
   }
   pre {
     width: 100%;
     max-width: 680px;
     margin: 32px auto;
   }
-  p {
+  p,
+  ol li,
+  ul li, cite {
     font-family: "General Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 17px;
     line-height: 28px;
-    /* identical to box height, or 162% */
-
-    color: #313131;
+    color: var(--blog-post-primary-text-color);
   }
   ul,
   ol {
     padding-left: 32px;
+  }
+  img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width: 540px) {
+  .post_content {
+    h1 {
+      font-size: 28px;
+      line-height: 45px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 39px;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    h4 {
+      font-size: 18px;
+      line-height: 29px;
+    }
+    h6 {
+      font-size: 16px;
+      line-height: 26px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
     li {
-      margin-bottom: 12px;
-
-      font-family: "General Sans", sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 17px;
-      line-height: 28px;
-      /* identical to box height, or 162% */
-
-      color: #313131;
+      line-height: 27px;
+      color: var(--blog-list-color) !important;
     }
   }
 }

@@ -21,11 +21,10 @@ const months = {
 };
 
 const formatDate = (date) => {
-  
   const datetimeArray = date.toString().split("T");
   const dateArray = datetimeArray[0].split(" ");
   const timeArray = datetimeArray[1].split(":");
-  
+
   const month = dateArray[1];
   const monthName = months[dateArray[1]];
   const day = dateArray[2];
@@ -50,7 +49,6 @@ const getPosts = () => {
     let ilist = [];
 
     files.forEach((file, i) => {
-      let obj = {};
       let post;
 
       fs.readFile(`${dirPath}/${file}`, "utf8", (err, contents) => {
@@ -61,9 +59,7 @@ const getPosts = () => {
         let content = output.content;
         let dateString = output.data.date;
 
-        const parsedDate = dateString
-          ? formatDate(dateString)
-          : new Date();
+        const parsedDate = dateString ? formatDate(dateString) : new Date();
 
         const publishedDate = `${parsedDate["month"]} ${parsedDate["day"]}, ${parsedDate["year"]}`;
 
@@ -71,20 +67,20 @@ const getPosts = () => {
 
         const date = new Date(dateString);
 
-        const timestamp = date.getTime() / 1000;
+        const timestamp = Math.floor(date.getTime() / 1000);
 
         post = {
           id: timestamp,
           title: metadata.title ? metadata.title : "No title given",
           time1: datestring,
-          author: metadata.author ? metadata.author : "No author given",
+          author: "Lulu Nwenyi",
           publishDate: publishedDate ? publishedDate : "No date given",
           time: parsedDate["time"],
           thumbnail: metadata.thumbnail,
           category: metadata.category,
           content: content ? content : "No content given",
           slug: metadata.slug ? metadata.slug : "404",
-          tags: metadata.tags ? metadata.tags.split(",") : null,
+          tags: metadata.tags ? metadata.tags : null,
           description: metadata.description,
         };
 
@@ -95,7 +91,9 @@ const getPosts = () => {
           const sortedList = postlist.sort((a, b) => {
             return a.id < b.id ? 1 : -1;
           });
+
           let data = JSON.stringify(sortedList);
+
           fs.writeFileSync("src/data/posts.json", data);
         }
       });

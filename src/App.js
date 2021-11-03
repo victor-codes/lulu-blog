@@ -74,11 +74,14 @@ function App() {
             <Home />
           </Route>
 
-          <Route exact path="/:category/post/:slug">
+          <Route exact strict path="/:category/post/:slug">
             <SinglePost />
           </Route>
 
           <Route exact path="*">
+            <PageNotFound />
+          </Route>
+          <Route exact path="/404">
             <PageNotFound />
           </Route>
         </Switch>

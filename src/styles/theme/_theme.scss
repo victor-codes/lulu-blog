@@ -14,7 +14,7 @@
   --secondary-background: #ffffff;
 
   --article-primary-color: #1c1c1c;
-  --article-line-color: #F3F3F3;
+  --article-line-color: #f3f3f3;
   --article-background: #ffffff;
   --article-tag-color: #bb66ef;
   --article-accent-color: #525a61;
@@ -28,7 +28,7 @@
   --footer-bg-color: #f6f6f6;
 
   // --blur-effect: url(../../assets/home-ellipse-1.png),
-    // url(../../assets/home-ellipse-2.png);
+  // url(../../assets/home-ellipse-2.png);
 
   --blur-effect-position: bottom -500px right 0px, bottom -150px right 55px;
 
@@ -45,6 +45,9 @@
   --blog-post-secondary-color: #464646;
   --blog-contributions-bg-color: #fafafa;
   --blog-contributions-text-color: #464646;
+  --blog-header-color: #161616;
+  --blog-header-2-color: #313131;
+  --blog-list-color: #313131;
 }
 
 [data-theme="dark"] {
@@ -75,6 +78,10 @@
   --project-accent-color: #d2d2d2;
 
   --footer-bg-color: #070809;
+  --blog-header-color: #f1f1f1;
+  --blog-header-2-color: #f1f1f1;
+  --blog-list-color: #d2d2d2;
+
 
   // --blur-effect: url(../../assets/home-ellipse-1.png);
 

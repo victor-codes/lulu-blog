@@ -19,6 +19,8 @@ import postList from "../data/posts.json";
 const Home = () => {
   const [scroll, setScroll] = useState(0);
   const [subName, setSubName] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const postPerPage = 9;
 
   function handleClick(name) {
     setSubName(name);
@@ -31,71 +33,13 @@ const Home = () => {
     setScroll(articleTop);
   }, [scroll]);
 
-  // const { page } = useParams();
-  // const pageToString = parseInt(page, 10);
+  // pagination
 
-  // function selizerNext(page) {
-  //   let fixedPage;
-  //   if (page === 12) {
-  //     fixedPage = "";
-  //   } else {
-  //     fixedPage = page + 1;
-  //   }
-  //   return fixedPage;
-  // }
-  // function selizer(page) {
-  //   let fixedPage;
-  //   if (page === 12) {
-  //     fixedPage = "";
-  //   }
-  //   return fixedPage;
-  // }
-  // function selizerPrev(page) {
-  //   let fixedPage;
+  const indexOfLastPage = currentPage * postPerPage;
+  const indexOfFirstPage = indexOfLastPage - postPerPage;
 
-  // console.log(PostContent);
-
-  //   if (page === 1) {
-  //     fixedPage = "";
-  //   } else {
-  //     fixedPage = page - 1;
-  //   }
-
-  //   return fixedPage;
-  // }
-
-  // const [pageList, setPageList] = useState({
-  //   one: selizerPrev(pageToString),
-  //   two: selizer(pageToString),
-  //   three: selizerNext(pageToString),
-  // });
-  // const history = useHistory();
-
-  // const prevPage = (page) => {
-  //   let newPage = parseInt(page, 10);
-  //   if (newPage > 1) {
-  //     newPage -= 1;
-  //     if (newPage < 1) {
-  //       setPageList({ one: "", two: newPage, three: newPage + 1 });
-  //     } else {
-  //       setPageList({ one: newPage - 1, two: newPage, three: newPage + 1 });
-  //     }
-
-  //     return String(newPage);
-  //   } else return String(newPage);
-  // };
-  // const nextPage = (page, total) => {
-  //   let newPage = parseInt(page, 10);
-  //   if (total > newPage) {
-  //     newPage += 1;
-  //     if (newPage === 12) {
-  //       setPageList({ one: newPage - 1, two: newPage, three: "" });
-  //     } else {
-  //       setPageList({ one: newPage - 1, two: newPage, three: newPage + 1 });
-  //     }
-  //     return String(newPage);
-  //   } else return String(newPage);
-  // };
+  const currentPosts = postList.slice(indexOfFirstPage, indexOfLastPage);
+  console.log(currentPosts);
 
   // gsap.registerPlugin(ScrollTrigger);
 
@@ -173,7 +117,7 @@ const Home = () => {
         >
           <SubCategory name="Home" handleClick={handleClick} />
           <div className="article_container max_width">
-            {postList.map((post, id) => (
+            {currentPosts.map((post, id) => (
               <Post post={post} key={id} />
             ))}
           </div>
@@ -202,9 +146,9 @@ const Home = () => {
               </NavLink>
             </div>
             <button
-              // onClick={() => {
-              //   // history.push(nextPage(page, 12));
-              // }}
+              onClick={() => {
+                // setCurrentPage()
+              }}
               className="inline_flex"
             >
               NEXT <ArrowRight />
