@@ -22,6 +22,8 @@ collections:
           widget: "datetime",
           required: true,
         }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Featured Image alt text", name: "thumbnail alt text", widget: "string"}
       - { label: "Tags", name: "tags", widget: "string", required: true }
       - {
           label: "Category",

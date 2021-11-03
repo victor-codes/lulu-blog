@@ -18,7 +18,6 @@ const categories = {
 };
 
 const Category = ({ name }) => {
-
   const { subcategory } = useParams();
 
   const [subName, setSubName] = useState("All");
@@ -78,15 +77,15 @@ const Category = ({ name }) => {
           <SubCategory name={name} handleClick={handleClick} />
         </div>
         <section id="articles" className="bg_color_article article__catergory">
-          {filteredPost.length > 0 ? (
-            filteredPost.map((post, id) => (
-              <div className="article_container max_width">
-                <Post key={id} post={post} />
+          <div className="article_container max_width">
+            {filteredPost.length > 0 ? (
+              filteredPost.map((post, id) => <Post key={id} post={post} />)
+            ) : (
+              <div className="max_width no_post ">
+                No post yet, come back later :(
               </div>
-            ))
-          ) : (
-            <div className="max_width no_post ">No post yet, come back later :(</div>
-          )}
+            )}
+          </div>
           <div className="paginate">
             <button
               className="inline_flex"
