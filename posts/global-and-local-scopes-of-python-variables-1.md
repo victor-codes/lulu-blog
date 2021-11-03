@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Global and Local Scopes of Python Variables
-date: 2021-11-01T20:28:29.029Z
+date: 2021-06-07T21:41:47.552Z
 thumbnail: ""
 tags: Python, Docker
 category: Dev
