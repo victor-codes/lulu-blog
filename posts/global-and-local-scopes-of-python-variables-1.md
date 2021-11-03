@@ -2,7 +2,7 @@
 layout: blog
 title: Global and Local Scopes of Python Variables
 date: 2021-11-01T20:28:29.029Z
-thumbnail: https://lulunwenyi.super.site/_next/image?url=https%3A%2F%2Fsuper-static-assets.s3.amazonaws.com%2F1fbba07a-705f-4e88-9440-65f7cb599915%2Fimages%2F063df8db-079a-45f8-a291-4db863d73d96.png&w=1920&q=80
+thumbnail: ""
 tags: Python, Docker
 category: Dev
 slug: global-and-local-scopes-of-python-variables
