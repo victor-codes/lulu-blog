@@ -34,7 +34,7 @@ Going over what we would be working on; we’re building an app that sends tweet
 
 For simplicity, we would structure our app like this: 
 
-![iAffirmbot_directory.png](/image/iaffirmbot_directory.png)
+![iAffirmbot_directory.png](/image/iaffirmbot_directory.png "iAffirmbot_directory")
 
 Once this is done, we can setup the environment we would be working in. To create and activate the virtual environment, run the following commands:
 
@@ -198,7 +198,7 @@ $ python main.py
 
 When we check our twitter account, we should have a tweet with your app’s name, like this:
 
-![D522B0C8-1644-411A-80CF-88ABF6E60751.jpeg](/image/d522b0c8-1644-411a-80cf-88abf6e60751.jpeg)
+![D522B0C8-1644-411A-80CF-88ABF6E60751.jpeg](/image/d522b0c8-1644-411a-80cf-88abf6e60751.jpeg "iAffirmBot twitter image")
 
 Though our bot works, we want to set intervals for it. I mean that the aim is to get the bot to tweet every 10 minutes. 
 
@@ -242,7 +242,7 @@ Yaay! Our app works great. However, we can’t always run our bot in our termina
 
 Login to your dashboard and create an app. Once you do so, navigate to “Settings” and Reveal Config Vars" to add your environment variables. Add the key - value pair from your `.env` file one after the other. 
 
-![Screen Shot 2021-08-20 at 12.50.00 PM.png](/image/screen_shot_2021-08-20_at_12.50.00_pm.png)
+![Screen Shot 2021-08-20 at 12.50.00 PM.png](/image/screen_shot_2021-08-20_at_12.50.00_pm.png "heroku")
 
 After the config variables are set up, we can go back to our code editor to create the `Procfile` . This is a file that specifies the commands to be executed by the app. In our `Procfile`, we would declare a worker(background task) that keeps running. To set the worker, 
 
