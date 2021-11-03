@@ -46,6 +46,7 @@
       font-size: 12px;
       line-height: 15px;
       letter-spacing: 0.05em;
+      text-transform: uppercase;
       color: #bb66ef;
     }
 
@@ -275,10 +276,15 @@ p {
   ol {
     padding-left: 32px;
   }
-  img {
+  p img {
     width: 100%;
     max-width: 500px;
     height: auto;
+    margin: 32px auto;
+    text-align: center;
+  }
+  a {
+    text-decoration: underline;
   }
 
 }

@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "public/image"
-public_folder: "/image"
+media_folder: "src/image"
+src_folder: "/image"
 
 collections:
   - name: "posts"
@@ -23,6 +23,7 @@ collections:
           required: true,
         }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Featured Image alt text", name: "thumbnail alt text", widget: "string" }
       - { label: "Tags", name: "tags", widget: "string", required: true }
       - {
           label: "Category",

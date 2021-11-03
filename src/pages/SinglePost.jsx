@@ -23,9 +23,14 @@ const SinglePost = () => {
 
   useEffect(() => {
     if (postExists) {
-      const nodes = codeRef.current.querySelectorAll("pre");
-      nodes.forEach((node) => {
+      const pres = codeRef.current.querySelectorAll("pre");
+      const a = codeRef.current.querySelectorAll("a");
+      pres.forEach((node) => {
         hljs.highlightBlock(node);
+      });
+      a.forEach((node) => {
+        node.setAttribute("target", "_blamk");
+        node.setAttribute("rel", "noreferrer noopener");
       });
     }
   }, [codeRef, postExists]);
@@ -90,7 +95,7 @@ const SinglePost = () => {
             <figcaption>Image alt text</figcaption>
           </figure>
           <article ref={codeRef} className="post_content">
-            <Markdown source={content} escapeHtml={true} />
+            <Markdown source={content} escapeHtml={false} />
           </article>
           <div className="share_link">
             <div>
