@@ -22,8 +22,18 @@ collections:
           widget: "datetime",
           required: true,
         }
-      - { label: "Post Image", name: "thumbnail", widget: "image" }
-      - { label: "Post Image alt text", name: "thumbnail alt text", widget: "string"}
+      - {
+          label: "Post Image",
+          name: "thumbnail",
+          widget: "image",
+          required: false,
+        }
+      - {
+          label: "Post Image alt text",
+          name: "thumbnail alt text",
+          widget: "string",
+          required: false,
+        }
       - { label: "Tags", name: "tags", widget: "string", required: true }
       - {
           label: "Category",
