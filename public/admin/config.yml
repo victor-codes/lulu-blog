@@ -30,7 +30,7 @@ collections:
         }
       - {
           label: "Post Image alt text",
-          name: "thumbnail alt text",
+          name: "thumbnailalttext",
           widget: "string",
           required: false,
         }
