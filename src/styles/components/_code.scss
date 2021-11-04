@@ -136,7 +136,7 @@
 }
 
 [data-theme="dark"] {
-    --hljs: #0d1117;
+  --hljs: #0d1117;
   --hljs-color: #637688;
   --hljs-keyword-color: #ff7b72;
   --hljs-title-color: #d2a8ff;
@@ -156,6 +156,7 @@
   --hljs-deletion-background: #67060c;
 }
 pre code.hljs {
+  font-family: "General Sans", sans-serif;
   display: block;
   overflow-x: auto;
 }
