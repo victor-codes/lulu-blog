@@ -23,42 +23,54 @@ const MobileNav = ({ show, hide }) => {
     >
       <nav>
         <NavLink
-       
+          onClick={() => {
+            hide(false);
+          }}
           activeClassName="mobile_nav_active a"
           to="/home"
         >
           Home
         </NavLink>
         <NavLink
-       
+          onClick={() => {
+            hide(false);
+          }}
           activeClassName="mobile_nav_active"
           to="/design"
         >
           Design
         </NavLink>
         <NavLink
-       
+          onClick={() => {
+            hide(false);
+          }}
           activeClassName="mobile_nav_active"
           to="/dev"
         >
           {"Dev </>"}
         </NavLink>
         <NavLink
-       
+          onClick={() => {
+            hide(false);
+          }}
           activeClassName="mobile_nav_active"
           to="/writing"
         >
           Writing
         </NavLink>
         <NavLink
-       
+          onClick={() => {
+            hide(false);
+          }}
           activeClassName="mobile_nav_active"
           to="/resources"
         >
           Resources
         </NavLink>
         <NavLink
-       
+          onClick={() => {
+            hide(false);
+          }}
           activeClassName="mobile_nav_active"
           to="/sponsor"
         >
