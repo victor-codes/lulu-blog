@@ -16,6 +16,7 @@ const SinglePost = () => {
   const codeRef = useRef();
   const { slug } = useParams();
   const [scroll, setScroll] = useState(0);
+  window.scrollTo(0, 0);
 
   let currentPost;
   let postExists = false;
@@ -68,7 +69,6 @@ const SinglePost = () => {
 
   useEffect(() => {
     if (postExists) {
-      window.scrollTo(0, 0);
       const posEl = document.querySelector(".link").getBoundingClientRect().top;
       setScroll(posEl);
       hljs.registerLanguage("css", css);
