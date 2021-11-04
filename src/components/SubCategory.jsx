@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
 import { ReactComponent as ChrevonLeft } from "../assets/chervon-left.svg";
 import { stringToLink } from "../utils/helperFunction";
@@ -7,7 +7,7 @@ import { stringToLink } from "../utils/helperFunction";
 
 const SubCategory = ({ name, handleClick, styles }) => {
   const categories = {
-    home: ["All", "Design", "Dev", "Writing"],
+    home: ["Design", "Dev", "Cloud/DevOps", "Writing", "Resources", "Sponsor"],
     design: ["All", "UX Writing", "Category 1", "Category 2"],
     dev: ["All", "Backend", "Category 1", "Category 2"],
     devops: ["All", "AWS", "GCP", "Category 2"],
@@ -22,16 +22,16 @@ const SubCategory = ({ name, handleClick, styles }) => {
         <div className="container">
           {categories[category] &&
             categories[category].map((item, id) => (
-              <NavLink
+              <Link
                 key={id}
                 onClick={() => {
                   handleClick(item);
                 }}
                 activeClassName="active"
-                to={`${stringToLink(item)}`}
+                to={category === "home" ? `/${item.toLowerCase()}` : `${stringToLink(item)}`}
               >
                 {item}
-              </NavLink>
+              </Link>
             ))}
         </div>
         <div className="less_btn">

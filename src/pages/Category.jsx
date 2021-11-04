@@ -11,7 +11,6 @@ import PageNotFound from "./PageNotFound";
 import postList from "../data/posts.json";
 
 const categories = {
-  home: ["All", "Category 1", "Category 2", "Category 3"],
   design: ["All", "UX Writing", "Category 1", "Category 2"],
   dev: ["All", "Backend", "Category 1", "Category 2"],
   devops: ["All", "AWS", "GCP"],
@@ -32,7 +31,7 @@ const Category = ({ name }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const subcategoryToString = subcategory.split("-").join(" ");
 
   function handleClick(name) {
