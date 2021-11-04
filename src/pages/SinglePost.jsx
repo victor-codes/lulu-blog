@@ -11,6 +11,7 @@ import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
 import css from "highlight.js/lib/languages/css";
 import xml from "highlight.js/lib/languages/xml";
+import Copy from "../components/Copy";
 
 const SinglePost = () => {
   const codeRef = useRef();
@@ -25,6 +26,7 @@ const SinglePost = () => {
   let previousPost;
   let nextPost;
 
+  
   useEffect(() => {
     window.scroll(0, 0);
     if (postExists) {
@@ -37,6 +39,7 @@ const SinglePost = () => {
       });
 
       pres.forEach((node) => {
+        console.log(node.innerText);
         hljs.highlightBlock(node);
       });
     }
@@ -48,6 +51,7 @@ const SinglePost = () => {
       const a = codeRef.current.querySelectorAll("a");
       pres.forEach((node) => {
         hljs.highlightBlock(node);
+        node.style.position = "relative";
       });
       a.forEach((node) => {
         node.setAttribute("target", "_blamk");
@@ -113,6 +117,7 @@ const SinglePost = () => {
           <ArrowRight />
         </div>
       </div>
+      <Copy text="sdfhs" />
       <div className="post_bg_color">
         <div className="post__details">
           {fetchedData.thumbnail && (

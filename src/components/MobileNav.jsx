@@ -47,7 +47,16 @@ const MobileNav = ({ show, hide }) => {
           activeClassName="mobile_nav_active"
           to="/dev"
         >
-          {"Dev </>"}
+          {`Dev </>`}
+        </NavLink>
+        <NavLink
+          onClick={() => {
+            hide(false);
+          }}
+          activeClassName="mobile_nav_active"
+          to="/cloud"
+        >
+          Cloud/DevOps
         </NavLink>
         <NavLink
           onClick={() => {

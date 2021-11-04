@@ -29,15 +29,7 @@ function App() {
           <Route exact path="/home">
             <Redirect to="/home/all" />
           </Route>
-          {/* <Route exact path="/home/design">
-            <Redirect to="design" />
-          </Route>
-          <Route exact path="/home/dev">
-            <Redirect to="dev" />
-          </Route>
-          <Route exact path="/home/writing">
-            <Redirect to="writing" />
-          </Route> */}
+
           <Route exact path="/home/:subcategory">
             <Home />
           </Route>
@@ -57,6 +49,13 @@ function App() {
 
           <Route exact path="/dev/:subcategory">
             <Category name="Dev" />
+          </Route>
+          <Route exact path="/cloud">
+            <Redirect to="/cloud/all" />
+          </Route>
+
+          <Route exact path="/cloud/:subcategory">
+            <Category name="DevOps" />
           </Route>
 
           <Route exact path="/writing">

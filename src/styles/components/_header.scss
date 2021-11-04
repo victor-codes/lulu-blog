@@ -22,6 +22,7 @@ header {
     svg {
       path {
         stroke: var(--logo-color);
+        fill: var(--logo-color);
       }
       display: none;
       stroke: var(--logo-color);
@@ -54,19 +55,35 @@ header {
   }
 }
 
+.mode {
+  display: flex;
+  align-items: center;
+  button {
+    background: none;
+    border: none;
+  }
+}
+
 .logo {
   font-family: "Clash Grotesk", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
+  margin-right: 12px;
   line-height: 37px;
   letter-spacing: -0.05em;
   color: var(--logo-color);
 }
 
+.mode_show {
+  width: 24px;
+  height: 24px;
+  display: block !important;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 540px) {
   header {
-    // background: none;
     padding: 0 43px !important;
     display: flex;
     align-items: center;
@@ -93,7 +110,10 @@ header {
     padding: 23px 24px;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
+  .header_container {
+    padding-top: 0px !important;
+  }
   .hide {
     display: none !important;
   }

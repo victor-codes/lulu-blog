@@ -36,6 +36,10 @@
   }
 }
 
+.hero_fixed  * {
+  transition: 200ms ease-out !important;
+}
+
 .home_subcategory {
   display: none;
 }
@@ -174,6 +178,7 @@
 
 @media screen and (max-width: 540px) {
   .fixed_style {
+    transition: 100ms;
     position: sticky;
     background: var(--primary-background-blur);
     backdrop-filter: blur(16px);
@@ -184,22 +189,20 @@
       padding: 30px 33px 0px !important;
       margin: 0 !important;
       p {
-        // height: 0px !important;
-        // overflow: hidden;
-        // clip: rect(0 0 0 0);
-        // clip-path: inset(50%);
-        // height: 1px;
-        // overflow: hidden;
-        // position: absolute;
-        // white-space: nowrap;
-        // width: 1px;
+        overflow: hidden;
         height: 0px;
         margin: 0 !important;
-        // display: none;
       }
     }
+    .sub__category_fixed {
+      position: sticky;
+      top: 160px;
+    }
   }
-
+  .sub__category_fixed {
+    position: sticky;
+    top: 160px;
+  }
   .static_style {
     position: sticky;
 
@@ -213,7 +216,6 @@
     }
   }
 }
-
 
 .no_post {
   padding: 24px 33px 0px !important;

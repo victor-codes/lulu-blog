@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
@@ -14,6 +14,7 @@ const categories = {
   home: ["All", "Category 1", "Category 2", "Category 3"],
   design: ["All", "UX Writing", "Category 1", "Category 2"],
   dev: ["All", "Backend", "Category 1", "Category 2"],
+  devops: ["All", "AWS", "GCP"],
   writing: ["All", "Category 1", "Category 2", "Category 3"],
 };
 
@@ -28,6 +29,10 @@ const Category = ({ name }) => {
     }
   );
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const subcategoryToString = subcategory.split("-").join(" ");
 
   function handleClick(name) {
@@ -49,13 +54,13 @@ const Category = ({ name }) => {
   return (
     <>
       <Helmet>
-        <title>{name} - Lulu Nwenyi</title>
+        <title>{name === "DevOps" ? "Cloud/DevOps" : name} - Lulu Nwenyi</title>
       </Helmet>
       <div>
         <div className="fixed_category">
           <main className="category_hero max_width">
             <h2>
-              {name}
+              {name === "DevOps" ? "Cloud/DevOps" : name}{" "}
               <div>
                 <ChervonRight /> <span>{subName}</span>
               </div>
@@ -65,14 +70,6 @@ const Category = ({ name }) => {
                 <div className="circle_1"></div>
               </div>
             </div>
-            {/* <div className="scroll noselect"
-            onClick={() => {
-              return window.scrollTo(0, scroll);
-            }}
-          >
-          <Scroll />
-          Scroll to continue
-        </div> */}
           </main>
           <SubCategory name={name} handleClick={handleClick} />
         </div>
@@ -86,39 +83,41 @@ const Category = ({ name }) => {
               </div>
             )}
           </div>
-          <div className="paginate">
-            <button
-              className="inline_flex"
-              // onClick={() => {
-              //   // history.push(prevPage(page));
-              // }}
-            >
-              <ArrowLeft className="left" /> PREVIOUS
-            </button>
-            <div className="link">
-              <NavLink activeClassName="page" to={`/home/1`}>
-                1
-              </NavLink>
-              <NavLink activeClassName="page" to={`/home/2`}>
-                2
-              </NavLink>
-              <NavLink activeClassName="page" to={`/home/3`}>
-                3
-              </NavLink>
-              <span>•••</span>
-              <NavLink activeClassName="page" to="/home/12">
-                12
-              </NavLink>
+          {filteredPost.length > 9 && (
+            <div className="paginate">
+              <button
+                className="inline_flex"
+                // onClick={() => {
+                //   // history.push(prevPage(page));
+                // }}
+              >
+                <ArrowLeft className="left" /> PREVIOUS
+              </button>
+              <div className="link">
+                <NavLink activeClassName="page" to={`/home/1`}>
+                  1
+                </NavLink>
+                <NavLink activeClassName="page" to={`/home/2`}>
+                  2
+                </NavLink>
+                <NavLink activeClassName="page" to={`/home/3`}>
+                  3
+                </NavLink>
+                <span>•••</span>
+                <NavLink activeClassName="page" to="/home/12">
+                  12
+                </NavLink>
+              </div>
+              <button
+                // onClick={() => {
+                //   // history.push(nextPage(page, 12));
+                // }}
+                className="inline_flex"
+              >
+                NEXT <ArrowRight />
+              </button>
             </div>
-            <button
-              // onClick={() => {
-              //   // history.push(nextPage(page, 12));
-              // }}
-              className="inline_flex"
-            >
-              NEXT <ArrowRight />
-            </button>
-          </div>
+          )}
         </section>
       </div>
 

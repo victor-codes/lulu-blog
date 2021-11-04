@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
-// import { ReactComponent as Scroll } from "../assets/scroll.svg";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { Link, NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import { useInView } from "react-intersection-observer";
-// import { useAnimation } from "framer-motion";
-// import gsap from "gsap";
-// import ScrollTrigger from "gsap/ScrollTrigger";
+
 
 import postList from "../data/posts.json";
-// import { fetchPostContent } from "../utils/main";
-// import { fetchPostContent, PostContent } from "../utils/main";
 
 const Home = () => {
   const [scroll, setScroll] = useState(0);
@@ -39,27 +34,10 @@ const Home = () => {
   const indexOfFirstPage = indexOfLastPage - postPerPage;
 
   const currentPosts = postList.slice(indexOfFirstPage, indexOfLastPage);
-  console.log(currentPosts);
 
-  // gsap.registerPlugin(ScrollTrigger);
-
-  // gsap.to(".trigger", {
-  //   scrollTrigger: {
-  //     trigger: ".trigger",
-  //     start: "top 13px",
-  //     markers: true,
-  //     // pin: true,
-  //     scrub: true,
-  //     end: () => {
-  //       return (
-  //         document.body.scrollX
-  //       );
-  //     },
-  //   },
-  //   // position: "sticky",
-  //   top: 83,
-  //   zIndex: 5,
-  // });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const { ref, inView } = useInView({
     threshold: 1,
@@ -67,30 +45,25 @@ const Home = () => {
   // const animation = useAnimation();
   const [styles, setStyles] = useState("");
   const [stylesArt, setStylesArt] = useState("");
+  const [styleCat, setStylesCat] = useState("");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let scrollY = window.scrollY;
-      // setScrollY(window.scrollY);
-      // console.log(scrollY);
       if (window.scrolly === 0) {
         setStylesArt("");
         setStyles("static_style");
       } else if (inView && scrollY === 0) {
         setStyles("static_style");
+        setStylesCat("");
         setStylesArt("");
-      } else if (scrollY > 264) {
+      }  else if (scrollY >= 160) {
         setStylesArt(`articles_fixed ${subName}`);
+        setStylesCat("sub__category_fixed");
         return setStyles("fixed_style");
       }
     });
   });
-  // fetchPostContent()
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", () => {
-  //   }); background: var(--primary-background-blur);
-  // }, [scrollY]);
 
   return (
     <>
@@ -115,45 +88,54 @@ const Home = () => {
           id="articles"
           className={`article_trigger bg_color_article ${stylesArt}`}
         >
-          <SubCategory name="Home" handleClick={handleClick} />
+          <SubCategory
+            name="Home"
+            handleClick={handleClick}
+            styles={styleCat}
+          />
           <div className="article_container max_width">
             {currentPosts.map((post, id) => (
               <Post post={post} key={id} />
             ))}
           </div>
-          <div className="paginate">
-            <button
-              className="inline_flex"
-              // onClick={() => {
-              //   // history.push(prevPage(page));
-              // }}
-            >
-              <ArrowLeft className="left" /> PREVIOUS
-            </button>
-            <div className="link">
-              <NavLink activeClassName="page" to={`/home/1`}>
-                1
-              </NavLink>
-              <NavLink activeClassName="page" to={`/home/2`}>
-                2
-              </NavLink>
-              <NavLink activeClassName="page" to={`/home/3`}>
-                3
-              </NavLink>
-              <span>•••</span>
-              <NavLink activeClassName="page" to="/home/12">
-                12
-              </NavLink>
+          {postList.length > 9 && (
+            <div className="paginate">
+              <button
+                className="inline_flex"
+                onClick={() => {
+                  if (currentPage === 1) {
+                    return;
+                  }
+                  setCurrentPage(currentPage - 1);
+                }}
+              >
+                <ArrowLeft className="left" /> PREVIOUS
+              </button>
+              <div className="link">
+                <NavLink activeClassName="page" to={`/home/1`}>
+                  1
+                </NavLink>
+                <NavLink activeClassName="page" to={`/home/2`}>
+                  2
+                </NavLink>
+                <NavLink activeClassName="page" to={`/home/3`}>
+                  3
+                </NavLink>
+                <span>•••</span>
+                <NavLink activeClassName="page" to="/home/12">
+                  12
+                </NavLink>
+              </div>
+              <button
+                onClick={() => {
+                  setCurrentPage(currentPage + 1);
+                }}
+                className="inline_flex"
+              >
+                NEXT <ArrowRight />
+              </button>
             </div>
-            <button
-              onClick={() => {
-                // setCurrentPage()
-              }}
-              className="inline_flex"
-            >
-              NEXT <ArrowRight />
-            </button>
-          </div>
+          )}
         </section>
       </div>
 

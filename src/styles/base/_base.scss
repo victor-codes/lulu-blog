@@ -101,9 +101,37 @@ a {
   .blur-effect {
     div {
       div {
-        width: 260.06px  !important;
-        height: 189.94px  !important;
+        width: 260.06px !important;
+        height: 189.94px !important;
       }
+    }
+  }
+}
+
+.copy_container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-flex;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: filter(16px);
+  padding: 8px 12px;
+  cursor: pointer;
+  span {
+    font-size: $font-size-7;
+    color: var(--blog-post-primary-text-color) !important;
+  }
+  svg {
+    margin-left: 8px;
+    width: 24px;
+    height: 24px;
+    display: block !important;
+    stroke: var(--blog-post-primary-text-color);
+    path {
+      stroke: var(--blog-post-primary-text-color);
     }
   }
 }
