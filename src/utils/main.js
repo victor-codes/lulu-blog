@@ -1,34 +1,39 @@
 const path = require("path");
 const fs = require("fs");
 const matter = require("gray-matter");
+const { log } = require("console");
 
 const dirPath = path.join(__dirname, "../../posts");
 let postlist = [];
 
 const months = {
-  "01": "January",
-  "02": "February",
-  "03": "March",
-  "04": "April",
-  "05": "May",
-  "06": "June",
-  "07": "July",
-  "08": "August",
-  "09": "September",
-  10: "October",
-  11: "November",
-  12: "December",
+  "Jan": "January",
+  "FEB": "February",
+  "MAR": "March",
+  "APR": "April",
+  "MAY": "May",
+  "JUN": "June",
+  "JUL": "July",
+  "AUG": "August",
+  "SEP": "September",
+  "OCT": "October",
+  "NOV": "November",
+  "DEC": "December",
 };
 
 const formatDate = (date) => {
-  const datetimeArray = date.toString().split("T");
-  const dateArray = datetimeArray[0].split(" ");
-  const timeArray = datetimeArray[1].split(":");
+  const datetimeArray = date.toString().split(" ");
 
-  const month = dateArray[1];
-  const monthName = months[dateArray[1]];
-  const day = dateArray[2];
-  const year = dateArray[3];
+  const timeArray = datetimeArray[4].split(":");
+
+  const month = datetimeArray[1];
+
+  const monthName = months[month.toUpperCase()];
+
+  const day = datetimeArray[2];
+
+  const year = datetimeArray[3];
+  
   const time = `${timeArray[0]}:${timeArray[1]}`;
 
   return {
@@ -38,6 +43,7 @@ const formatDate = (date) => {
     year: year,
     time: time,
   };
+
 };
 
 const getPosts = () => {
@@ -57,6 +63,7 @@ const getPosts = () => {
         let metadata = output.data;
 
         let content = output.content;
+
         let dateString = output.data.date;
 
         const parsedDate = dateString ? formatDate(dateString) : new Date();
@@ -76,14 +83,15 @@ const getPosts = () => {
           author: "Lulu Nwenyi",
           publishDate: publishedDate ? publishedDate : "No date given",
           time: parsedDate["time"],
-          thumbnail: metadata.thumbnail,
+          thumbnail: metadata.thumbnail ? metadata.thumbnail : null,
+          altText: metadata.thumbnailalttext ? metadata.thumbnailalttext : null,
           category: metadata.category,
           content: content ? content : "No content given",
           slug: metadata.slug ? metadata.slug : "404",
           tags: metadata.tags ? metadata.tags : null,
           description: metadata.description,
         };
-
+ 
         postlist.push(post);
 
         ilist.push(i);
