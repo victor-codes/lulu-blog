@@ -21,6 +21,19 @@ const SinglePost = () => {
   let postExists = false;
   let fetchedData;
 
+  let previousPost;
+  let nextPost;
+
+  useEffect(() => {
+    window.scroll(0, 0);
+    if (postExists) {
+      const pres = codeRef.current.querySelectorAll("pre");
+      pres.forEach((node) => {
+        hljs.highlightBlock(node);
+      });
+    }
+  });
+
   useEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
@@ -41,6 +54,8 @@ const SinglePost = () => {
       fetchedData = { ...postList[currentPost] };
       postExists = true;
     }
+    previousPost = postList[currentPost - 1];
+    nextPost = postList[currentPost + 1];
     return null;
   });
 
@@ -49,6 +64,9 @@ const SinglePost = () => {
       window.scrollTo(0, 0);
       const posEl = document.querySelector(".link").getBoundingClientRect().top;
       setScroll(posEl);
+      hljs.registerLanguage("css", css);
+      hljs.registerLanguage("xml", xml);
+      hljs.registerLanguage("python", python);
     }
   }, [postExists]);
 
@@ -90,10 +108,12 @@ const SinglePost = () => {
       </div>
       <div className="post_bg_color">
         <div className="post__details">
-          <figure>
-            <img src={fetchedData.thumbnail} alt="" />
-            <figcaption>Image alt text</figcaption>
-          </figure>
+          {fetchedData.thumbnail && (
+            <figure>
+              <img src={fetchedData.thumbnail} alt="" />
+              <figcaption>{fetchedData.altText}</figcaption>
+            </figure>
+          )}
           <article ref={codeRef} className="post_content">
             <Markdown source={content} escapeHtml={false} />
           </article>
@@ -158,22 +178,40 @@ const SinglePost = () => {
             </p>
           </div>
           <div className="read">
-            {postList[currentPost - 1] ? (
-              <Link to={`/${postList[currentPost - 1].slug}`}>
-                <ArrowLeft />
-                PREVIOUS READ
-              </Link>
-            ) : (
-              ""
-            )}
-            {postList[currentPost + 1] ? (
-              <Link to={`/${postList[currentPost + 1].slug}`}>
-                NEXT READ
-                <ArrowRight />
-              </Link>
-            ) : (
-              ""
-            )}
+            <Link
+              onClick={(e) => {
+                if (previousPost) {
+                  return;
+                }
+                return e.preventDefault();
+              }}
+              to={
+                previousPost
+                  ? `/${previousPost.category.toLowerCase()}/post/${
+                      previousPost.slug
+                    }`
+                  : ""
+              }
+            >
+              <ArrowLeft />
+              PREVIOUS READ
+            </Link>
+
+            <Link
+              onClick={(e) => {
+                if (nextPost) {
+                  return;
+                }
+                return e.preventDefault();
+              }}
+              to={
+                nextPost &&
+                `/${nextPost.category.toLowerCase()}/post/${nextPost.slug}`
+              }
+            >
+              NEXT READ
+              <ArrowRight />
+            </Link>
           </div>
         </div>
       </div>

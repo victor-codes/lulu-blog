@@ -89,7 +89,7 @@
 figure {
   width: 100%;
   max-width: 720px;
-  margin: 0 auto 36px;
+  margin: 0 auto;
   img {
     object-fit: contain;
     width: 100%;
@@ -220,6 +220,7 @@ p {
 }
 
 .post_content {
+  margin-top: 36px;
   h1 {
     font-style: normal;
     font-weight: bold;
