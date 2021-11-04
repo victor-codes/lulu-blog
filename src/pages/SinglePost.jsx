@@ -28,6 +28,14 @@ const SinglePost = () => {
     window.scroll(0, 0);
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
+      const val = codeRef.current.querySelectorAll("img");
+      val.forEach((node) => {
+        if (node.parentNode) {
+          node.parentNode.style.textAlign = "center";
+          
+        }
+      });
+
       pres.forEach((node) => {
         hljs.highlightBlock(node);
       });
