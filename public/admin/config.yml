@@ -30,7 +30,7 @@ collections:
         }
       - {
           label: "Post Image alt text",
-          name: "thumbnailalttext",
+          name: "thumbnailAltText",
           widget: "string",
           required: false,
         }
@@ -38,6 +38,12 @@ collections:
       - {
           label: "Category",
           name: "category",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Sub Category",
+          name: "subCategory",
           widget: "string",
           required: true,
         }

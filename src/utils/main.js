@@ -86,6 +86,7 @@ const getPosts = () => {
           thumbnail: metadata.thumbnail ? metadata.thumbnail : null,
           altText: metadata.thumbnailalttext ? metadata.thumbnailalttext : null,
           category: metadata.category,
+          subCategory: metadata.subCategory ? metadata.subCategory : null,
           content: content ? content : "No content given",
           slug: metadata.slug ? metadata.slug : "404",
           tags: metadata.tags ? metadata.tags : null,
