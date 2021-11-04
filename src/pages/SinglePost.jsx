@@ -32,7 +32,6 @@ const SinglePost = () => {
       val.forEach((node) => {
         if (node.parentNode) {
           node.parentNode.style.textAlign = "center";
-          
         }
       });
 
@@ -119,7 +118,9 @@ const SinglePost = () => {
           {fetchedData.thumbnail && (
             <figure>
               <img src={fetchedData.thumbnail} alt="" />
-              <figcaption>{fetchedData.altText}</figcaption>
+              <figcaption>
+                {fetchedData.altText && fetchedData.altText}
+              </figcaption>
             </figure>
           )}
           <article ref={codeRef} className="post_content">
