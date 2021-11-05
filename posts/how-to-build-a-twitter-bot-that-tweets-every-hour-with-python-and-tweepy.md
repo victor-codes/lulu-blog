@@ -11,8 +11,6 @@ category: Dev
 subCategory: Python
 description: How to build a Twitter bot that tweets every hour with Python and Tweepy
 ---
-# How to build a Twitter bot that tweets every hour with Python and Tweepy
-
 Building a Twitter bot is a simple and very interesting project to take on as a developer. While there’s a wide range of functionalities you can choose from, in this article, I’ll highlight how to build a Twitter bot that makes a tweet, every five minutes. 
 
 ### Prerequisites:
