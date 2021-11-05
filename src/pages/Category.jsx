@@ -12,7 +12,7 @@ import postList from "../data/posts.json";
 
 const categories = {
   design: ["All", "UX Writing", "Category 1", "Category 2"],
-  dev: ["All", "Backend", "Category 1", "Category 2"],
+  dev: ["All", "Python", "Category 1", "Category 2"],
   devops: ["All", "AWS", "GCP"],
   writing: ["All", "Category 1", "Category 2", "Category 3"],
 };

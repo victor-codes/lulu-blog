@@ -23,6 +23,9 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/all">
+            <Redirect to="/home/all" />
+          </Route>
           <Route exact path="/">
             <Redirect to="/home/all" />
           </Route>
