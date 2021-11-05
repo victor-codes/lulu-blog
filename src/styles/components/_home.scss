@@ -19,9 +19,10 @@
     margin: -8px 0 56px;
     width: 100%;
     max-width: 564px;
-    a {
+    span {
       color: var(--tertary-text-color);
       text-decoration: underline;
+     font-weight: $font-weight-2; 
     }
   }
   .scroll {
@@ -93,7 +94,7 @@
   }
 
   .link {
-    display: grid;
+    display: flex;
     gap: 16px;
     // padding: 0 48px;
     grid-template-columns: repeat(5, 1fr);

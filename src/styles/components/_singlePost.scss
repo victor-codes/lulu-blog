@@ -54,7 +54,7 @@
       font-style: normal;
       font-weight: normal;
       font-size: 40px;
-      line-height: 65px;
+      line-height: 120%;
       letter-spacing: -0.03em;
       width: 100%;
       max-width: 1046px;
@@ -220,12 +220,22 @@ p {
 }
 
 .post_content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    // font-family: "General Sans", sans-serif;
+    font-weight: $font-weight-4 !important;
+  }
   margin-top: 36px;
   h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 40px;
-    line-height: 65px;
+    line-height: 50px;
+    margin: 16px 0 12px;
     color: var(--blog-header-color);
   }
   h2 {
@@ -265,7 +275,8 @@ p {
   }
   p,
   ol li,
-  ul li, cite {
+  ul li,
+  cite {
     font-family: "General Sans", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -287,7 +298,6 @@ p {
   a {
     text-decoration: underline;
   }
-
 }
 
 @media screen and (max-width: 540px) {
@@ -295,7 +305,7 @@ p {
     margin-top: 24px;
     h1 {
       font-size: 28px;
-      line-height: 45px;
+      line-height: 35px;
     }
     h2 {
       font-size: 24px;

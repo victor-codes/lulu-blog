@@ -3,11 +3,10 @@ import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import { useInView } from "react-intersection-observer";
-
 
 import postList from "../data/posts.json";
 
@@ -16,6 +15,14 @@ const Home = () => {
   const [subName, setSubName] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const postPerPage = 9;
+
+  const postLength = postList.length;
+
+  const paginateArray = [];
+
+  for (let i = 0; i < postLength; i++) {
+    paginateArray.push(i);
+  }
 
   function handleClick(name) {
     setSubName(name);
@@ -42,6 +49,7 @@ const Home = () => {
   const { ref, inView } = useInView({
     threshold: 1,
   });
+
   // const animation = useAnimation();
   const [styles, setStyles] = useState("");
   const [stylesArt, setStylesArt] = useState("");
@@ -57,7 +65,7 @@ const Home = () => {
         setStyles("static_style");
         setStylesCat("");
         setStylesArt("");
-      }  else if (scrollY >= 160) {
+      } else if (scrollY >= 160) {
         setStylesArt(`articles_fixed ${subName}`);
         setStylesCat("sub__category_fixed");
         return setStyles("fixed_style");
@@ -77,9 +85,9 @@ const Home = () => {
             <h2>Learn. Share. Grow.</h2>
             <p>
               Hello! Welcome to my blog. On here, you can find articles on{" "}
-              <Link to="category/design">Design</Link>,{" "}
-              <Link to="category/backend">Backend Development</Link>,
-              <Link to="category/writing"> Technical Writing</Link>, and More.
+              <span to="category/design">Design</span>,{" "}
+              <span to="category/backend">Backend Development</span>,
+              <span to="category/writing"> Technical Writing</span>, and More.
             </p>
           </main>
           <div className="home_subcategory"></div>
@@ -118,13 +126,17 @@ const Home = () => {
                 <NavLink activeClassName="page" to={`/home/2`}>
                   2
                 </NavLink>
-                <NavLink activeClassName="page" to={`/home/3`}>
-                  3
-                </NavLink>
-                <span>•••</span>
-                <NavLink activeClassName="page" to="/home/12">
-                  12
-                </NavLink>
+                {/* {paginateArray.length > 2 && ( */}
+                <>
+                  <NavLink activeClassName="page" to={`/home/3`}>
+                    3
+                  </NavLink>
+                  <span>•••</span>
+                  <NavLink activeClassName="page" to="/home/12">
+                    12
+                  </NavLink>
+                </>
+                {/* )} */}
               </div>
               <button
                 onClick={() => {

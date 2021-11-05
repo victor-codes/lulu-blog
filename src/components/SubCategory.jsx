@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
 import { ReactComponent as ChrevonLeft } from "../assets/chervon-left.svg";
 import { stringToLink } from "../utils/helperFunction";
@@ -7,31 +7,44 @@ import { stringToLink } from "../utils/helperFunction";
 
 const SubCategory = ({ name, handleClick, styles }) => {
   const categories = {
-    home: ["Design", "Dev", "Cloud/DevOps", "Writing", "Resources", "Sponsor"],
+    home: [
+      "All",
+      "Design",
+      "Dev",
+      "Cloud/DevOps",
+      "Writing",
+      "Resources",
+      "Sponsor",
+    ],
     design: ["All", "UX Writing", "Category 1", "Category 2"],
-    dev: ["All", "Backend", "Category 1", "Category 2"],
+    dev: ["All", "Python", "Category 1", "Category 2"],
     devops: ["All", "AWS", "GCP", "Category 2"],
     writing: ["All", "Category 1", "Category 2", "Category 3"],
   };
 
   const category = name.toLowerCase();
   const [scrollX, setScrollX] = useState(true);
+
   return (
     <div className={`${styles}`}>
       <section className="mobile_nav">
         <div className="container">
           {categories[category] &&
             categories[category].map((item, id) => (
-              <Link
+              <NavLink
                 key={id}
                 onClick={() => {
                   handleClick(item);
                 }}
                 activeClassName="active"
-                to={category === "home" ? `/${item.toLowerCase()}` : `${stringToLink(item)}`}
+                to={
+                  category === "home" && item !== "All"
+                    ? `/${item.toLowerCase()}`
+                    : `${stringToLink(item)}`
+                }
               >
                 {item}
-              </Link>
+              </NavLink>
             ))}
         </div>
         <div className="less_btn">
