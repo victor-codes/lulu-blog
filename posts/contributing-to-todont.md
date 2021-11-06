@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Contributing to ToDon't
-date: 2021-11-06T08:30:29.547Z
+date: 2021-08-19T08:30:00.000Z
 tags: OPEN SOURCE
 category: Dev
 subCategory: CONTRIBUTION
