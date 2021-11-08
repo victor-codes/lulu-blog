@@ -14,8 +14,6 @@ description: >-
 
   Even workers with experience in working remote still face a lot of challenges. Many parents have to juggle taking care of their kids and family while working, and for first-timers, this means figuring out how to be productive and remain focused in this environment.
 ---
-# How to Stay Productive Working from Home
-
 Due to the pandemonium, many companies –home and abroad, have resulted in working remotely. Managing this shift in how we collaborate and communicate while doing our work has been a challenge for employees.
 
 Even workers with experience in working remote still face a lot of challenges. Many parents have to juggle taking care of their kids and family while working, and for first-timers, this means figuring out how to be productive and remain focused in this environment.
