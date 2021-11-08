@@ -67,7 +67,7 @@ tkinter._test()
 
 When you enter these commands, a test GUI should appear on your screen like this: 
 
-![GUI%20Programming%20with%20Tkinter%20in%20Python%204aecc33ef924422c8e1d5813011fbb2b/97B90DFC-92BB-4122-B4EF-FE026CB1F42E.jpeg](/image/97b90dfc-92bb-4122-b4ef-fe026cb1f42e.jpeg)
+![terminal](/image/97b90dfc-92bb-4122-b4ef-fe026cb1f42e.jpeg)
 
 ### Using widgets in Tkinter
 
@@ -101,7 +101,7 @@ window.mainloop()
 
 The code above, if written correctly, should give the output as:
 
-![GUI%20Programming%20with%20Tkinter%20in%20Python%204aecc33ef924422c8e1d5813011fbb2b/0AF5277F-762D-4B49-ABCC-888663A9445B.png](/image/0af5277f-762d-4b49-abcc-888663a9445b.png)
+![window pop up](/image/0af5277f-762d-4b49-abcc-888663a9445b.png)
 
 In Tkinter, there are different widgets available for use. Some of the most common include: 
 
