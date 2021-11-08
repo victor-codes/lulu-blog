@@ -30,7 +30,7 @@ The whole point of pairing fonts is for contrast. Creating contrast in fonts mak
 
 Font choices are a great influence on people’s emotions and thoughts when reading a piece of text. For example, you’re likely to read the texts in the image below, differently. 
 
-![A6 - 1.png](/image/a6_-_1.png)
+![A6 type face](/image/a6_-_1.png)
 
 [Studies](https://affect.media.mit.edu/pdfs/05.larson-picard.pdf) have revealed that line spacing, book dimensions, and layouts play a huge role in the emotions of a person while reading. It is also noted that script fonts stimulate feelings of humor or love and serif fonts inspire a feeling of maturity. Therefore, to convey the right message in our design, considerable font pairing is vital.
 
@@ -50,7 +50,7 @@ Understanding why great font pairing is important is one thing, knowing how to p
 
 Making use of varying font weights is a great way to ensure visual hierarchy and clear difference. It’s a much better combination to match a **Bold Montserrat** with **Montserrat Regular** than to match **Montserrat Bold** with its **Semibold**. It’s important to understand that matching font weights can be compared with matching people. When two hotheaded people are matched, it’s very likely for a clash to occur. In the same sense, when two heavy fonts are matched, there will be a clash. 
 
-![2.png](/image/2.png)
+![Raleway ](/image/2.png)
 
 For harmony, it’s better to practice making use of a heavy and lighter or neutral font-weight. 
 
@@ -58,7 +58,7 @@ For harmony, it’s better to practice making use of a heavy and lighter or neut
 
 Another way to achieve contrast is by making use of varying font sizes. This helps with a better layout, visual hierarchy, and distinguishing what’s most important to the user. For instance;
 
-![3.png](/image/3.png)
+![Raleway header](/image/3.png)
 
 ### 3. Use only a maximum of 2/3 typefaces.
 
@@ -68,7 +68,7 @@ Making use of more than two or three fonts is one mistake you do not want to mak
 
 This is one of the safest, yet powerful, combos in the world of typography and design. Serif fonts are typefaces with a small line attached to the end of each stroke of a letter, while Sans-Serif fonts are those that don’t have these attachments. 
 
-![Screen Shot 2021-08-23 at 10.52.26 PM.png](/image/screen_shot_2021-08-23_at_10.52.26_pm.png)
+![Blog home page](/image/screen_shot_2021-08-23_at_10.52.26_pm.png)
 
 Creating a font pair from these families is a great way to include contrast in your design. However, it’s important to stay away from fonts that are too different to prevent the creation of conflict instead of contrast. Examples of amazing pairs include: 
 
