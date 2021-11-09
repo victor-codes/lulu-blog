@@ -52,8 +52,10 @@ const SinglePost = () => {
       const pres = codeRef.current.querySelectorAll("pre");
       const a = codeRef.current.querySelectorAll("a");
 
+      hljs.configure({ ignoreUnescapedHTML: true });
+
       pres.forEach((node) => {
-        hljs.highlightBlock(node);
+        hljs.highlightElement(node);
         node.style.position = "relative";
       });
 
@@ -114,7 +116,11 @@ const SinglePost = () => {
       transition={{ delay: 0.3, ...transition }}
       className="single_post_footer_bg"
     >
-      <Title title={fetchedData.title} description={fetchedData.description} imageUrl={fetchedData.thumbnail} />
+      <Title
+        title={fetchedData.title}
+        description={fetchedData.description}
+        imageUrl={fetchedData.thumbnail}
+      />
 
       <div className="single_post">
         <div className="post_info">
