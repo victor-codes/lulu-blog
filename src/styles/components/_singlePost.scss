@@ -295,6 +295,10 @@ p {
   a {
     text-decoration: underline;
   }
+  ul li:last-child,
+  ol li:last-child {
+    margin-bottom: 24px;
+  }
 }
 
 @media screen and (max-width: 540px) {
