@@ -5,3 +5,6 @@ pre {
   display: block;
   overflow-x: auto;
 }
+.section {
+  transition: none !important;
+}

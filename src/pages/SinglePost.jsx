@@ -3,7 +3,6 @@ import { Link, useParams, Redirect } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
 import Markdown from "react-markdown";
 import postList from "../data/posts.json";
 
@@ -11,13 +10,14 @@ import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
 import css from "highlight.js/lib/languages/css";
 import xml from "highlight.js/lib/languages/xml";
-import Copy from "../components/Copy";
+import { blogVariants, transition } from "../utils/variants";
+import { motion } from "framer-motion";
+import Title from "../components/Title";
 
 const SinglePost = () => {
   const codeRef = useRef();
   const { slug } = useParams();
   const [scroll, setScroll] = useState(0);
-  window.scrollTo(0, 0);
 
   let currentPost;
   let postExists = false;
@@ -26,9 +26,7 @@ const SinglePost = () => {
   let previousPost;
   let nextPost;
 
-  
   useEffect(() => {
-    window.scroll(0, 0);
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
       const val = codeRef.current.querySelectorAll("img");
@@ -39,20 +37,26 @@ const SinglePost = () => {
       });
 
       pres.forEach((node) => {
-        console.log(node.innerText);
         hljs.highlightBlock(node);
+        node.appendChild(copyContainer);
       });
     }
   });
 
   useEffect(() => {
+    window.scroll(0, 0);
+  }, [slug]);
+
+  useEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
       const a = codeRef.current.querySelectorAll("a");
+
       pres.forEach((node) => {
         hljs.highlightBlock(node);
         node.style.position = "relative";
       });
+
       a.forEach((node) => {
         node.setAttribute("target", "_blamk");
         node.setAttribute("rel", "noreferrer noopener");
@@ -75,9 +79,6 @@ const SinglePost = () => {
     if (postExists) {
       const posEl = document.querySelector(".link").getBoundingClientRect().top;
       setScroll(posEl);
-      hljs.registerLanguage("css", css);
-      hljs.registerLanguage("xml", xml);
-      hljs.registerLanguage("python", python);
     }
   }, [postExists]);
 
@@ -99,11 +100,22 @@ const SinglePost = () => {
 
   const shareTwitter = `https://twitter.com/share?url=${window.location.href}&text=I just read ${fetchedData.title} by @LuluNwenyi`;
 
+  const copyContainer = document.createElement("div");
+
+  copyContainer.setAttribute("class", "copy_container");
+
   return (
-    <div className="single_post_footer_bg">
-      <Helmet>
-        <title>{fetchedData.title} - Lulu Nwenyi</title>
-      </Helmet>
+    <motion.div
+      key={fetchedData.title}
+      exit="leave"
+      initial="hidden"
+      animate="visible"
+      variants={blogVariants}
+      transition={{ delay: 0.3, ...transition }}
+      className="single_post_footer_bg"
+    >
+      <Title title={fetchedData.title} description={fetchedData.description} imageUrl={fetchedData.thumbnail} />
+
       <div className="single_post">
         <div className="post_info">
           <span children="tag">{fetchedData.tags}</span>
@@ -117,7 +129,7 @@ const SinglePost = () => {
           <ArrowRight />
         </div>
       </div>
-      <Copy text="sdfhs" />
+      {/* <Copy text="sdfhs" /> */}
       <div className="post_bg_color">
         <div className="post__details">
           {fetchedData.thumbnail && (
@@ -200,11 +212,10 @@ const SinglePost = () => {
                 return e.preventDefault();
               }}
               to={
-                previousPost
-                  ? `/${previousPost.category.toLowerCase()}/post/${
-                      previousPost.slug
-                    }`
-                  : ""
+                previousPost &&
+                `/${previousPost.category.toLowerCase()}/post/${
+                  previousPost.slug
+                }`
               }
             >
               <ArrowLeft />
@@ -231,7 +242,7 @@ const SinglePost = () => {
       </div>
 
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

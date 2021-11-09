@@ -64,6 +64,13 @@
 }
 
 @media screen and (min-width: 580px) {
+  .articles {
+    .mobile_nav {
+      .container {
+        display: none;
+      }
+    }
+  }
   .mobile_nav {
     .container {
       padding: 27px 0px 24px !important;

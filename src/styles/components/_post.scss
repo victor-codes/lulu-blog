@@ -1,4 +1,5 @@
 .post_article {
+  cursor: pointer;
   width: 100%;
   min-height: 274px;
   padding-bottom: 8px;
@@ -15,6 +16,7 @@
       font-style: normal;
       font-weight: normal;
       font-size: 24px;
+      min-height: 60px;
       line-height: 30px;
       color: var(--article-primary-color);
       margin: 4px 0;

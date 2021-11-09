@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
 import { ReactComponent as Menu } from ".././assets/menu.svg";
 import MobileNav from "./MobileNav";
 import { ReactComponent as Close } from "../assets/close.svg";
-import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ReactComponent as Sun } from "../assets/sun.svg";
 import { ReactComponent as Moon } from "../assets/moon.svg";
+import { SubCategoryContent } from "../context/Category";
 
 const Header = () => {
+  const { setSubName } = useContext(SubCategoryContent);
+
   const localTheme = localStorage.getItem("mode");
 
   const [mode, setMode] = useState(localTheme);
@@ -37,7 +40,12 @@ const Header = () => {
   }
   return (
     <>
-      <header>
+      <motion.header
+        initial={{ y: -101 }}
+        animate={{ y: 0 }}
+        exit={{ y: -101 }}
+        transition={{ duration: 1, type: "spring" }}
+      >
         <div className="header_container">
           <div>
             <div className="mode">
@@ -45,37 +53,78 @@ const Header = () => {
                 LN
               </h1>
               {mode === "light" ? (
-                <button onClick={theme} >
-                  <Moon className="mode_show"/>
+                <button onClick={theme}>
+                  <Moon className="mode_show" />
                 </button>
               ) : (
                 <button>
-                  <Sun onClick={theme}  className="mode_show"/>
+                  <Sun onClick={theme} className="mode_show" />
                 </button>
               )}
             </div>
             <nav className="menu-items hide">
-              <NavLink to="/home">Home</NavLink>
-              <NavLink to="/design">Design</NavLink>
-              <NavLink to="/dev">{`Dev </> `}</NavLink>
-              <NavLink to="/cloud">Cloud/DevOps</NavLink>
-              <NavLink to="/writing">Writing</NavLink>
-              <NavLink to="/resources">Resources</NavLink>
-              <NavLink to="/sponsor">Sponsor</NavLink>
+              <NavLink
+                onClick={() => {
+                  setSubName("All");
+                }}
+                to="/home"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                onClick={() => {
+                  setSubName("All");
+                }}
+                to="/design"
+              >
+                Design
+              </NavLink>
+              <NavLink
+                onClick={() => {
+                  setSubName("All");
+                }}
+                to="/dev"
+              >{`Dev </> `}</NavLink>
+              <NavLink
+                onClick={() => {
+                  setSubName("All");
+                }}
+                to="/cloud"
+              >
+                Cloud/DevOps
+              </NavLink>
+              {/* <NavLink
+                onClick={() => {
+                  setSubName("All");
+                }}
+                to="/writing"
+              >
+                Writing
+              </NavLink> */}
+              <NavLink
+                onClick={() => {
+                  setSubName("All");
+                }}
+                to="/resources"
+              >
+                Resources
+              </NavLink>
+              <NavLink
+                onClick={() => {
+                  setSubName("All");
+                }}
+                to="/sponsor"
+              >
+                Sponsor
+              </NavLink>
             </nav>
             {mobileNav && <Close onClick={handleClick} />}
             {!mobileNav && <Menu onClick={handleClick} />}
           </div>
           <hr className="hidden" />
         </div>
-      </header>
-      <AnimatePresence exitBeforeEnter>
-        <MobileNav
-          key="overlay"
-          hide={(e) => setMobileNav(e)}
-          show={mobileNav}
-        />
-      </AnimatePresence>
+      </motion.header>
+      <MobileNav key="overlay" hide={(e) => setMobileNav(e)} show={mobileNav} />
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { NavLink } from "react-router-dom";
@@ -9,6 +8,9 @@ import SubCategory from "../components/SubCategory";
 import { useInView } from "react-intersection-observer";
 
 import postList from "../data/posts.json";
+import { motion } from "framer-motion";
+import { pageVariants, transition } from "../utils/variants";
+import Title from "../components/Title";
 
 const Home = () => {
   const [scroll, setScroll] = useState(0);
@@ -50,7 +52,6 @@ const Home = () => {
     threshold: 1,
   });
 
-  // const animation = useAnimation();
   const [styles, setStyles] = useState("");
   const [stylesArt, setStylesArt] = useState("");
   const [styleCat, setStylesCat] = useState("");
@@ -75,10 +76,15 @@ const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Blog - Lulu Nwenyi</title>
-      </Helmet>
-      <div>
+      <Title title="Blog" />
+      <motion.div
+        key="home"
+        exit="leave"
+        initial="hidden"
+        animate="visible"
+        transition={transition}
+        variants={pageVariants}
+      >
         <div ref={ref} className={`fixed hero_fixed trigger ${styles}`}>
           <div className="blur_fect"></div>
           <main className="home_hero max_width">
@@ -86,8 +92,8 @@ const Home = () => {
             <p>
               Hello! Welcome to my blog. On here, you can find articles on{" "}
               <span to="category/design">Design</span>,{" "}
-              <span to="category/backend">Backend Development</span>,
-              <span to="category/writing"> Technical Writing</span>, and More.
+              <span to="category/backend">Backend Development</span>,{" "}
+              <span to="category/writing">Technical Writing</span>, and More.
             </p>
           </main>
           <div className="home_subcategory"></div>
@@ -149,7 +155,7 @@ const Home = () => {
             </div>
           )}
         </section>
-      </div>
+      </motion.div>
 
       <Footer />
     </>

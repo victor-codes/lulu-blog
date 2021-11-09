@@ -58,7 +58,7 @@ const MobileNav = ({ show, hide }) => {
         >
           Cloud/DevOps
         </NavLink>
-        <NavLink
+        {/* <NavLink
           onClick={() => {
             hide(false);
           }}
@@ -66,7 +66,7 @@ const MobileNav = ({ show, hide }) => {
           to="/writing"
         >
           Writing
-        </NavLink>
+        </NavLink> */}
         <NavLink
           onClick={() => {
             hide(false);

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { ReactComponent as ChervonRight } from "../assets/chervon-right.svg";
@@ -9,6 +8,10 @@ import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import PageNotFound from "./PageNotFound";
 import postList from "../data/posts.json";
+import { motion } from "framer-motion";
+import { pageVariants, transition } from "../utils/variants";
+import { SubCategoryContent } from "../context/Category";
+import Title from "../components/Title";
 
 const categories = {
   design: ["All", "UX Writing", "Category 1", "Category 2"],
@@ -18,9 +21,13 @@ const categories = {
 };
 
 const Category = ({ name }) => {
+  const { subName } = useContext(SubCategoryContent);
+
   const { subcategory } = useParams();
 
-  const [subName, setSubName] = useState("All");
+  // const [subName, setSubName] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const postPerPage = 9;
 
   const convertCategoriesToLowercase = categories[name.toLowerCase()].map(
     (item) => {
@@ -34,15 +41,11 @@ const Category = ({ name }) => {
 
   const subcategoryToString = subcategory.split("-").join(" ");
 
-  function handleClick(name) {
-    setSubName(name);
-  }
-
   if (!convertCategoriesToLowercase.includes(subcategoryToString)) {
     return <PageNotFound />;
   }
 
-  const filteredPost = postList.filter((post) => {
+  const filteredPosts = postList.filter((post) => {
     if (name === post.category) {
       return post;
     } else {
@@ -50,16 +53,37 @@ const Category = ({ name }) => {
     }
   });
 
+  // pagination
+
+  const indexOfLastPage = currentPage * postPerPage;
+  const indexOfFirstPage = indexOfLastPage - postPerPage;
+
+  const currentPosts = filteredPosts.slice(indexOfFirstPage, indexOfLastPage);
+
   return (
-    <>
-      <Helmet>
-        <title>{name === "DevOps" ? "Cloud/DevOps" : name} - Lulu Nwenyi</title>
-      </Helmet>
-      <div>
+    <motion.div
+      key={name}
+      className="section"
+      exit="leave"
+      initial="hidden"
+      animate="visible"
+      variants={pageVariants}
+      transition={transition}
+    >
+      <Title title={name === "DevOps" ? "Cloud/DevOps" : name} description={"k"} />
+
+      <motion.div
+        key={name}
+        exit="leave"
+        initial="hidden"
+        animate="visible"
+        transition={transition}
+        variants={pageVariants}
+      >
         <div className="fixed_category">
           <main className="category_hero max_width">
             <h2>
-              {name === "DevOps" ? "Cloud/DevOps" : name}{" "}
+              {name === "DevOps" ? "Cloud/DevOps" : name}
               <div>
                 <ChervonRight /> <span>{subName}</span>
               </div>
@@ -70,26 +94,21 @@ const Category = ({ name }) => {
               </div>
             </div>
           </main>
-          <SubCategory name={name} handleClick={handleClick} />
+          <SubCategory name={name} />
         </div>
         <section id="articles" className="bg_color_article article__catergory">
           <div className="article_container max_width">
-            {filteredPost.length > 0 ? (
-              filteredPost.map((post, id) => <Post key={id} post={post} />)
+            {currentPosts.length > 0 ? (
+              currentPosts.map((post, id) => <Post key={id} post={post} />)
             ) : (
               <div className="max_width no_post ">
                 No post yet, come back later :(
               </div>
             )}
           </div>
-          {filteredPost.length > 9 && (
+          {currentPosts.length >= 9 && (
             <div className="paginate">
-              <button
-                className="inline_flex"
-                // onClick={() => {
-                //   // history.push(prevPage(page));
-                // }}
-              >
+              <button className="inline_flex">
                 <ArrowLeft className="left" /> PREVIOUS
               </button>
               <div className="link">
@@ -118,10 +137,10 @@ const Category = ({ name }) => {
             </div>
           )}
         </section>
-      </div>
+      </motion.div>
 
       <Footer />
-    </>
+    </motion.div>
   );
 };
 

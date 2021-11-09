@@ -1,4 +1,5 @@
 .category_hero {
+  transform: none !important;
   margin-top: 95px !important;
   padding: 109px 24px 87px !important;
   main {
@@ -213,7 +214,7 @@
 }
 @media screen and (max-width: 580px) {
   .fixed_category {
-    position: fixed;
+    position: sticky;
     right: 0px;
     left: 0px;
     top: 83px;
@@ -224,6 +225,6 @@
     }
   }
   .article__catergory {
-    margin-top: 264px;
+    margin-top: 83px;
   }
 }
