@@ -72,12 +72,12 @@ const Footer = () => {
             <a
               target="_blank"
               rel="noreferrer noopener"
-              href="mailto:hello@lulu.wtf"
+              href="https://www.medium.com/@lulunwenyi"
             >
               Medium
             </a>
             <Link to="/resources">Resources</Link>
-            <Link to="/sponsor">Sponsor</Link>
+            <Link to="/psych">Psych</Link>
           </nav>
           <p className="copyright">
             Copyrights &#169; 2021, Lulu Nwenyi. All rights reserved.
