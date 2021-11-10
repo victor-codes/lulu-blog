@@ -29,7 +29,14 @@ const SinglePost = () => {
   useEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
+      const strong = codeRef.current.querySelectorAll("strong");
       const val = codeRef.current.querySelectorAll("img");
+
+      strong.forEach((node) => {
+        if (node.parentNode) {
+          node.parentNode.style.marginBottom = "0px";
+        }
+      });
       val.forEach((node) => {
         if (node.parentNode) {
           node.parentNode.style.textAlign = "center";
@@ -103,8 +110,9 @@ const SinglePost = () => {
   const shareTwitter = `https://twitter.com/share?url=${window.location.href}&text=I just read ${fetchedData.title} by @LuluNwenyi`;
 
   const copyContainer = document.createElement("div");
+  // copyContainer.innerHTML = `<span>Copy5</span> `;
 
-  copyContainer.setAttribute("class", "copy_container");
+  // copyContainer.setAttribute("class", "copy_container");
 
   return (
     <motion.div
@@ -120,6 +128,7 @@ const SinglePost = () => {
         title={fetchedData.title}
         description={fetchedData.description}
         imageUrl={fetchedData.thumbnail}
+        isBlogPost={true}
       />
 
       <div className="single_post">

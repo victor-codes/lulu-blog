@@ -283,7 +283,7 @@ p {
     padding-left: 32px;
   }
   p {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   p img {
     width: 100%;
@@ -292,6 +292,10 @@ p {
     margin: 32px auto;
     text-align: center;
   }
+  li strong,
+  ul strong {
+    font-size: 17px;
+  }
   a {
     text-decoration: underline;
   }
@@ -299,6 +303,11 @@ p {
   ol li:last-child {
     margin-bottom: 24px;
   }
+}
+blockquote {
+  border-left: 2px solid #1c1c1c;
+  padding-left: 24px;
+  margin: 16px 0 0 24px;
 }
 
 @media screen and (max-width: 540px) {
