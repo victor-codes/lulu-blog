@@ -96,13 +96,9 @@ header {
 
     div {
       margin-bottom: 0px;
-      h1 button svg {
-        path {
-          stroke: unset;
-          fill: unset;
-        }
-        stroke: unset;
-        fill: unset;
+      .menu_icon {
+        stroke: var(--logo-color);
+        fill: var(--logo-color);
       }
     }
   }

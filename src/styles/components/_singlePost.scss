@@ -227,7 +227,7 @@ p {
   h6 {
     font-weight: bold !important;
   }
-  margin-top: 36px;
+  padding-top: 36px;
   h1 {
     font-style: normal;
     font-size: 40px;
@@ -345,5 +345,8 @@ blockquote {
   blockquote {
     padding: 0px 14px;
     margin: 16px 0px;
+  }
+  figure {
+    padding-top: 24px;
   }
 }

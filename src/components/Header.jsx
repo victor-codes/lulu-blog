@@ -109,8 +109,8 @@ const Header = () => {
                 Sponsor
               </NavLink>
             </nav>
-            {mobileNav && <Close onClick={handleClick} />}
-            {!mobileNav && <Menu onClick={handleClick} />}
+            {mobileNav && <Close className="menu_icon" onClick={handleClick} />}
+            {!mobileNav && <Menu className="menu_icon" onClick={handleClick} />}
           </div>
           <hr className="hidden" />
         </div>
