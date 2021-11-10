@@ -116,10 +116,9 @@ a {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   border-radius: 6px;
-  background-color: #000;
-  // background: rgba(255, 255, 255, 0.1);
-  // backdrop-filter: filter(16px);
-  padding: 8px 12px;
+  // background: rgba(70, 70, 70, 0.5);
+  backdrop-filter: filter(16px);
+  padding: 2px 8px;
   cursor: pointer;
   span {
     font-size: $font-size-7;

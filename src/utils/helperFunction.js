@@ -3,7 +3,12 @@ function truncateString(str, num) {
 }
 
 function stringToLink(str) {
-  return str.toLowerCase().split(" ").join("-").replace(",", "");
+  return str
+    .toLowerCase()
+    .split(" ")
+    .join("-")
+    .replace(",", "")
+    .replace("/", "-");
 }
 
 export { truncateString, stringToLink };

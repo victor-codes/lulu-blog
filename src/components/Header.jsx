@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import { ReactComponent as Menu } from ".././assets/menu.svg";
 import MobileNav from "./MobileNav";
 import { ReactComponent as Close } from "../assets/close.svg";
-import { motion } from "framer-motion";
 import { ReactComponent as Sun } from "../assets/sun.svg";
 import { ReactComponent as Moon } from "../assets/moon.svg";
 import { SubCategoryContent } from "../context/Category";
@@ -40,12 +39,7 @@ const Header = () => {
   }
   return (
     <>
-      <motion.header
-        initial={{ y: -101 }}
-        animate={{ y: 0 }}
-        exit={{ y: -101 }}
-        transition={{ duration: 1, type: "spring" }}
-      >
+      <header>
         <div className="header_container">
           <div>
             <div className="mode">
@@ -123,7 +117,7 @@ const Header = () => {
           </div>
           <hr className="hidden" />
         </div>
-      </motion.header>
+      </header>
       <MobileNav key="overlay" hide={(e) => setMobileNav(e)} show={mobileNav} />
     </>
   );
