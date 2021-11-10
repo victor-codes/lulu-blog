@@ -49,6 +49,8 @@
     line-height: 17px;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
+    text-underline-offset: 4px;
+    text-underline-width: 1px;
 
     color: var(--article-primary-color);
     svg {
