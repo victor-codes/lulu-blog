@@ -41,6 +41,7 @@
   --mobile-nav-text-color: #77848b;
 
   --single-post-accent-color: #7c7676;
+  
   --blog-post-primary-text-color: #313131;
   --blog-post-secondary-color: #464646;
   --blog-contributions-bg-color: #fafafa;
@@ -48,6 +49,8 @@
   --blog-header-color: #161616;
   --blog-header-2-color: #313131;
   --blog-list-color: #313131;
+  --blockquote-line-color: #1c1c1c;
+
 }
 
 [data-theme="dark"] {
@@ -90,11 +93,14 @@
   --mobile-nav-background: #161616;
   --mobile-nav-line-color: #272727;
 
+  --single-post-accent-color: #d2d2d2;
   --mobile-nav-btn-bg-color: rgba(54, 54, 54, 0.9);
 
   --mobile-nav-text-color: #989fa3;
 
   --single-post-accent-color: #d2d2d2;
+
+  --blockquote-line-color: #d2d2d2;
 
   --blog-post-primary-text-color: #a5a5a5;
   --blog-post-secondary-color: #f3f3f3;

@@ -144,7 +144,6 @@ const SinglePost = () => {
           <ArrowRight />
         </div>
       </div>
-      {/* <Copy text="sdfhs" /> */}
       <div className="post_bg_color">
         <div className="post__details">
           {fetchedData.thumbnail && (

@@ -13,7 +13,6 @@
     }
   }
   .post__details {
-    padding-top: 35px !important;
     background: var(--secondary-background);
     padding-bottom: 64px !important;
   }
@@ -305,14 +304,14 @@ p {
   }
 }
 blockquote {
-  border-left: 2px solid #1c1c1c;
+  border-left: 2px solid var(--blockquote-line-color);
   padding-left: 24px;
   margin: 16px 0 0 24px;
 }
 
 @media screen and (max-width: 540px) {
   .post_content {
-    margin-top: 24px;
+    padding-top: 24px;
     h1 {
       font-size: 28px;
       line-height: 35px;
@@ -342,5 +341,9 @@ blockquote {
       line-height: 27px;
       color: var(--blog-list-color) !important;
     }
+  }
+  blockquote {
+    padding: 0px 14px;
+    margin: 16px 0px;
   }
 }

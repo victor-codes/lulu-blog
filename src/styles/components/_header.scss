@@ -28,16 +28,6 @@ header {
     max-width: 1220px;
     margin: 0 auto !important;
 
-    svg {
-      path {
-        // stroke: var(--logo-color);
-        // fill: var(--logo-color);
-      }
-      display: none;
-      // stroke: var(--logo-color);
-      // fill: var(--logo-color);
-    }
-
     nav {
       display: flex;
       flex-direction: row;
@@ -106,9 +96,13 @@ header {
 
     div {
       margin-bottom: 0px;
-      svg {
-        stroke: var(--logo-color);
-        fill: var(--logo-color);
+      h1 button svg {
+        path {
+          stroke: unset;
+          fill: unset;
+        }
+        stroke: unset;
+        fill: unset;
       }
     }
   }

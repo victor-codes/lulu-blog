@@ -43,18 +43,15 @@ const Header = () => {
         <div className="header_container">
           <div>
             <div className="mode">
-              <h1 className="logo" onClick={theme}>
-                LN
-              </h1>
-              {mode === "light" ? (
-                <button onClick={theme}>
+              <h1 className="logo">LN</h1>
+
+              <button style={{ padding: "0 4px" }} onClick={theme}>
+                {mode === "light" ? (
                   <Moon className="mode_show" />
-                </button>
-              ) : (
-                <button>
-                  <Sun onClick={theme} className="mode_show" />
-                </button>
-              )}
+                ) : (
+                  <Sun className="mode_show" />
+                )}
+              </button>
             </div>
             <nav className="menu-items hide">
               <NavLink

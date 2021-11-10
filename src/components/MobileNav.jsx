@@ -8,9 +8,7 @@ const MobileNav = ({ show, hide }) => {
     enter: { x: 0 },
     leave: { x: "-100vw" },
   };
-  // function handleClick() {
-  //   hide(false);
-  // }
+
   return (
     <motion.div
       key="1"
