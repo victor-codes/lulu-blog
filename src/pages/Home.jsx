@@ -76,7 +76,11 @@ const Home = () => {
 
   return (
     <>
-      <Title title="Blog" />
+      <Title
+        title="Blog"
+        description="Welcome to Lulu Nwenyi personal blog"
+        isBlogPost={false}
+      />
       <motion.div
         key="home"
         exit="leave"
@@ -156,7 +160,6 @@ const Home = () => {
           )}
         </section>
       </motion.div>
-
       <Footer />
     </>
   );

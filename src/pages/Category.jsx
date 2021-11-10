@@ -14,10 +14,18 @@ import { SubCategoryContent } from "../context/Category";
 import Title from "../components/Title";
 
 const categories = {
-  design: ["All", "UX Writing", "Category 1", "Category 2"],
-  dev: ["All", "Python", "Category 1", "Category 2"],
+  design: ["All", "UX Writing", "UX Research", "UI UX"],
+  dev: ["All", "Python", "Flask", "Generic"],
   devops: ["All", "AWS", "GCP"],
-  writing: ["All", "Category 1", "Category 2", "Category 3"],
+  psych: ["All"],
+  resources: [
+    "All",
+    "Cloud",
+    "Backend",
+    "Web3",
+    "Technical Writing",
+    "Projects",
+  ],
 };
 
 const Category = ({ name }) => {
@@ -26,7 +34,7 @@ const Category = ({ name }) => {
   const { subcategory } = useParams();
 
   // const [subName, setSubName] = useState("All");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage] = useState(1);
   const postPerPage = 9;
 
   const convertCategoriesToLowercase = categories[name.toLowerCase()].map(
@@ -54,7 +62,6 @@ const Category = ({ name }) => {
   });
 
   // pagination
-
   const indexOfLastPage = currentPage * postPerPage;
   const indexOfFirstPage = indexOfLastPage - postPerPage;
 
@@ -70,7 +77,11 @@ const Category = ({ name }) => {
       variants={pageVariants}
       transition={transition}
     >
-      <Title title={name === "DevOps" ? "Cloud/DevOps" : name} description={"k"} />
+      <Title
+        title={name === "DevOps" ? "Cloud/DevOps" : name}
+        description={`This is a Category page`}
+        isBlogPost={false}
+      />
 
       <motion.div
         key={name}

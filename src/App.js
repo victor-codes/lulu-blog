@@ -35,22 +35,10 @@ function App() {
                 initial={false}
               >
                 <Switch location={location} key={location.pathname}>
-                  <Route exact path="/all">
-                    <Redirect to="/home/all" />
-                  </Route>
                   <Route exact path="/">
-                    <Redirect to="/home/all" />
+                    <Redirect to="/home" />
                   </Route>
-                  <Route exact path="/home">
-                    <Redirect to="/home/all" />
-                  </Route>
-
-                  <Route
-                    exact
-                    path="/home/:subcategory"
-                    component={Home}
-                    key={0}
-                  />
+                  <Route exact path="/home" component={Home} key={0} />
 
                   {/* categories */}
 
@@ -81,15 +69,19 @@ function App() {
                     <Category name="DevOps" key={3} />
                   </Route>
 
-                  <Route exact path="/writing">
-                    <Redirect to="/writing/all" />
+                  <Route exact path="/psych">
+                    <Redirect to="/psych/all" />
                   </Route>
-                  <Route exact path="/writing/:subcategory">
-                    <Category name="Writing" key={4} />
+                  <Route exact path="/psych/:subcategory">
+                    <Category name="Psych" key={4} />
                   </Route>
 
-                  <Route exact path="/resources" component={Home} key={5} />
-
+                  <Route exact path="/resources">
+                    <Redirect to="/resources/all" />
+                  </Route>
+                  <Route exact path="/resources/:subcategory" key={5}>
+                    <Category name="Resources" />
+                  </Route>
                   <Route exact path="/sponsor" component={Home} key={6} />
 
                   <Route

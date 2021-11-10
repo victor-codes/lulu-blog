@@ -7,11 +7,42 @@ import { SubCategoryContent } from "../context/Category";
 
 const SubCategory = ({ name }) => {
   const categories = {
-    home: ["All", "Design", "Dev", "Cloud/DevOps", "Resources", "Sponsor"],
-    design: ["All", "UX Writing", "Category 1", "Category 2"],
-    dev: ["All", "Python", "Category 1", "Category 2"],
-    devops: ["All", "AWS", "GCP"],
-    writing: ["All", "Category 1", "Category 2", "Category 3"],
+    home: {
+      All: "home",
+      Design: "design",
+      Dev: "dev",
+      "Cloud/DevOps": "cloud",
+      Resources: "resources",
+      Sponsor: "Sponsor",
+    },
+    design: {
+      All: "all",
+      "UX Writing": "ux-writing",
+      "UX Research": "ux-research",
+      "UI UX": "ui/ux",
+    },
+    dev: {
+      All: "all",
+      Python: "python",
+      Flask: "flask",
+      Generic: "generic",
+    },
+    psych: {
+      all: "All",
+    },
+    devops: {
+      All: "all",
+      AWS: "aws",
+      GCP: "gcp",
+    },
+    resources: {
+      All: "all",
+      "Cloud/DevOps": "cloud",
+      Backend: "backend",
+      Web3: "web3",
+      "Technical Writing": "technical-writing",
+      Projects: "projects",
+    },
   };
 
   const category = name.toLowerCase();
@@ -24,7 +55,7 @@ const SubCategory = ({ name }) => {
       <section className="mobile_nav">
         <div className="container">
           {categories[category] &&
-            categories[category].map((item, id) => (
+            Object.keys(categories[category]).map((item, id) => (
               <NavLink
                 key={id}
                 onClick={() => {
@@ -34,11 +65,7 @@ const SubCategory = ({ name }) => {
                   setSubName(item);
                 }}
                 activeClassName="active"
-                to={
-                  category === "home" && item !== "All"
-                    ? `/${item.toLowerCase()}`
-                    : `${stringToLink(item)}`
-                }
+                to={stringToLink(categories[category][item])}
               >
                 {item}
               </NavLink>

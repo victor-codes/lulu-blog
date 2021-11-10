@@ -2,15 +2,20 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { truncateString } from "../utils/helperFunction";
 
-const Title = ({ title, description, imageUrl }) => {
+const Title = ({ title, description, imageUrl, isBlogPost }) => {
   const defaultImgUrl = "";
   const defaultDescriptionText = "";
-  const trimmedDescription = truncateString(description, 150);
+  const trimmedDescription = description && truncateString(description, 150);
 
   return (
-    <Helmet>
-      {/* // <!-- Primary Meta Tags --> */}
+    <Helmet titleAttributes={`${title}`}>
+      <html lang="en" />
       <title>{`${title} — Lulu Nwenyi`}</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charSet="utf-8" />
+
+      {/* // <!-- Primary Meta Tags --> */}
       <meta name="title" content={`${title} — Lulu Nwenyi`} />
       <meta
         name="description"
@@ -18,6 +23,7 @@ const Title = ({ title, description, imageUrl }) => {
           description ? trimmedDescription : defaultDescriptionText
         } Read more...`}
       />
+      {isBlogPost && <meta property="og:type" content="article" />}
 
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
@@ -32,7 +38,9 @@ const Title = ({ title, description, imageUrl }) => {
       <meta
         property="og:image"
         content={`${
-          imageUrl ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}` : ""
+          imageUrl
+            ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
+            : defaultImgUrl
         }`}
       />
 
@@ -40,6 +48,7 @@ const Title = ({ title, description, imageUrl }) => {
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={`${window.location.href}`} />
       <meta property="twitter:title" content={`${title} — Lulu Nwenyi`} />
+      <meta name="twitter:card" content="summary" />
       <meta
         property="twitter:description"
         content={`${
@@ -49,7 +58,9 @@ const Title = ({ title, description, imageUrl }) => {
       <meta
         property="twitter:image"
         content={`${
-          imageUrl ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}` : ""
+          imageUrl
+            ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
+            : defaultImgUrl
         }`}
       ></meta>
     </Helmet>
