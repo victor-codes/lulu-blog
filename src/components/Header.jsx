@@ -45,7 +45,7 @@ const Header = () => {
             <div className="mode">
               <h1 className="logo">LN</h1>
 
-              <button style={{ padding: "0 4px" }} onClick={theme}>
+              <button aria-label="Toggle Theme" style={{ padding: "0 4px" }} onClick={theme}>
                 {mode === "light" ? (
                   <Moon className="mode_show" />
                 ) : (

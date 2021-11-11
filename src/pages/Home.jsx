@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import { useInView } from "react-intersection-observer";
@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 import postList from "../data/posts.json";
 import { motion } from "framer-motion";
 import { pageVariants, transition } from "../utils/variants";
-import Title from "../components/Title";
+import Meta from "../components/Meta";
 
 const Home = () => {
   const [scroll, setScroll] = useState(0);
@@ -19,10 +19,11 @@ const Home = () => {
   const postPerPage = 9;
 
   const postLength = postList.length;
+  const paginate = postLength % 9;
 
-  const paginateArray = [];
+  let paginateArray = [];
 
-  for (let i = 0; i < postLength; i++) {
+  for (let i = 1; i <= paginate; i++) {
     paginateArray.push(i);
   }
 
@@ -38,7 +39,6 @@ const Home = () => {
   }, [scroll]);
 
   // pagination
-
   const indexOfLastPage = currentPage * postPerPage;
   const indexOfFirstPage = indexOfLastPage - postPerPage;
 
@@ -76,18 +76,19 @@ const Home = () => {
 
   return (
     <>
-      <Title
+      <Meta
         title="Blog"
         description="Welcome to Lulu Nwenyi personal blog"
         isBlogPost={false}
+        canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/home`}
       />
       <motion.div
         key="home"
         exit="leave"
         initial="hidden"
         animate="visible"
-        transition={transition}
         variants={pageVariants}
+        transition={transition}
       >
         <div ref={ref} className={`fixed hero_fixed trigger ${styles}`}>
           <div className="blur_fect"></div>
@@ -121,7 +122,7 @@ const Home = () => {
               <button
                 className="inline_flex"
                 onClick={() => {
-                  if (currentPage === 1) {
+                  if (currentPage === 1 || paginate === currentPage) {
                     return;
                   }
                   setCurrentPage(currentPage - 1);
@@ -130,14 +131,25 @@ const Home = () => {
                 <ArrowLeft className="left" /> PREVIOUS
               </button>
               <div className="link">
-                <NavLink activeClassName="page" to={`/home/1`}>
+                <button
+                  activeClassName="page"
+                  onClick={() => setCurrentPage(1)}
+                  // to="/home/1"
+                >
                   1
-                </NavLink>
-                <NavLink activeClassName="page" to={`/home/2`}>
-                  2
-                </NavLink>
+                </button>
+                {paginateArray.map((item, id) => (
+                  <button
+                    key={id}
+                    onClick={() => setCurrentPage(item + 1)}
+                    activeClassName="page"
+                    // to={`/home/${item + 1}`}
+                  >
+                    {item + 1}
+                  </button>
+                ))}
                 {/* {paginateArray.length > 2 && ( */}
-                <>
+                {/* <>
                   <NavLink activeClassName="page" to={`/home/3`}>
                     3
                   </NavLink>
@@ -145,11 +157,14 @@ const Home = () => {
                   <NavLink activeClassName="page" to="/home/12">
                     12
                   </NavLink>
-                </>
+                </> */}
                 {/* )} */}
               </div>
               <button
                 onClick={() => {
+                  if (paginate < currentPage) {
+                    return;
+                  }
                   setCurrentPage(currentPage + 1);
                 }}
                 className="inline_flex"

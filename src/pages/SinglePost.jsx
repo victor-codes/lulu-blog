@@ -12,7 +12,7 @@ import css from "highlight.js/lib/languages/css";
 import xml from "highlight.js/lib/languages/xml";
 import { blogVariants, transition } from "../utils/variants";
 import { motion } from "framer-motion";
-import Title from "../components/Title";
+import Meta from "../components/Meta";
 
 const SinglePost = () => {
   const codeRef = useRef();
@@ -110,9 +110,9 @@ const SinglePost = () => {
   const shareTwitter = `https://twitter.com/share?url=${window.location.href}&text=I just read ${fetchedData.title} by @LuluNwenyi`;
 
   const copyContainer = document.createElement("div");
-  // copyContainer.innerHTML = `<span>Copy5</span> `;
+  // // copyContainer.innerHTML = `<span>Copy5</span> `;
 
-  // copyContainer.setAttribute("class", "copy_container");
+  // // copyContainer.setAttribute("class", "copy_container");
 
   return (
     <motion.div
@@ -124,11 +124,12 @@ const SinglePost = () => {
       transition={{ delay: 0.3, ...transition }}
       className="single_post_footer_bg"
     >
-      <Title
+      <Meta
         title={fetchedData.title}
         description={fetchedData.description}
         imageUrl={fetchedData.thumbnail}
         isBlogPost={true}
+        canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/${fetchedData.slug}`}
       />
 
       <div className="single_post">

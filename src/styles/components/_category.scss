@@ -82,12 +82,7 @@
 }
 
 .paginate {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 461px;
-  padding: 0 24px;
-  margin: 100px auto 0;
+
   button {
     background: none;
     cursor: pointer;
@@ -109,10 +104,10 @@
   }
 
   .link {
-    display: grid;
+    // display: grid;
     gap: 16px;
     // padding: 0 48px;
-    grid-template-columns: repeat(5, 1fr);
+    // grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
     a {
@@ -207,9 +202,6 @@
     .category_hero {
       margin-top: 0 !important;
     }
-  }
-  #articles {
-    // margin-top: 264px;
   }
 }
 @media screen and (max-width: 580px) {

@@ -2,19 +2,21 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { truncateString } from "../utils/helperFunction";
 
-const Title = ({ title, description, imageUrl, isBlogPost }) => {
+const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
   const defaultImgUrl = "";
   const defaultDescriptionText = "";
   const trimmedDescription = description && truncateString(description, 150);
 
+  console.log(canonicalLink);
+  
   return (
-    <Helmet titleAttributes={`${title}`}>
+    <Helmet>
       <html lang="en" />
       <title>{`${title} — Lulu Nwenyi`}</title>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
-
+      <meta rel="canonical" href={canonicalLink} />
       {/* // <!-- Primary Meta Tags --> */}
       <meta name="title" content={`${title} — Lulu Nwenyi`} />
       <meta
@@ -67,4 +69,4 @@ const Title = ({ title, description, imageUrl, isBlogPost }) => {
   );
 };
 
-export default Title;
+export default Meta;

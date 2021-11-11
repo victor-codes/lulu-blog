@@ -17,9 +17,9 @@ const SubCategory = ({ name }) => {
     },
     design: {
       All: "all",
+      "UI UX": "ui/ux",
       "UX Writing": "ux-writing",
       "UX Research": "ux-research",
-      "UI UX": "ui/ux",
     },
     dev: {
       All: "all",
@@ -28,7 +28,7 @@ const SubCategory = ({ name }) => {
       Generic: "generic",
     },
     psych: {
-      all: "All",
+      All: "all",
     },
     devops: {
       All: "all",

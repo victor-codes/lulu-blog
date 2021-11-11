@@ -68,7 +68,7 @@
 
 .paginate {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   max-width: 461px;
   padding: 0 24px;
@@ -97,7 +97,6 @@
     display: flex;
     gap: 16px;
     // padding: 0 48px;
-    grid-template-columns: repeat(5, 1fr);
     align-items: center;
     justify-items: center;
     a {

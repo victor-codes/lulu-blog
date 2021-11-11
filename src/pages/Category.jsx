@@ -11,10 +11,10 @@ import postList from "../data/posts.json";
 import { motion } from "framer-motion";
 import { pageVariants, transition } from "../utils/variants";
 import { SubCategoryContent } from "../context/Category";
-import Title from "../components/Title";
+import Meta from "../components/Meta";
 
 const categories = {
-  design: ["All", "UX Writing", "UX Research", "UI UX"],
+  design: ["All", "UI UX", "UX Writing", "UX Research"],
   dev: ["All", "Python", "Flask", "Generic"],
   devops: ["All", "AWS", "GCP"],
   psych: ["All"],
@@ -77,10 +77,13 @@ const Category = ({ name }) => {
       variants={pageVariants}
       transition={transition}
     >
-      <Title
+      <Meta
         title={name === "DevOps" ? "Cloud/DevOps" : name}
         description={`This is a Category page`}
         isBlogPost={false}
+        canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/${
+          name === "devops" ? "cloud" : name.toLowerCase()
+        }`}
       />
 
       <motion.div
