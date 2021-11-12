@@ -57,7 +57,6 @@ Wirebox is a used to create wireframes of your design. It simply duplicates your
 Freepik is a widely known image and vector art resource. Freepik recently created an extension, [stories.freepik.com](http://stories.freepik.com/), for amazing illustrations. This plugin imports your chosen illustration in svg format which allows you to edit it’s contents.
 
 ![unsplash.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1605295807323/P8iOOqPar.jpeg?auto=compress,format&format=webp)
-[stories-by-freepik-image](https://devlulu.xyz/must-have-figma-plugins-for-every-designer)
 
 **7. Lorem Ipsum**
 
