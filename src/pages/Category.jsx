@@ -95,7 +95,7 @@ const Category = ({ name }) => {
         variants={pageVariants}
       >
         <div className="fixed_category">
-          <main className="category_hero max_width">
+          <main className="category_hero max_width gradient_container">
             <h2>
               {name === "DevOps" ? "Cloud/DevOps" : name}
               <div>
@@ -107,6 +107,7 @@ const Category = ({ name }) => {
                 <div className="circle_1"></div>
               </div>
             </div>
+            <div className="gradient"></div>
           </main>
           <SubCategory name={name} />
         </div>

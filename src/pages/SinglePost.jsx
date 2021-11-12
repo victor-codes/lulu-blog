@@ -40,6 +40,7 @@ const SinglePost = () => {
       val.forEach((node) => {
         if (node.parentNode) {
           node.parentNode.style.textAlign = "center";
+          node.parentNode.style.margin = "0";
         }
       });
 

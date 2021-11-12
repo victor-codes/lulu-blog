@@ -2,7 +2,8 @@
   background: var(--mobile-nav-background);
   padding: 0 44px 0 33px;
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 163px;
   align-items: center;
   border-bottom: 0.5px solid var(--mobile-nav-line-color);
 
@@ -64,6 +65,9 @@
 }
 
 @media screen and (min-width: 580px) {
+  #articles .mobile_nav {
+    display: none !important;
+  }
   .articles {
     .mobile_nav {
       .container {

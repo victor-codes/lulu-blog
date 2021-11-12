@@ -46,6 +46,7 @@
     // left: 965.03px;
     right: 200px;
     top: 97.68px;
+    z-index: -10;
     background: var(--single-post-gradient);
     filter: blur(151px);
     opacity: var(--single-post-gradient-opacity);
@@ -235,10 +236,6 @@ p {
   }
 }
 
-.single_post_footer_bg {
-  // margin-top: 101px !important;
-}
-
 .post_content {
   h1,
   h2,
@@ -307,10 +304,11 @@ p {
   }
   p img {
     width: 100%;
-    max-width: 500px;
+    object-fit: fill;
+    max-width: 540px;
     height: auto;
-    margin: 32px auto;
-    text-align: center;
+    max-height: 375px;
+    margin: 16px auto 32px;
   }
   li strong,
   ul strong {
@@ -356,6 +354,9 @@ blockquote {
     p {
       font-size: 16px;
       line-height: 30px;
+    }
+    img {
+      margin: 0px auto 16px !important;
     }
     li {
       font-size: 17px;

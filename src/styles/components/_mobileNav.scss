@@ -33,6 +33,6 @@
 
 @media screen and (min-width: 900px) {
   .mobile__nav {
-    display: none;
+    display: none !important;
   }
 }

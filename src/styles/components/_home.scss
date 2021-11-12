@@ -120,9 +120,7 @@
   font-size: 18px !important;
   text-align: center;
   letter-spacing: 0.03em;
-
   color: var(--paginate-primary-color) !important;
-
   text-shadow: 0px 2px 50px rgba(0, 0, 0, 0.34);
 }
 
@@ -140,6 +138,7 @@
     display: block;
   }
   .home_hero {
+    backdrop-filter: blur(16px);
     h2 {
       font-size: 30px;
       line-height: 49px;
