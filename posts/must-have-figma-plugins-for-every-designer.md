@@ -48,11 +48,15 @@ When you need to put a map in your design, all you need is the mapsicle plugin. 
 
 Wirebox is a used to create wireframes of your design. It simply duplicates your design as a wireframe.
 
-![wire.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1605296128495/O_7RxZxES.jpeg?auto=compress,format&format=webp)**6. Stories by Freepik**
+![wire.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1605296128495/O_7RxZxES.jpeg?auto=compress,format&format=webp)
+
+
+
+**6. Stories by Freepik**
 
 Freepik is a widely known image and vector art resource. Freepik recently created an extension, [stories.freepik.com](http://stories.freepik.com/), for amazing illustrations. This plugin imports your chosen illustration in svg format which allows you to edit it’s contents.
 
-![unsplash.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1605295807323/P8iOOqPar.jpeg?auto=compress,format&format=webp)[stories-by-freepik-image](https://devlulu.xyz/must-have-figma-plugins-for-every-designer)
+![unsplash.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1605295807323/P8iOOqPar.jpeg?auto=compress,format&format=webp)
 
 **7. Lorem Ipsum**
 
