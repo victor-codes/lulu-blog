@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 const matter = require("gray-matter");
-const { log } = require("console");
 
 const dirPath = path.join(__dirname, "../../posts");
 let postlist = [];

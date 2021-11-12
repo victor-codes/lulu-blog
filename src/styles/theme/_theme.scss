@@ -41,7 +41,7 @@
   --mobile-nav-text-color: #77848b;
 
   --single-post-accent-color: #7c7676;
-  
+
   --blog-post-primary-text-color: #313131;
   --blog-post-secondary-color: #464646;
   --blog-contributions-bg-color: #fafafa;
@@ -50,7 +50,8 @@
   --blog-header-2-color: #313131;
   --blog-list-color: #313131;
   --blockquote-line-color: #1c1c1c;
-
+  --single-post-gradient: rgb(221, 148, 239);
+  --single-post-gradient-opacity: 0.5;
 }
 
 [data-theme="dark"] {
@@ -85,7 +86,6 @@
   --blog-header-2-color: #f1f1f1;
   --blog-list-color: #d2d2d2;
 
-
   // --blur-effect: url(../../assets/home-ellipse-1.png);
 
   // --blur-effect-position: bottom -650px right 0px;
@@ -107,4 +107,6 @@
 
   --blog-contributions-bg-color: #1e1e1e;
   --blog-contributions-text-color: #f1f1f1;
+  --single-post-gradient: rgba(161, 54, 188, 0.8);
+  --single-post-gradient-opacity: 0.8;
 }

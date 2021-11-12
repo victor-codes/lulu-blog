@@ -140,12 +140,7 @@ const Category = ({ name }) => {
                   12
                 </NavLink>
               </div>
-              <button
-                // onClick={() => {
-                //   // history.push(nextPage(page, 12));
-                // }}
-                className="inline_flex"
-              >
+              <button className="inline_flex">
                 NEXT <ArrowRight />
               </button>
             </div>

@@ -5,6 +5,7 @@ function truncateString(str, num) {
 function stringToLink(str) {
   return str
     .toLowerCase()
+    .trim()
     .split(" ")
     .join("-")
     .replace(",", "")

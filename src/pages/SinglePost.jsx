@@ -73,7 +73,7 @@ const SinglePost = () => {
     }
   }, [codeRef, postExists]);
 
-  postList.map((post, id) => {
+  postList.forEach((post, id) => {
     if (slug === post.slug) {
       currentPost = id;
       fetchedData = { ...postList[currentPost] };
@@ -81,7 +81,6 @@ const SinglePost = () => {
     }
     previousPost = postList[currentPost - 1];
     nextPost = postList[currentPost + 1];
-    return null;
   });
 
   useEffect(() => {
@@ -131,19 +130,21 @@ const SinglePost = () => {
         isBlogPost={true}
         canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/${fetchedData.slug}`}
       />
-
-      <div className="single_post">
-        <div className="post_info">
-          <span children="tag">{fetchedData.tags}</span>
-          <h2>{fetchedData.title}</h2>
-          <span>{fetchedData.publishDate}</span>
+      <div className="single_post_padding">
+        <div className="single_post">
+          <div className="post_info">
+            <span children="tag">{fetchedData.tags}</span>
+            <h2>{fetchedData.title}</h2>
+            <span>{fetchedData.publishDate}</span>
+          </div>
+          <div className="inline_flex share">
+            <Link onClick={handleScroll} to="/">
+              SHARE THIS ARTICLE
+            </Link>
+            <ArrowRight />
+          </div>
         </div>
-        <div className="inline_flex share">
-          <Link onClick={handleScroll} to="/">
-            SHARE THIS ARTICLE
-          </Link>
-          <ArrowRight />
-        </div>
+        <div className="gradient"></div>
       </div>
       <div className="post_bg_color">
         <div className="post__details">

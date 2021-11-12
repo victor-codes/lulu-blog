@@ -5,25 +5,10 @@ import { stringToLink, truncateString } from "../utils/helperFunction";
 // import { motion } from "framer-motion;
 
 const Post = ({ post }) => {
-  const { tags, title, publishDate, description, category } = post;
-  // const link = {
-  //   visible: { opacity: 1, y: -4 },
-  //   hidden: { opacity: 0, y: 0 },
-  // };
-
-  // const item = {
-  //   visible: {
-  //     opacity: 1,
-  //     x: 8,
-  //   },
-  //   hidden: {
-  //     opacity: 0,
-  //     x: 8,
-  //   },
-  // };
+  const { tags, title, publishDate, description, category, slug } = post;
 
   return (
-    <Link to={`/${stringToLink(category)}/post/${stringToLink(title)}`}>
+    <Link to={`/${stringToLink(category)}/post/${slug}`}>
       <article className="post_article">
         <div className="info">
           <div className="tag">
