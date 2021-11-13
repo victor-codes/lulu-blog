@@ -10,7 +10,7 @@
   --suppport-line-color: #f3f3f3;
 
   --primary-background: #ffffff;
-  --primary-background-blur: rgba(255, 255, 255, 0.5);
+  --primary-background-blur: rgba(255, 255, 255, 0.4);
   --secondary-background: #ffffff;
 
   --article-primary-color: #1c1c1c;
@@ -52,6 +52,7 @@
   --blockquote-line-color: #1c1c1c;
   --single-post-gradient: rgb(221, 148, 239);
   --single-post-gradient-opacity: 0.5;
+  --home-gradient-opacity: 0.9;
 }
 
 [data-theme="dark"] {
@@ -66,7 +67,7 @@
   --tertary-text-color: #bdbdbd;
 
   --primary-background: rgb(7, 8, 9);
-  --primary-background-blur: rgba(7, 8, 9, 0.5);
+  --primary-background-blur: rgba(7, 8, 9, 0.4);
 
   --secondary-background: #121212;
 
@@ -109,4 +110,5 @@
   --blog-contributions-text-color: #f1f1f1;
   --single-post-gradient: rgba(161, 54, 188, 0.8);
   --single-post-gradient-opacity: 0.8;
+  --home-gradient-opacity: 0.8;
 }

@@ -8,8 +8,16 @@ import { ReactComponent as Close } from "../assets/close.svg";
 import { ReactComponent as Sun } from "../assets/sun.svg";
 import { ReactComponent as Moon } from "../assets/moon.svg";
 import { SubCategoryContent } from "../context/Category";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 const Header = () => {
+  const { scrollY } = useViewportScroll();
+  const color = useTransform(
+    scrollY,
+    [0, 0.3, 0.4],
+    ["", "", "var(--primary-background-blur)"]
+  );
+
   const { setSubName } = useContext(SubCategoryContent);
 
   const localTheme = localStorage.getItem("mode");
@@ -37,15 +45,25 @@ const Header = () => {
   function handleClick() {
     setMobileNav(!mobileNav);
   }
+
+  const match = window.matchMedia(`(max-width: 768px)`);
   return (
     <>
-      <header>
+      <motion.header
+        style={{
+          backgroundColor: color,
+        }}
+      >
         <div className="header_container">
           <div>
             <div className="mode">
               <h1 className="logo">LN</h1>
 
-              <button aria-label="Toggle Theme" style={{ padding: "0 4px" }} onClick={theme}>
+              <button
+                aria-label="Toggle Theme"
+                style={{ padding: "0 4px" }}
+                onClick={theme}
+              >
                 {mode === "light" ? (
                   <Moon className="mode_show" />
                 ) : (
@@ -114,8 +132,14 @@ const Header = () => {
           </div>
           <hr className="hidden" />
         </div>
-      </header>
-      <MobileNav key="overlay" hide={(e) => setMobileNav(e)} show={mobileNav} />
+      </motion.header>
+      {match && (
+        <MobileNav
+          key="overlay"
+          hide={(e) => setMobileNav(e)}
+          show={mobileNav}
+        />
+      )}
     </>
   );
 };

@@ -36,7 +36,8 @@
   }
 }
 .single_post_padding {
-  overflow: hidden;
+  overflow: clip;
+  overflow-clip-margin: 69px;
   position: relative;
   padding: 197px 0 24px;
   .gradient {
@@ -187,21 +188,48 @@ p {
 }
 .read {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 618px;
   margin: auto;
+  :hover {
+    opacity: 0.8;
+  }
+  a:first-child {
+    div {
+      align-items: flex-start;
+      span {
+        text-align: left;
+      }
+    }
+  }
   a {
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 200px;
+      font-size: 0.8rem;
+
+      span {
+        margin-top: 4px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: right;
+      }
+    }
     svg {
+      path {
+        fill: var(--paginate-primary-color);
+        stroke: var(--paginate-primary-color);
+      }
+      fill: var(--paginate-primary-color);
       stroke: var(--paginate-primary-color);
     }
     color: var(--paginate-primary-color);
-    font-weight: bold;
-    display: inline-grid;
-    grid-template-columns: repeat(2, auto);
+    display: inline-flex;
     gap: 8px;
-    text-decoration: underline;
     align-items: center;
   }
 }

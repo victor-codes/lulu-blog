@@ -81,7 +81,6 @@
 }
 
 .paginate {
-
   button {
     background: none;
     cursor: pointer;
@@ -150,6 +149,7 @@
 
 @media screen and (max-width: 500px) {
   .category_hero {
+    padding-bottom: 0px !important;
     h2 {
       font-size: 30px;
       line-height: 49px;
@@ -163,13 +163,14 @@
     p {
       margin-top: 0px !important;
     }
+    .max_width {
+      padding: 30px 33px !important;
+    }
   }
   .bg_color_article {
     background: var(--mobile-article-background);
   }
-  .max_width {
-    padding: 30px 33px !important;
-  }
+
   .link {
     gap: 8px !important;
   }

@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams, Redirect } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
-import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
+import { ReactComponent as CheronRight } from "../assets/chervon-right.svg";
+import { ReactComponent as CheronLeft } from "../assets/chervon-left.svg";
+
 import Footer from "../components/Footer";
 import Markdown from "react-markdown";
 import postList from "../data/posts.json";
@@ -220,40 +222,53 @@ const SinglePost = () => {
               </a>
             </p>
           </div>
-          <div className="read">
-            <Link
-              onClick={(e) => {
-                if (previousPost) {
-                  return;
+          <div
+            style={previousPost ? {} : { justifyContent: "flex-end" }}
+            className="read"
+          >
+            {previousPost && (
+              <Link
+                onClick={(e) => {
+                  if (previousPost) {
+                    return;
+                  }
+                  return e.preventDefault();
+                }}
+                to={
+                  previousPost &&
+                  `/${previousPost.category.toLowerCase()}/post/${
+                    previousPost.slug
+                  }`
                 }
-                return e.preventDefault();
-              }}
-              to={
-                previousPost &&
-                `/${previousPost.category.toLowerCase()}/post/${
-                  previousPost.slug
-                }`
-              }
-            >
-              <ArrowLeft />
-              PREVIOUS READ
-            </Link>
+              >
+                <CheronLeft />
+                <div>
+                  PREVIOUS READ
+                  <span>{previousPost.title}</span>
+                </div>
+              </Link>
+            )}
 
-            <Link
-              onClick={(e) => {
-                if (nextPost) {
-                  return;
+            {nextPost && (
+              <Link
+                onClick={(e) => {
+                  if (nextPost) {
+                    return;
+                  }
+                  return e.preventDefault();
+                }}
+                to={
+                  nextPost &&
+                  `/${nextPost.category.toLowerCase()}/post/${nextPost.slug}`
                 }
-                return e.preventDefault();
-              }}
-              to={
-                nextPost &&
-                `/${nextPost.category.toLowerCase()}/post/${nextPost.slug}`
-              }
-            >
-              NEXT READ
-              <ArrowRight />
-            </Link>
+              >
+                <div>
+                  NEXT READ
+                  <span>{nextPost.title}</span>
+                </div>
+                <CheronRight />
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -264,3 +279,4 @@ const SinglePost = () => {
 };
 
 export default SinglePost;
+//google-site-verification=rPli5HoIL0aLwvf9GZwf-6cPmg11oJ7jRT5nwXRm1aQ
