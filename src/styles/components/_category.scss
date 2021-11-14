@@ -205,10 +205,10 @@
       padding-top: 113px !important;
     }
     .gradient_container {
+      overflow: hidden !important;
+      overflow-clip-margin: unset !important;
       .gradient {
         top: 179px !important;
-        overflow: hidden !important;
-        overflow-clip-margin: unset !important;
       }
     }
   }
