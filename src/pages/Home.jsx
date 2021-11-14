@@ -6,11 +6,7 @@ import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 
 import postList from "../data/posts.json";
-import {
-  motion,
-  useTransform,
-  useViewportScroll,
-} from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { pageVariants, transition } from "../utils/variants";
 import Meta from "../components/Meta";
 
@@ -18,8 +14,11 @@ const Home = () => {
   const { scrollY } = useViewportScroll();
 
   const styles = useTransform(scrollY, [0, 0.4, 0.5], ["100%", "100%", "0px"]);
-  const padding = useTransform(scrollY, [0, 1], ["110px", "0px"]);
-
+  const padding = useTransform(
+    scrollY,
+    [0, 0.4, 0.5],
+    ["110px", "110px", "0px"]
+  );  
   const [scroll, setScroll] = useState(0);
   const [subName, setSubName] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);

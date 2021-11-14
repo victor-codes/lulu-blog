@@ -213,17 +213,16 @@
 
 .gradient_container {
   position: relative;
-  overflow-y: clip;
+  overflow: clip;
+  overflow-clip-margin: 500px;
   .gradient {
     position: absolute;
     width: 384.97px;
     height: 169.15px;
-    // left: 965.03px;
     right: 200px;
     top: 257px;
     background: var(--single-post-gradient);
     filter: blur(170px);
     z-index: -10;
-    // opacity: var(--single-post-gradient-opacity);
   }
 }

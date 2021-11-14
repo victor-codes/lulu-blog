@@ -159,7 +159,11 @@ const SinglePost = () => {
               </figcaption>
             </figure>
           )}
-          <article ref={codeRef} className="post_content">
+          <article
+            ref={codeRef}
+            style={{ paddingTop: `${fetchedData.thumbnail ? "" : "96px"}` }}
+            className="post_content"
+          >
             <Markdown source={content} escapeHtml={false} />
           </article>
           <div className="share_link">

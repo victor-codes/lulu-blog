@@ -52,7 +52,8 @@
   --blockquote-line-color: #1c1c1c;
   --single-post-gradient: rgb(221, 148, 239);
   --single-post-gradient-opacity: 0.5;
-  --home-gradient-opacity: 0.9;
+  --home-gradient-opacity: 1;
+  --home-gradient-color: #dd94ef;
 }
 
 [data-theme="dark"] {
@@ -111,4 +112,6 @@
   --single-post-gradient: rgba(161, 54, 188, 0.8);
   --single-post-gradient-opacity: 0.8;
   --home-gradient-opacity: 0.8;
+  --home-gradient-color: rgba(161, 54, 188, 0.8);
+
 }

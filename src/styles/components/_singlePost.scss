@@ -209,7 +209,7 @@ p {
       flex-direction: column;
       align-items: flex-end;
       width: 100%;
-      max-width: 200px;
+      max-width: 240px;
       font-size: 0.8rem;
 
       span {
@@ -358,7 +358,7 @@ blockquote {
 
 @media screen and (max-width: 540px) {
   .post_content {
-    padding-top: 24px;
+    padding-top: 24px !important;
     h1 {
       font-size: 28px;
       line-height: 35px;
@@ -398,5 +398,12 @@ blockquote {
   }
   figure {
     padding-top: 24px;
+  }
+  .read {
+    flex-direction: column;
+    a:last-child {
+      margin-top: 16px;
+      justify-content: flex-end;
+    }
   }
 }

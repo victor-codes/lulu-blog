@@ -14,7 +14,7 @@ const Header = () => {
   const { scrollY } = useViewportScroll();
   const color = useTransform(
     scrollY,
-    [0, 0.3, 0.4],
+    [0, 0.4, 0.5],
     ["", "", "var(--primary-background-blur)"]
   );
 
@@ -58,7 +58,6 @@ const Header = () => {
           <div>
             <div className="mode">
               <h1 className="logo">LN</h1>
-
               <button
                 aria-label="Toggle Theme"
                 style={{ padding: "0 4px" }}

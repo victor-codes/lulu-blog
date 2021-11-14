@@ -7,9 +7,10 @@
     width: 384.97px;
     height: 363.28px;
     right: 0px;
-    top: 209.78px;
+    top: 209.78px !important;
     background: #dd94ef;
-    opacity: var(--home-gradient-opacity);
+    background: rgba(161, 54, 188, 0.8);
+    opacity: var(--home-gradient-color);
     filter: blur(200px);
   }
   h2 {
@@ -154,10 +155,9 @@
   .home_hero {
     backdrop-filter: blur(16px);
     .gradient {
-      top: 285px !important;
       width: 128.06px !important;
       height: 189.94px !important;
-      filter: blur(109 px);
+      filter: blur(102px);
       right: 0 !important;
     }
     h2 {
