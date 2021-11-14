@@ -7,7 +7,6 @@ header {
   height: 100%;
   max-height: 101px;
   z-index: 10;
-  // background-color: var(--primary-background-blur);
   backdrop-filter: blur(10px);
   .header_container {
     display: flex;
@@ -20,7 +19,6 @@ header {
     div {
       display: flex;
       align-items: center;
-      // margin-bottom: $spacing-4;
       justify-content: space-between;
     }
 
@@ -47,11 +45,11 @@ header {
       }
     }
     .menu_icon {
-      display: none;
+      // display: none;
     }
 
     hr {
-      border-top: none;
+      
       border-color: var(--header-line-color);
     }
   }
@@ -131,5 +129,6 @@ header {
 @media screen and (max-width: 768px) {
   header {
     padding: 23px 24px;
+    align-items: unset;
   }
 }

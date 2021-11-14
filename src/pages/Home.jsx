@@ -81,8 +81,8 @@ const Home = () => {
         style={{ x: value }}
       >
         <div className="fixed_home">
-          <motion.div className="fixed_category">
-            <motion.main className={`home_hero max_width`}>
+          <div className="fixed_category">
+            <main className={`home_hero max_width`}>
               <div className="gradient"></div>
               <h2>Learn. Share. Grow.</h2>
               <motion.p
@@ -97,14 +97,11 @@ const Home = () => {
                 <span to="category/backend">Backend Development</span>,{" "}
                 <span to="category/writing">Technical Writing</span>, and More.
               </motion.p>
-            </motion.main>
-          </motion.div>
+            </main>
+          </div>
           <SubCategory name="Home" handleClick={handleClick} />
         </div>
-        <motion.section
-          id="articles"
-          className={`article_trigger bg_color_article`}
-        >
+        <section id="articles" className={`article_trigger bg_color_article`}>
           <div className="article_container max_width">
             {currentPosts.map((post, id) => (
               <Post post={post} key={id} />
@@ -152,7 +149,7 @@ const Home = () => {
               </button>
             </div>
           )}
-        </motion.section>
+        </section>
       </motion.div>
       <Footer />
     </>
