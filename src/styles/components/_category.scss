@@ -213,7 +213,7 @@
 
 .gradient_container {
   position: relative;
-  overflow: clip;
+  overflow-y: clip;
   overflow-clip-margin: 500px;
   .gradient {
     position: absolute;
