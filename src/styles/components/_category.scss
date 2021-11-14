@@ -199,6 +199,7 @@
     top: 0px;
     background: var(--primary-background-blur);
     backdrop-filter: blur(16px);
+    z-index: 5;
     .category_hero {
       margin-top: 0 !important;
       padding-top: 113px !important;
@@ -206,6 +207,8 @@
     .gradient_container {
       .gradient {
         top: 179px !important;
+        overflow: hidden !important;
+        overflow-clip-margin: unset !important;
       }
     }
   }

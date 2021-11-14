@@ -8,7 +8,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  transition: 300ms $transition-1;
+  transition: $transition-1;
 }
 *:focus {
   transition: none;
