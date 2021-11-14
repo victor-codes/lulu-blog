@@ -4,24 +4,13 @@ import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
-
 import postList from "../data/posts.json";
-import {
-  motion,
-  motionValue,
-  useTransform,
-  useViewportScroll,
-} from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { pageVariants, transition } from "../utils/variants";
 import Meta from "../components/Meta";
 
 const Home = () => {
   const { scrollY } = useViewportScroll();
-
-  const scrollv = motionValue(0);
-
-  const value = useTransform(scrollv, [0, 100], [0, 200]);
-
   const styles = useTransform(scrollY, [0, 0.4, 0.5], ["100%", "100%", "0px"]);
   const padding = useTransform(
     scrollY,
@@ -29,7 +18,6 @@ const Home = () => {
     ["110px", "110px", "0px"]
   );
   const [scroll, setScroll] = useState(0);
-  const [subName, setSubName] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
   const postPerPage = 9;
 
@@ -41,11 +29,6 @@ const Home = () => {
   for (let i = 1; i <= Math.ceil(postLength / postPerPage); i++) {
     paginateArray.push(i);
   }
-
-  function handleClick(name) {
-    setSubName(name);
-  }
-
   useEffect(() => {
     const articleTop = document
       .querySelector(".bg_color_article")
@@ -56,7 +39,6 @@ const Home = () => {
   // pagination
   const indexOfLastPage = currentPage * postPerPage;
   const indexOfFirstPage = indexOfLastPage - postPerPage;
-
   const currentPosts = postList.slice(indexOfFirstPage, indexOfLastPage);
 
   useEffect(() => {
@@ -78,7 +60,6 @@ const Home = () => {
         animate="visible"
         variants={pageVariants}
         transition={transition}
-        style={{ x: value }}
       >
         <div className="fixed_home">
           <div className="fixed_category">
@@ -93,13 +74,12 @@ const Home = () => {
                 }}
               >
                 Hello! Welcome to my blog. On here, you can find articles on{" "}
-                <span to="category/design">Design</span>,{" "}
-                <span to="category/backend">Backend Development</span>,{" "}
-                <span to="category/writing">Technical Writing</span>, and More.
+                <span>Design</span>, <span>Backend Development</span>,{" "}
+                <span>Technical Writing</span>, and More.
               </motion.p>
             </main>
           </div>
-          <SubCategory name="Home" handleClick={handleClick} />
+          <SubCategory name="Home" />
         </div>
         <section id="articles" className={`article_trigger bg_color_article`}>
           <div className="article_container max_width">
