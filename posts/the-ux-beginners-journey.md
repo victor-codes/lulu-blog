@@ -4,7 +4,7 @@ title: The UX Beginner's Journey
 date: 2021-11-11T20:07:38.315Z
 tags: UX Research
 category: Design
-subCategory: User Experience
+subCategory: UX Research
 slug: the-ux-beginners-journey
 description: The UX Design journey is a very interesting and tough one, but they
   do say these times never last. Starting out in the design industry requires a
