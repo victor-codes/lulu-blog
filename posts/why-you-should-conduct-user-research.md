@@ -3,7 +3,7 @@ layout: blog
 title: Why you should conduct User Research
 date: 2021-11-11T20:18:28.428Z
 tags: UX Research
-category: "Design "
+category: Design
 subCategory: UX Research
 slug: why-you-should-conduct-user-research
 description: >-
