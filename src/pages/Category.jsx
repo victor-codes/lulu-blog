@@ -1,14 +1,13 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { ReactComponent as ChervonRight } from "../assets/chervon-right.svg";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useParams, useHistory } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import PageNotFound from "./PageNotFound";
 import postList from "../data/posts.json";
-import { SubCategoryContent } from "../context/Category";
 import Meta from "../components/Meta";
 
 const categories = {
@@ -27,10 +26,11 @@ const categories = {
 };
 
 const Category = ({ name }) => {
-  const { subName } = useContext(SubCategoryContent);
-
   const { subcategory } = useParams();
 
+  const history = useHistory();
+
+  const [subName, setSubName] = useState("All");
   const [currentPage] = useState(1);
   const postPerPage = 9;
 
@@ -47,20 +47,27 @@ const Category = ({ name }) => {
       behavior: "smooth",
     });
   }, []);
+  
+  const subCategoryToString = subcategory.split("-").join(" ");
 
-  const subcategoryToString = subcategory.split("-").join(" ");
-
-  if (!convertCategoriesToLowercase.includes(subcategoryToString)) {
+  if (!convertCategoriesToLowercase.includes(subCategoryToString)) {
     return <PageNotFound />;
   }
 
   const filteredPosts = postList.filter((post) => {
     if (name === post.category) {
-      return post;
-    } else {
-      return null;
+      if (subName === "All") {
+        return post;
+      } else if (subName === post.subCategory) {
+        return post;
+      }
     }
+    return null;
   });
+
+  function handleClick(e) {
+    setSubName(e);
+  }
 
   // pagination
   const indexOfLastPage = currentPage * postPerPage;
@@ -95,7 +102,7 @@ const Category = ({ name }) => {
             </div>
             <div className="gradient"></div>
           </main>
-          <SubCategory name={name} />
+          <SubCategory name={name} handleClick={handleClick} />
         </div>
         <section id="articles" className="bg_color_article article__catergory">
           <div className="article_container max_width">

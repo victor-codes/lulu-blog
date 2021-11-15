@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
@@ -7,7 +7,6 @@ import MobileNav from "./MobileNav";
 import { ReactComponent as Close } from "../assets/close.svg";
 import { ReactComponent as Sun } from "../assets/sun.svg";
 import { ReactComponent as Moon } from "../assets/moon.svg";
-import { SubCategoryContent } from "../context/Category";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 const Header = () => {
@@ -17,8 +16,6 @@ const Header = () => {
     [0, 0.4, 0.5],
     ["", "", "var(--primary-background-blur)"]
   );
-
-  const { setSubName } = useContext(SubCategoryContent);
 
   const localTheme = localStorage.getItem("mode");
 
@@ -71,61 +68,20 @@ const Header = () => {
               </button>
             </div>
             <nav className="menu-items hide">
-              <NavLink
-                exact
-                onClick={() => {
-                  setSubName("All");
-                }}
-                to="/"
-              >
+              <NavLink exact to="/">
                 Home
               </NavLink>
-              <NavLink
-                onClick={() => {
-                  setSubName("All");
-                }}
-                to="/design"
-              >
-                Design
-              </NavLink>
-              <NavLink
-                onClick={() => {
-                  setSubName("All");
-                }}
-                to="/dev"
-              >{`Dev </> `}</NavLink>
-              <NavLink
-                onClick={() => {
-                  setSubName("All");
-                }}
-                to="/cloud"
-              >
-                Cloud/DevOps
-              </NavLink>
+              <NavLink to="/design">Design</NavLink>
+              <NavLink to="/dev">{`Dev </> `}</NavLink>
+              <NavLink to="/cloud">Cloud/DevOps</NavLink>
               {/* <NavLink
-                onClick={() => {
-                  setSubName("All");
-                }}
+               
                 to="/writing"
               >
                 Writing
               </NavLink> */}
-              <NavLink
-                onClick={() => {
-                  setSubName("All");
-                }}
-                to="/resources"
-              >
-                Resources
-              </NavLink>
-              <NavLink
-                onClick={() => {
-                  setSubName("All");
-                }}
-                to="/sponsor"
-              >
-                Sponsor
-              </NavLink>
+              <NavLink to="/resources">Resources</NavLink>
+              <NavLink to="/sponsor">Sponsor</NavLink>
             </nav>
             {mobileNav && <Close className="menu_icon" onClick={handleClick} />}
             {!mobileNav && <Menu className="menu_icon" onClick={handleClick} />}

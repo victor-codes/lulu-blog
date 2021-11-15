@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useParams } from "react-router-dom";
 import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
 import { ReactComponent as ChrevonLeft } from "../assets/chervon-left.svg";
 import { stringToLink } from "../utils/helperFunction";
-import { SubCategoryContent } from "../context/Category";
 
-const SubCategory = ({ name }) => {
+const SubCategory = ({ name, handleClick }) => {
   const categories = {
     home: {
       All: "",
@@ -47,8 +46,10 @@ const SubCategory = ({ name }) => {
 
   const category = name.toLowerCase();
   const [scrollX, setScrollX] = useState(true);
+  // const { subcategory } = useParams();
+  // if (subcategory === name ) {
 
-  const { setSubName } = useContext(SubCategoryContent);
+  // }
 
   return (
     <div>
@@ -62,7 +63,7 @@ const SubCategory = ({ name }) => {
                   if (category === "home") {
                     return;
                   }
-                  setSubName(item);
+                  handleClick(item);
                 }}
                 activeClassName="active"
                 to={stringToLink(categories[category][item])}

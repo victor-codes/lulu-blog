@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Arrow } from "../assets/arrow-right.svg";
 import { stringToLink, truncateString } from "../utils/helperFunction";
-// import { motion } from "framer-motion;
 
 const Post = ({ post }) => {
   const { tags, title, publishDate, description, category, slug } = post;
