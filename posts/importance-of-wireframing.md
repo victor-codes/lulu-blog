@@ -4,7 +4,7 @@ title: Importance of Wireframing
 date: 2021-11-11T20:00:03.355Z
 tags: Wireframing
 category: Design
-subCategory: "UI UX, "
+subCategory: UI UX
 slug: importance-of-wireframing
 description: Wireframing is the skeletal framework of which your design is built
   around. Imagine your design as your body and your wireframe as your skeleton
