@@ -12,8 +12,6 @@ import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
 import css from "highlight.js/lib/languages/css";
 import xml from "highlight.js/lib/languages/xml";
-import { blogVariants, transition } from "../utils/variants";
-import { motion } from "framer-motion";
 import Meta from "../components/Meta";
 
 const SinglePost = () => {
@@ -54,7 +52,11 @@ const SinglePost = () => {
   });
 
   useEffect(() => {
-    window.scroll(0, 0);
+   window.scrollTo({
+     left: 0,
+     top: 0,
+     behavior: "smooth",
+   });
   }, [slug]);
 
   useEffect(() => {
@@ -117,15 +119,7 @@ const SinglePost = () => {
   // // copyContainer.setAttribute("class", "copy_container");
 
   return (
-    <div
-      key={fetchedData.title}
-      exit="leave"
-      initial="hidden"
-      animate="visible"
-      variants={blogVariants}
-      transition={{ delay: 0.3, ...transition }}
-      className="single_post_footer_bg"
-    >
+    <div key={fetchedData.title} className="single_post_footer_bg">
       <Meta
         title={fetchedData.title}
         description={fetchedData.description}

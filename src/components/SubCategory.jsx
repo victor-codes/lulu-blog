@@ -8,7 +8,7 @@ import { SubCategoryContent } from "../context/Category";
 const SubCategory = ({ name }) => {
   const categories = {
     home: {
-      All: "home",
+      All: "",
       Design: "design",
       Dev: "dev",
       "Cloud/DevOps": "cloud",

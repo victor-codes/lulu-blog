@@ -1,33 +1,34 @@
-.not_found {
+.not_found_container {
+  position: relative;
   min-height: calc(100vh - 120px);
   padding-top: 194px;
-  width: 100%;
   max-width: 1260px;
   margin: 95px auto 0;
-
-  div {
-    /* or 163% */
-
+  .not_found {
     width: 100%;
-    max-width: 611px;
-    h2 {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 50px;
-      line-height: 81px;
-      letter-spacing: -0.03em;
-      color: var(--primary-text-color);
-    }
 
-    p {
-      font-family: "General Sans", sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 29px;
-      margin: -8px 0 24px;
+    div {
+      width: 100%;
+      max-width: 611px;
+      h2 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 81px;
+        letter-spacing: -0.03em;
+        color: var(--primary-text-color);
+      }
 
-      color: var(--blog-post-secondary-color);
+      p {
+        font-family: "General Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 29px;
+        margin: -8px 0 24px;
+
+        color: var(--blog-post-secondary-color);
+      }
     }
   }
 }
@@ -35,50 +36,45 @@
 .absolute {
   position: absolute;
   z-index: -10;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-  background-image: url(../../assets/ellipse_one.png),
-    url(../../assets/ellipse_two.png);
-  background-position: bottom 0px right 0px, bottom 50px right 0px;
-  background-repeat: no-repeat;
+  top: 120px;
+  right: 0px;
+  width: 428.06px;
+  height: 489.94px;
+  filter: blur(200px);
+  background: var(--home-gradient-color);
+  opacity: var(--home-gradient-opacity);
 }
 
 @media screen and (max-width: 1259px) {
-  .not_found {
+  .not_found_container {
     padding-left: 24px;
     padding-right: 24px;
   }
 }
 
 @media screen and (max-width: 540px) {
-  .not_found {
-    padding: 169px 32px 0;
-    padding-right: 32px;
-    div {
-      h2 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 32px;
-        line-height: 45px;
-        /* identical to box height, or 142% */
-
-        letter-spacing: -0.03em;
-
-        color: #000000;
-      }
-      p {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 23px;
-        margin-top: 0px !important;
-        /* or 163% */
-
-        letter-spacing: -0.03em;
-
-        color: #464646;
+  .not_found_container {
+    padding: 169px 32px 0 !important;
+    .absolute {
+      top: unset;
+      bottom: 0px;
+      width: 200px;
+      height: 200px;
+      filter: blur(120px);
+    }
+    .not_found {
+      div {
+        h2 {
+          font-size: 32px;
+          line-height: 45px;
+          letter-spacing: -0.03em;
+        }
+        p {
+          font-size: 14px;
+          line-height: 23px;
+          margin-top: 0px !important;
+          letter-spacing: -0.03em;
+        }
       }
     }
   }

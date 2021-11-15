@@ -6,7 +6,6 @@ import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import postList from "../data/posts.json";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { pageVariants, transition } from "../utils/variants";
 import Meta from "../components/Meta";
 
 const Home = () => {
@@ -42,7 +41,11 @@ const Home = () => {
   const currentPosts = postList.slice(indexOfFirstPage, indexOfLastPage);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   return (
@@ -53,14 +56,7 @@ const Home = () => {
         isBlogPost={false}
         canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/home`}
       />
-      <div
-        key="home"
-        exit="leave"
-        initial="hidden"
-        animate="visible"
-        variants={pageVariants}
-        transition={transition}
-      >
+      <div key="home">
         <div className="fixed_home">
           <div className="fixed_category">
             <main className={`home_hero max_width`}>

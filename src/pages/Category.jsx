@@ -8,8 +8,6 @@ import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import PageNotFound from "./PageNotFound";
 import postList from "../data/posts.json";
-import { motion } from "framer-motion";
-import { pageVariants, transition } from "../utils/variants";
 import { SubCategoryContent } from "../context/Category";
 import Meta from "../components/Meta";
 
@@ -33,7 +31,6 @@ const Category = ({ name }) => {
 
   const { subcategory } = useParams();
 
-  // const [subName, setSubName] = useState("All");
   const [currentPage] = useState(1);
   const postPerPage = 9;
 
@@ -44,7 +41,11 @@ const Category = ({ name }) => {
   );
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   const subcategoryToString = subcategory.split("-").join(" ");
@@ -68,15 +69,7 @@ const Category = ({ name }) => {
   const currentPosts = filteredPosts.slice(indexOfFirstPage, indexOfLastPage);
 
   return (
-    <motion.div
-      key={name}
-      className="section"
-      exit="leave"
-      initial="hidden"
-      animate="visible"
-      variants={pageVariants}
-      transition={transition}
-    >
+    <div key={name} className="section">
       <Meta
         title={name === "DevOps" ? "Cloud/DevOps" : name}
         description={`This is a Category page`}
@@ -86,14 +79,7 @@ const Category = ({ name }) => {
         }`}
       />
 
-      <motion.div
-        key={name}
-        exit="leave"
-        initial="hidden"
-        animate="visible"
-        transition={transition}
-        variants={pageVariants}
-      >
+      <div key={name}>
         <div className="fixed_category">
           <main className="category_hero max_width gradient_container">
             <h2>
@@ -147,10 +133,10 @@ const Category = ({ name }) => {
             </div>
           )}
         </section>
-      </motion.div>
+      </div>
 
       <Footer />
-    </motion.div>
+    </div>
   );
 };
 

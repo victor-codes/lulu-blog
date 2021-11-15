@@ -1,19 +1,10 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as Bmc } from "../assets/bmc.svg";
-import { pageVariants, transition } from "../utils/variants";
 
 const Footer = () => {
   return (
-    <footer
-      key="footer"
-      exit="leave"
-      initial="hidden"
-      animate="visible"
-      transition={transition}
-      variants={pageVariants}
-    >
+    <footer key="footer">
       <div className="about_container">
         <div className="projects_support">
           <div className="project_header hiddens">

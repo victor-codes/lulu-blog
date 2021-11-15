@@ -45,12 +45,11 @@ header {
       }
     }
     .menu_icon {
-      // display: none;
+      display: none;
     }
 
     hr {
-      
-      border-color: var(--header-line-color);
+      border-bottom: -0.5px solid var(--header-line-color);
     }
   }
 }
@@ -124,6 +123,8 @@ header {
 
   svg {
     display: block !important;
+    fill: var(--logo-color);
+    stroke: var(--logo-color);
   }
 }
 @media screen and (max-width: 768px) {

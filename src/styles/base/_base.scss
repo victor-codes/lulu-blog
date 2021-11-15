@@ -21,7 +21,6 @@ body {
 * {
   font-family: "Cabinet Grotesk", sans-serif;
   scroll-behavior: smooth;
-  font-display: swap;
 }
 
 body {
@@ -38,16 +37,6 @@ body {
   height: 0;
 }
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -56,18 +45,6 @@ a {
 .inline_flex {
   display: inline-flex;
   align-items: center;
-}
-
-.blur_effect {
-  position: absolute;
-  z-index: -10;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 524px;
-  background-image: var(--blur-effect);
-  background-position: var(--blur-effect-position);
-  background-repeat: no-repeat;
 }
 
 .noselect {
@@ -79,38 +56,6 @@ a {
   user-select: none;
 }
 
-.blur-effect {
-  position: absolute;
-  top: -100px;
-  right: 0;
-  z-index: -10;
-
-  div {
-    position: relative;
-    div:first-child {
-      margin-top: 300px;
-      margin-left: 300px;
-      width: 384.97px;
-      height: 363.28px;
-      border-radius: 50%;
-      // background: rgba(161, 54, 188, 0.8);
-      // background: #753e7d;
-      filter: blur(180px);
-    }
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .blur-effect {
-    div {
-      div {
-        width: 260.06px !important;
-        height: 189.94px !important;
-      }
-    }
-  }
-}
-
 .copy_container {
   position: absolute;
   top: 0px;
@@ -119,7 +64,6 @@ a {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   border-radius: 6px;
-  // background: rgba(70, 70, 70, 0.5);
   backdrop-filter: filter(16px);
   padding: 2px 8px;
   cursor: pointer;
