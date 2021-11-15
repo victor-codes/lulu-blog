@@ -6,7 +6,7 @@ import { pageVariants, transition } from "../utils/variants";
 
 const Footer = () => {
   return (
-    <motion.footer
+    <footer
       key="footer"
       exit="leave"
       initial="hidden"
@@ -84,7 +84,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 

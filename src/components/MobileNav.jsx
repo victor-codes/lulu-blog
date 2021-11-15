@@ -25,7 +25,8 @@ const MobileNav = ({ show, hide }) => {
             hide(false);
           }}
           activeClassName="mobile_nav_active a"
-          to="/home"
+          exact
+          to="/"
         >
           Home
         </NavLink>

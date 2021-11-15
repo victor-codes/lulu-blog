@@ -1,4 +1,4 @@
-const transition = { ease: "easeInOut", duration: 0.2 };
+const transition = { ease: "easeInOut", duration: 0.1 };
 
 const pageVariants = {
   hidden: {

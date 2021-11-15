@@ -117,7 +117,7 @@ const SinglePost = () => {
   // // copyContainer.setAttribute("class", "copy_container");
 
   return (
-    <motion.div
+    <div
       key={fetchedData.title}
       exit="leave"
       initial="hidden"
@@ -278,7 +278,7 @@ const SinglePost = () => {
       </div>
 
       <Footer />
-    </motion.div>
+    </div>
   );
 };
 

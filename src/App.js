@@ -8,40 +8,28 @@ import "./App.css";
 import "./styles/main.scss";
 
 import Home from "./pages/Home";
-import { Helmet } from "react-helmet";
 import PageNotFound from "./pages/PageNotFound";
 import Category from "./pages/Category";
 import SinglePost from "./pages/SinglePost";
 import Header from "./components/Header";
 import { AnimatePresence } from "framer-motion";
 import CategoryProvider from "./context/Category";
+import Meta from "./components/Meta";
 
 function App() {
   return (
     <div className="App">
+      <Meta />
       <Router>
-        <Helmet>
-          <title>Home - Lulu Nwenyi</title>
-        </Helmet>
         <CategoryProvider>
           <Header />
           <Route
             render={({ location }) => (
-              <AnimatePresence
-                exitBeforeEnter
-                // onExitComplete={() => {
-                //   alert("askfjas");
-                // }}
-                initial={false}
-              >
+              <AnimatePresence exitBeforeEnter initial={false}>
                 <Switch location={location} key={location.pathname}>
-                  <Route exact path="/">
-                    <Redirect to="/home" />
-                  </Route>
-                  <Route exact path="/home" component={Home} key={0} />
+                  <Route exact path="/" component={Home} key={0} />
 
                   {/* categories */}
-
                   <Route exact path="/design">
                     <Redirect to="/design/all" />
                   </Route>

@@ -72,10 +72,11 @@ const Header = () => {
             </div>
             <nav className="menu-items hide">
               <NavLink
+                exact
                 onClick={() => {
                   setSubName("All");
                 }}
-                to="/home"
+                to="/"
               >
                 Home
               </NavLink>

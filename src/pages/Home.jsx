@@ -53,7 +53,7 @@ const Home = () => {
         isBlogPost={false}
         canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/home`}
       />
-      <motion.div
+      <div
         key="home"
         exit="leave"
         initial="hidden"
@@ -130,7 +130,7 @@ const Home = () => {
             </div>
           )}
         </section>
-      </motion.div>
+      </div>
       <Footer />
     </>
   );
