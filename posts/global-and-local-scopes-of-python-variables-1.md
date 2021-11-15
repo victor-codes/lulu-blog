@@ -5,6 +5,7 @@ date: 2021-06-07T21:41:47.552Z
 thumbnail: ""
 tags: Python, Docker
 category: Dev
+subCategory: Python
 slug: global-and-local-scopes-of-python-variables
 description: As you may or may not know; In python, a variable is created the
   moment you assign a value to it using the “=“ sign. Due to their scopes,
