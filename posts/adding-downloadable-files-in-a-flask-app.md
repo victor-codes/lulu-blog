@@ -4,7 +4,7 @@ title: Adding downloadable files in a Flask App
 date: 2021-11-08T19:08:36.407Z
 tags: Python, Flask
 category: Dev
-subCategory: Python
+subCategory: Flask
 slug: adding-downloadable-files-in-a-flask-app
 description: Sometimes, you might want to have users download a file or report
   in pdf, txt, excel, app, etc, from your application. In many of the flask
