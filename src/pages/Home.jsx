@@ -26,7 +26,7 @@ const Home = () => {
   const postLength = postList.length;
   const paginate = postLength % 9;
 
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const paginateArray = [];
 
   for (let i = 1; i <= Math.ceil(postLength / postPerPage); i++) {
