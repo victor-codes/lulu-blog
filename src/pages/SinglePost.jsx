@@ -10,7 +10,6 @@ import postList from "../data/posts.json";
 
 import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
-import css from "highlight.js/lib/languages/css";
 import xml from "highlight.js/lib/languages/xml";
 import Meta from "../components/Meta";
 
@@ -38,6 +37,7 @@ const SinglePost = () => {
         }
       });
       val.forEach((node) => {
+        node.setAttribute("loading", "lazy");
         if (node.parentNode) {
           node.parentNode.style.textAlign = "center";
           node.parentNode.style.margin = "0";
@@ -52,11 +52,11 @@ const SinglePost = () => {
   });
 
   useEffect(() => {
-   window.scrollTo({
-     left: 0,
-     top: 0,
-     behavior: "smooth",
-   });
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
   }, [slug]);
 
   useEffect(() => {
@@ -105,7 +105,6 @@ const SinglePost = () => {
     return window.scrollTo(0, scroll);
   }
 
-  hljs.registerLanguage("css", css);
   hljs.registerLanguage("xml", xml);
   hljs.registerLanguage("python", python);
 
@@ -147,7 +146,7 @@ const SinglePost = () => {
         <div className="post__details">
           {fetchedData.thumbnail && (
             <figure>
-              <img src={fetchedData.thumbnail} alt="" />
+              <img loading="eager" src={fetchedData.thumbnail} alt="" />
               <figcaption>
                 {fetchedData.altText && fetchedData.altText}
               </figcaption>

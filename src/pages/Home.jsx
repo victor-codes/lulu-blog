@@ -7,8 +7,12 @@ import SubCategory from "../components/SubCategory";
 import postList from "../data/posts.json";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import Meta from "../components/Meta";
+import { NavLink, useParams, useHistory } from "react-router-dom";
+import PageNotFound from "./PageNotFound";
 
 const Home = () => {
+  const history = useHistory();
+  const { page } = useParams();
   const { scrollY } = useViewportScroll();
   const styles = useTransform(scrollY, [0, 0.4, 0.5], ["100%", "100%", "0px"]);
   const padding = useTransform(
@@ -16,29 +20,18 @@ const Home = () => {
     [0, 0.4, 0.5],
     ["110px", "110px", "0px"]
   );
-  const [scroll, setScroll] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const postPerPage = 9;
 
   const postLength = postList.length;
   const paginate = postLength % 9;
 
-  let paginateArray = [];
+
+  const paginateArray = [];
 
   for (let i = 1; i <= Math.ceil(postLength / postPerPage); i++) {
     paginateArray.push(i);
   }
-  useEffect(() => {
-    const articleTop = document
-      .querySelector(".bg_color_article")
-      .getBoundingClientRect().top;
-    setScroll(articleTop);
-  }, [scroll]);
-
-  // pagination
-  const indexOfLastPage = currentPage * postPerPage;
-  const indexOfFirstPage = indexOfLastPage - postPerPage;
-  const currentPosts = postList.slice(indexOfFirstPage, indexOfLastPage);
 
   useEffect(() => {
     window.scrollTo({
@@ -47,6 +40,25 @@ const Home = () => {
       behavior: "smooth",
     });
   }, []);
+
+  useEffect(() => {
+    if (window.location.pathname.includes("/blog")) {
+      if (paginateArray.includes(Number(page))) {
+        setCurrentPage(Number(page));
+      }
+    }
+  }, [page, paginateArray]);
+
+  if (window.location.pathname.includes("/blog")) {
+    if (!paginateArray.includes(Number(page))) {
+      return <PageNotFound />;
+    }
+  }
+
+  // pagination
+  const indexOfLastPage = currentPage * postPerPage;
+  const indexOfFirstPage = indexOfLastPage - postPerPage;
+  const currentPosts = postList.slice(indexOfFirstPage, indexOfLastPage);
 
   return (
     <>
@@ -91,24 +103,21 @@ const Home = () => {
                   if (currentPage === 1 || paginate === currentPage) {
                     return;
                   }
-                  setCurrentPage(currentPage - 1);
-                  window.scrollTo(9, scroll);
+                  history.push(`/blog/${currentPage - 1}`);
                 }}
               >
                 <ArrowLeft className="left" /> PREVIOUS
               </button>
               <div className="link">
                 {paginateArray.map((item, id) => (
-                  <button
+                  <NavLink
+                    exact
+                    to={`${item === 1 ? "" : `/blog/${item}`}`}
                     key={id}
-                    onClick={() => {
-                      setCurrentPage(item);
-                      window.scrollTo(9, scroll);
-                    }}
-                    className={`${item === currentPage ? "page" : ""}`}
+                    activeClassName="page"
                   >
                     {item}
-                  </button>
+                  </NavLink>
                 ))}
               </div>
               <button
@@ -116,8 +125,7 @@ const Home = () => {
                   if (paginateArray[paginateArray.length - 1] === currentPage) {
                     return;
                   }
-                  setCurrentPage(currentPage + 1);
-                  window.scrollTo(9, scroll);
+                  history.push(`/blog/${currentPage + 1}`);
                 }}
                 className="inline_flex"
               >
