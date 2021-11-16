@@ -13,6 +13,7 @@ import Category from "./pages/Category";
 import SinglePost from "./pages/SinglePost";
 import Header from "./components/Header";
 import Meta from "./components/Meta";
+import Resources from "./pages/Resources";
 
 function App() {
   return (
@@ -58,7 +59,7 @@ function App() {
             <Redirect to="/resources/all" />
           </Route>
           <Route exact path="/resources/:subcategory" key={5}>
-            <Category name="Resources" />
+            <Resources />
           </Route>
           <Route exact path="/sponsor" key={6} />
           <Route

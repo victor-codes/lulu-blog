@@ -20,6 +20,7 @@ const Home = () => {
     [0, 0.4, 0.5],
     ["110px", "110px", "0px"]
   );
+
   const [currentPage, setCurrentPage] = useState(1);
   const postPerPage = 9;
 
@@ -135,6 +136,7 @@ const Home = () => {
           )}
         </section>
       </div>
+
       <Footer />
     </>
   );

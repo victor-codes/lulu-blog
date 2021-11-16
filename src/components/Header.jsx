@@ -23,8 +23,8 @@ const Header = () => {
 
   useEffect(() => {
     if (mode === null) {
-      setMode("light");
-      return localStorage.setItem("mode", "light");
+      setMode("dark");
+      return localStorage.setItem("mode", "dark");
     } else document.body.setAttribute("data-theme", mode);
   }, [mode]);
 

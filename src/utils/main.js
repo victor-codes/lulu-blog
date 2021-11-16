@@ -78,7 +78,7 @@ const getPosts = () => {
         post = {
           id: timestamp,
           title: metadata.title ? metadata.title : "No title given",
-          time1: datestring,
+          timeZone: datestring,
           author: "Lulu Nwenyi",
           publishDate: publishedDate ? publishedDate : "No date given",
           time: parsedDate["time"],
