@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 import { ReactComponent as ChervonRight } from "../assets/chervon-right.svg";
-import { NavLink, useParams, useHistory } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Post from "../components/Post";
 import SubCategory from "../components/SubCategory";
 import PageNotFound from "./PageNotFound";
@@ -27,9 +27,6 @@ const categories = {
 
 const Category = ({ name }) => {
   const { subcategory } = useParams();
-
-  const history = useHistory();
-
   const [subName, setSubName] = useState("All");
   const [currentPage] = useState(1);
   const postPerPage = 9;
@@ -47,8 +44,15 @@ const Category = ({ name }) => {
       behavior: "smooth",
     });
   }, []);
-  
+
   const subCategoryToString = subcategory.split("-").join(" ");
+
+  useEffect(() => {
+    if (subCategoryToString) {
+      let index = convertCategoriesToLowercase.indexOf(subCategoryToString);
+      setSubName(categories[name.toLowerCase()][index]);
+    }
+  }, [name, convertCategoriesToLowercase, subCategoryToString]);
 
   if (!convertCategoriesToLowercase.includes(subCategoryToString)) {
     return <PageNotFound />;

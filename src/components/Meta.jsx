@@ -6,7 +6,7 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
   const defaultImgUrl = "";
   const defaultDescriptionText = "";
   const trimmedDescription = description && truncateString(description, 150);
-  
+
   return (
     <Helmet>
       <html lang="en" />

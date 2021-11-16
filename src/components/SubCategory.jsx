@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ReactComponent as ChrevonRight } from "../assets/chervon-right.svg";
 import { ReactComponent as ChrevonLeft } from "../assets/chervon-left.svg";
 import { stringToLink } from "../utils/helperFunction";
@@ -46,10 +46,6 @@ const SubCategory = ({ name, handleClick }) => {
 
   const category = name.toLowerCase();
   const [scrollX, setScrollX] = useState(true);
-  // const { subcategory } = useParams();
-  // if (subcategory === name ) {
-
-  // }
 
   return (
     <div>
