@@ -92,6 +92,7 @@ const Home = () => {
         </div>
         <section id="articles" className={`article_trigger bg_color_article`}>
           <div className="article_container max_width">
+            
             {currentPosts.map((post, id) => (
               <Post post={post} key={id} />
             ))}

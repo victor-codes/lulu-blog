@@ -350,6 +350,11 @@ p {
   ol li:last-child {
     margin-bottom: 24px;
   }
+  p {
+    strong {
+      font-size: 18px;
+    }
+  }
 }
 blockquote {
   border-left: 2px solid var(--blockquote-line-color);
