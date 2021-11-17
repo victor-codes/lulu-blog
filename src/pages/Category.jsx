@@ -11,7 +11,7 @@ import postList from "../data/posts.json";
 import Meta from "../components/Meta";
 
 const categories = {
-  design: ["All", "UI UX", "UX Writing", "UX Research"],
+  design: ["All", "UI&UX", "UX Writing", "UX Research"],
   dev: ["All", "Python", "Flask", "Generic"],
   devops: ["All", "AWS", "GCP"],
   psych: ["All"],
@@ -65,6 +65,7 @@ const Category = ({ name }) => {
       } else if (subName === post.subCategory) {
         return post;
       }
+
     }
     return null;
   });

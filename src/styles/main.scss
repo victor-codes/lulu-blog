@@ -3,6 +3,7 @@
 @import "base/base";
 @import "base/fonts";
 
+@import "components/code.scss";
 @import "components/header";
 @import "components/footer";
 @import "components/button";
@@ -13,6 +14,5 @@
 @import "components/category.scss";
 @import "components/singlePost.scss";
 @import "components/mobileNav.scss";
-@import "components/code.scss";
 
 @import "theme/theme";

@@ -62,14 +62,16 @@ a {
       }
     }
     .line_divider {
-      padding-top: 36px;
-      border-bottom: 1px solid var(--article-line-color);
+      margin-top: 36px;
+      border-top: 1px solid var(--article-line-color);
     }
   }
 }
 
 @media screen and (max-width: 500px) {
   .post_article {
+    padding-bottom: 0px !important;
+    min-height: unset !important;
     .info h3 {
       min-height: unset !important;
     }
@@ -77,7 +79,7 @@ a {
       margin-bottom: 8px;
     }
     .line_divider {
-      padding-top: 24px !important;
+      margin-top: 24px !important;
     }
   }
 }

@@ -1,3 +1,60 @@
+:root {
+  --logo-color: #000000;
+  --header-text-color: #000;
+  --header-line-color: #000000;
+
+  --primary-text-color: #000000;
+  --secondary-text-color: #1c1c1c;
+  --tertary-text-color: #7c7676;
+
+  --suppport-line-color: #f3f3f3;
+
+  --primary-background: #ffffff;
+  --primary-background-blur: rgba(255, 255, 255, 0.4);
+  --secondary-background: #ffffff;
+
+  --article-primary-color: #1c1c1c;
+  --article-line-color: #f3f3f3;
+  --article-background: #ffffff;
+  --article-tag-color: #bb66ef;
+  --article-accent-color: #525a61;
+  --article-secondary-color: #6d6d6d;
+
+  --paginate-primary-color: #000000;
+  --paginate-secondary-color: #8c8c8c;
+
+  --project-accent-color: #6d6d6d;
+
+  --footer-bg-color: #f6f6f6;
+
+  // --blur-effect: url(../../assets/home-ellipse-1.png),
+  // url(../../assets/home-ellipse-2.png);
+
+  --blur-effect-position: bottom -500px right 0px, bottom -150px right 55px;
+
+  --mobile-article-background: #fbfbfb;
+  --mobile-nav-background: #ffffff;
+  --mobile-nav-line-color: #f3f3f3;
+
+  --mobile-nav-btn-bg-color: #f8f8f8;
+  --mobile-nav-text-color: #77848b;
+  --mobile-nav-text-color: #77848b;
+
+  --single-post-accent-color: #7c7676;
+
+  --blog-post-primary-text-color: #313131;
+  --blog-post-secondary-color: #464646;
+  --blog-contributions-bg-color: #fafafa;
+  --blog-contributions-text-color: #464646;
+  --blog-header-color: #161616;
+  --blog-header-2-color: #313131;
+  --blog-list-color: #313131;
+  --blockquote-line-color: #1c1c1c;
+  --single-post-gradient: rgb(221, 148, 239);
+  --single-post-gradient-opacity: 0.5;
+  --home-gradient-opacity: 1;
+  --home-gradient-color: #dd94ef;
+}
 [data-theme="light"] {
   --logo-color: #000000;
   --header-text-color: #000;
@@ -113,5 +170,4 @@
   --single-post-gradient-opacity: 0.8;
   --home-gradient-opacity: 0.8;
   --home-gradient-color: rgba(161, 54, 188, 0.8);
-
 }

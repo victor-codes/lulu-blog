@@ -11,6 +11,7 @@ import postList from "../data/posts.json";
 import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
 import xml from "highlight.js/lib/languages/xml";
+import css from "highlight.js/lib/languages/css";
 import Meta from "../components/Meta";
 
 const SinglePost = () => {
@@ -104,7 +105,7 @@ const SinglePost = () => {
 
     return window.scrollTo(0, scroll);
   }
-
+  hljs.registerLanguage("css", css);
   hljs.registerLanguage("xml", xml);
   hljs.registerLanguage("python", python);
 

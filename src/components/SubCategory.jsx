@@ -16,7 +16,7 @@ const SubCategory = ({ name, handleClick }) => {
     },
     design: {
       All: "all",
-      "UI UX": "ui/ux",
+      "UI&UX": "ui&ux",
       "UX Writing": "ux-writing",
       "UX Research": "ux-research",
     },
