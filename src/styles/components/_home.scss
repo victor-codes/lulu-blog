@@ -4,13 +4,15 @@
   overflow-y: clip;
   .gradient {
     position: absolute;
-    width: 384.97px;
-    height: 363.28px;
+    width: 50vw;
+    background-position: center;
+    height: 500px;
     right: 0px;
-    top: 133.78px !important;
-    background: var(--home-gradient-color);
-    opacity: var(--home-gradient-opacity);
-    filter: blur(200px);
+    top: var(--home-hero-top) !important;
+    background-image: var(--home-gradient-color);
+    filter: blur(100px);
+    background-repeat: no-repeat;
+    z-index: -10;
   }
   h2 {
     font-style: normal;
@@ -155,10 +157,11 @@
     overflow: hidden !important;
     backdrop-filter: blur(16px);
     .gradient {
-      width: 128.06px !important;
-      height: 189.94px !important;
-      filter: blur(90px);
+      width: -48.06px !important;
+      // height: 189.94px !important;
+      filter: blur(60px);
       right: 0 !important;
+      top: 125px !important;
     }
     h2 {
       font-size: 30px;
