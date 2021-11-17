@@ -4,7 +4,7 @@ title: How design influences your life as a designer
 date: 2021-11-08T19:15:40.394Z
 tags: Design, Life
 category: Design
-subCategory: LIfe
+subCategory: UI&UX
 slug: how-design-influences-your-life-as-a-designer
 description: On most days, I pick my outfits based on my mood. This means that
   sometimes if you see me putting on black, I just might feel dark on the
