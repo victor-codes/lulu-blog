@@ -4,7 +4,7 @@ title: Must-Have Figma Plugins for Every Designer
 date: 2021-11-11T20:04:09.460Z
 tags: Figma, Plugin
 category: Design
-subCategory: UI UX
+subCategory: UI&UX
 slug: must-have-figma-plugins-for-every-designer
 description: Plugins are third-party scripts that add to the functionality of an
   application. They’re just like the applications on your phone. You have to
