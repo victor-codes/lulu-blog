@@ -4,7 +4,7 @@ title: Choosing Font Pairs Like a Pro
 date: 2021-11-08T18:59:06.285Z
 tags: " UI, Font Pairing"
 category: Design
-subCategory: UI UX
+subCategory: UI&UX
 slug: choosing-font-pairs-like-a-pro
 description: >-
   Choosing a great font pair is just like picking a great outfit. There’s a wide
