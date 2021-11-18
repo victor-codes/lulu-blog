@@ -53,7 +53,7 @@
   --single-post-gradient: rgb(221, 148, 239);
   --single-post-gradient-opacity: 0.5;
   --home-gradient-opacity: 1;
-  --home-gradient-color: url("../../assets/home_light.png");
+  --home-gradient-color: url("../../assets/home_light-min.png");
 }
 [data-theme="light"] {
   --logo-color: #000000;
@@ -110,7 +110,7 @@
   --single-post-gradient: rgb(221, 148, 239);
   --single-post-gradient-opacity: 0.5;
   --home-gradient-opacity: 1;
-  --home-gradient-color: url("../../assets/home_light.png");
+  --home-gradient-color: url("../../assets/home_light-min.png");
   --home-hero-top: 50px;
 }
 
@@ -170,6 +170,6 @@
   --single-post-gradient: rgba(161, 54, 188, 0.8);
   --single-post-gradient-opacity: 0.8;
   --home-gradient-opacity: 0.8;
-  --home-gradient-color: url("../../assets/home_dark.png");
+  --home-gradient-color: url("../../assets/home_dark-min.png");
   --home-hero-top: 201px;
 }
