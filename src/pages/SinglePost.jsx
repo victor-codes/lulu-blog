@@ -59,6 +59,13 @@ const SinglePost = () => {
       behavior: "smooth",
     });
   }, [slug]);
+  useEffect(() => {
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 
   useEffect(() => {
     if (postExists) {

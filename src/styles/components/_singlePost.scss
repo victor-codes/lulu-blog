@@ -409,6 +409,7 @@ blockquote {
     flex-direction: column;
     a:last-child {
       margin-top: 32px;
+      width: -webkit-fill-available;
       justify-content: flex-end;
     }
   }
