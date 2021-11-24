@@ -205,6 +205,9 @@ p {
     }
   }
   a {
+      padding: 16px 8px;
+      background-color: var(--blog-contributions-bg-color);
+      width: -webkit-fill-available;
     div {
       display: flex;
       flex-direction: column;
@@ -408,7 +411,7 @@ blockquote {
   .read {
     flex-direction: column;
     a:last-child {
-      margin-top: 32px;
+      margin-top: 12px;
       width: -webkit-fill-available;
       justify-content: flex-end;
     }
