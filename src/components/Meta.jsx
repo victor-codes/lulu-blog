@@ -6,11 +6,12 @@ import AppleTouch from "../assets/apple-touch-icon.png";
 import Icon32 from "../assets/favicon-32x32.png";
 import Icon16 from "../assets/favicon-16x16.png";
 import Safari from "../assets/safari-pinned-tab.svg";
-import defaultImgUrl from "../assets/meta-image.png";
+import defaultImgUrl from "../assets/meta-image-min.png";
 
 const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
   // const defaultImgUrl = "";
-  const defaultDescriptionText = "";
+  const defaultDescriptionText =
+    "Hello! Welcome to my blog. On here, you can find articles on Design, Backend Development, Technical Writing, and More.";
   const trimmedDescription = description && truncateString(description, 150);
 
   return (
