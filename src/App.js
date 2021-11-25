@@ -22,7 +22,11 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} key={0} />
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+
+          <Route exact path="/home" component={Home} key={0} />
           <Route exact path="/blog/1">
             <Redirect to="/" />
           </Route>
