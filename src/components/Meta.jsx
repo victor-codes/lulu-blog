@@ -23,6 +23,31 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
           description ? trimmedDescription : defaultDescriptionText
         } Read more...`}
       />
+      <link
+        rel="apple-touch-icon"
+        sizes="76x76"
+        href="%PUBLIC_URL%/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="%PUBLIC_URL%/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="%PUBLIC_URL%/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link
+        rel="mask-icon"
+        href="%PUBLIC_URL%/safari-pinned-tab.svg"
+        color="#fef0ff"
+      />
+      <meta name="msapplication-TileColor" content="#f5e5f6" />
+      <meta name="theme-color" content="#fef0ff" />
       {isBlogPost && <meta property="og:type" content="article" />}
 
       {/* <!-- Open Graph / Facebook --> */}
