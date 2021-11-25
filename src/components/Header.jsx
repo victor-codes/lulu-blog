@@ -68,7 +68,7 @@ const Header = () => {
               </button>
             </div>
             <nav className="menu-items hide">
-              <NavLink exact to="/home">
+              <NavLink exact to="/">
                 Home
               </NavLink>
               <NavLink to="/design">Design</NavLink>
