@@ -205,9 +205,9 @@ p {
     }
   }
   a {
-      padding: 16px 8px;
-      background-color: var(--blog-contributions-bg-color);
-      width: -webkit-fill-available;
+    padding: 16px 8px;
+    background-color: var(--blog-contributions-bg-color);
+    width: -webkit-fill-available;
     div {
       display: flex;
       flex-direction: column;
@@ -414,6 +414,14 @@ blockquote {
       margin-top: 12px;
       width: -webkit-fill-available;
       justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .read {
+    a {
+      background: none;
     }
   }
 }

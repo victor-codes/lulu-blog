@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { truncateString } from "../utils/helperFunction";
 
 import AppleTouch from "../assets/apple-touch-icon.png";
 import Icon32 from "../assets/favicon-32x32.png";
@@ -8,11 +7,11 @@ import Icon16 from "../assets/favicon-16x16.png";
 import Safari from "../assets/safari-pinned-tab.svg";
 import defaultImgUrl from "../assets/meta-image-min.png";
 
-const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
+const Meta = ({ title, description, isBlogPost, canonicalLink }) => {
   // const defaultImgUrl = "";
   const defaultDescriptionText =
     "Hello! Welcome to my blog. On here, you can find articles on Design, Backend Development, Technical Writing, and More.";
-  const trimmedDescription = description && truncateString(description, 150);
+  const trimmedDescription = description && description;
 
   return (
     <Helmet>
@@ -26,9 +25,7 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
       <meta name="title" content={`${title} — Lulu Nwenyi`} />
       <meta
         name="description"
-        content={`${
-          description ? trimmedDescription : defaultDescriptionText
-        } Read more...`}
+        content={`${description ? trimmedDescription : defaultDescriptionText}`}
       />
       <link rel="apple-touch-icon" sizes="76x76" href={AppleTouch} />
       <link rel="icon" type="image/png" sizes="32x32" href={Icon32} />
@@ -45,9 +42,7 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
       <meta property="og:title" content={`${title} — Lulu Nwenyi`} />
       <meta
         property="og:description"
-        content={`${
-          description ? trimmedDescription : defaultDescriptionText
-        } Read more...`}
+        content={`${description ? trimmedDescription : defaultDescriptionText}`}
       />
       <meta property="og:image" content={defaultImgUrl} />
 
@@ -58,9 +53,7 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
       <meta name="twitter:card" content="summary" />
       <meta
         property="twitter:description"
-        content={`${
-          description ? trimmedDescription : defaultDescriptionText
-        } Read more...`}
+        content={`${description ? trimmedDescription : defaultDescriptionText}`}
       />
       <meta property="twitter:image" content={defaultImgUrl}></meta>
     </Helmet>
