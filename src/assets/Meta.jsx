@@ -2,11 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { truncateString } from "../utils/helperFunction";
 
-import AppleTouch from "../assets/apple-touch-icon.png";
-import Icon32 from "../assets/favicon-32x32.png";
-import Icon16 from "../assets/favicon-16x16.png";
-import Safari from "../assets/safari-pinned-tab.svg";
-
 const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
   const defaultImgUrl = "";
   const defaultDescriptionText = "";
@@ -28,17 +23,35 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
           description ? trimmedDescription : defaultDescriptionText
         } Read more...`}
       />
-      <link rel="apple-touch-icon" sizes="76x76" href={AppleTouch} />
-      <link rel="icon" type="image/png" sizes="32x32" href={Icon32} />
-      <link rel="icon" type="image/png" sizes="16x16" href={Icon16} />
+      <link
+        rel="apple-touch-icon"
+        sizes="76x76"
+        href="%PUBLIC_URL%/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="%PUBLIC_URL%/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="%PUBLIC_URL%/favicon-16x16.png"
+      />
       <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href={Safari} color="#fef0ff" />
+      <link
+        rel="mask-icon"
+        href="%PUBLIC_URL%/safari-pinned-tab.svg"
+        color="#fef0ff"
+      />
       <meta name="msapplication-TileColor" content="#f5e5f6" />
       <meta name="theme-color" content="#fef0ff" />
       {isBlogPost && <meta property="og:type" content="article" />}
 
       {/* <!-- Open Graph / Facebook --> */}
-      <meta property="og:type" content="blog" />
+      <meta property="og:type" content="website" />
       <meta property="og:url" content={`${window.location.href}`} />
       <meta property="og:title" content={`${title} — Lulu Nwenyi`} />
       <meta
