@@ -132,7 +132,7 @@ const SinglePost = () => {
         description={fetchedData.description}
         imageUrl={fetchedData.thumbnail}
         isBlogPost={true}
-        canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/${fetchedData.slug}`}
+        canonicalLink={`https://lulu.wtf/${fetchedData.slug}`}
       />
       <div className="single_post_padding">
         <div className="single_post">

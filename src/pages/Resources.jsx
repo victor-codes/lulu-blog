@@ -64,9 +64,9 @@ const Resources = () => {
     <div key={name} className="section">
       <Meta
         title={name === "DevOps" ? "Cloud/DevOps" : name}
-        description={`This is a Category page`}
+        description="On here you can find resources for Design, Software Development"
         isBlogPost={false}
-        canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/${name.toLowerCase()}`}
+        canonicalLink="https://lulu.wtf/resources"
       />
 
       <div key={name}>

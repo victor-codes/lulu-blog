@@ -65,7 +65,6 @@ const Category = ({ name }) => {
       } else if (subName === post.subCategory) {
         return post;
       }
-
     }
     return null;
   });
@@ -80,13 +79,19 @@ const Category = ({ name }) => {
 
   const currentPosts = filteredPosts.slice(indexOfFirstPage, indexOfLastPage);
 
+  const metaDesc = {
+    design: "On here you can find articles related to Design",
+    dev: "On here you can find articles related to Software Devolopment",
+    devops: "On here you can find articles related to Cloud and DevOps",
+  };
+  
   return (
     <div key={name} className="section">
       <Meta
         title={name === "DevOps" ? "Cloud/DevOps" : name}
-        description={`This is a Category page`}
+        description={metaDesc[name.toLowerCase()]}
         isBlogPost={false}
-        canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/${
+        canonicalLink={`https://lulu.wtf/${
           name === "devops" ? "cloud" : name.toLowerCase()
         }`}
       />

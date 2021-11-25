@@ -38,7 +38,7 @@ const Meta = ({ title, description, isBlogPost, canonicalLink }) => {
 
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="blog" />
-      <meta property="og:url" content={`${window.location.href}`} />
+      <meta property="og:url" content={canonicalLink} />
       <meta property="og:title" content={`${title} — Lulu Nwenyi`} />
       <meta
         property="og:description"
@@ -48,7 +48,7 @@ const Meta = ({ title, description, isBlogPost, canonicalLink }) => {
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={`${window.location.href}`} />
+      <meta property="twitter:url" content={canonicalLink} />
       <meta property="twitter:title" content={`${title} — Lulu Nwenyi`} />
       <meta name="twitter:card" content="summary" />
       <meta

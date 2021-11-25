@@ -65,9 +65,9 @@ const Home = () => {
     <>
       <Meta
         title="Blog"
-        description="Welcome to Lulu Nwenyi personal blog"
+        description="Hello! Welcome to my blog. On here, you can find articles on Design, Backend Development, Technical Writing, and More."
         isBlogPost={false}
-        canonicalLink={`https://sad-rosalind-d98e2f.netlify.app/home`}
+        canonicalLink="https://lulu.wtf/home"
       />
       <div key="home">
         <div className="fixed_home">
@@ -92,7 +92,6 @@ const Home = () => {
         </div>
         <section id="articles" className={`article_trigger bg_color_article`}>
           <div className="article_container max_width">
-            
             {currentPosts.map((post, id) => (
               <Post post={post} key={id} />
             ))}
