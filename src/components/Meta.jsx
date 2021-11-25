@@ -6,9 +6,10 @@ import AppleTouch from "../assets/apple-touch-icon.png";
 import Icon32 from "../assets/favicon-32x32.png";
 import Icon16 from "../assets/favicon-16x16.png";
 import Safari from "../assets/safari-pinned-tab.svg";
+import defaultImgUrl from "../assets/meta-image.png";
 
 const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
-  const defaultImgUrl = "";
+  // const defaultImgUrl = "";
   const defaultDescriptionText = "";
   const trimmedDescription = description && truncateString(description, 150);
 
@@ -47,14 +48,7 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
           description ? trimmedDescription : defaultDescriptionText
         } Read more...`}
       />
-      <meta
-        property="og:image"
-        content={`${
-          imageUrl
-            ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
-            : defaultImgUrl
-        }`}
-      />
+      <meta property="og:image" content={defaultImgUrl} />
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -67,14 +61,7 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
           description ? trimmedDescription : defaultDescriptionText
         } Read more...`}
       />
-      <meta
-        property="twitter:image"
-        content={`${
-          imageUrl
-            ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
-            : defaultImgUrl
-        }`}
-      ></meta>
+      <meta property="twitter:image" content={defaultImgUrl}></meta>
     </Helmet>
   );
 };
