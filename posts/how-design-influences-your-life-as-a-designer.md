@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: How design influences your life as a designer
-date: 2021-11-08T19:15:40.394Z
+date: 2021-04-02T19:15:40.394Z
 tags: Design, Life
 category: Design
 subCategory: UI&UX
