@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Importance of Wireframing
-date: 2021-11-11T20:00:03.355Z
+date: 2020-11-23T20:00:03.355Z
 tags: Wireframing
 category: Design
 subCategory: UI&UX
