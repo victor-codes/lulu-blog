@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Adding downloadable files in a Flask App
-date: 2021-11-08T19:08:36.407Z
+date: 2021-08-17T19:08:36.407Z
 tags: Python, Flask
 category: Dev
 subCategory: Flask
