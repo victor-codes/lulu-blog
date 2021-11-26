@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: How to Stay Productive Working from Home
-date: 2021-11-08T18:29:12.044Z
+date: 2021-04-20T18:29:12.044Z
 tags: "Productivity, Remote "
 category: Psych
 subCategory: Remote
