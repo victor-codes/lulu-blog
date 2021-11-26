@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Choosing Font Pairs Like a Pro
-date: 2021-11-08T18:59:06.285Z
+date: 2021-08-24T18:59:06.285Z
 tags: " UI, Font Pairing"
 category: Design
 subCategory: UI&UX
