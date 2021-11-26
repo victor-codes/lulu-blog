@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: How to make money as a junior designer or developer
-date: 2021-11-11T19:47:18.152Z
+date: 2021-02-11T19:47:18.152Z
 tags: Design, Developer, Money
 category: Design
 subCategory: UI UX
