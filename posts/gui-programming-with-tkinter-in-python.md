@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: GUI Programming with Tkinter in Python
-date: 2021-11-08T18:51:52.157Z
+date: 2021-06-15T18:51:52.157Z
 tags: Python, Tkinker
 category: Dev
 subCategory: Python
