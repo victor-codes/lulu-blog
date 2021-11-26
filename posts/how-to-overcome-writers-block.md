@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: How To Overcome Writer's Block
-date: 2021-11-11T19:56:18.162Z
+date: 2020-11-24T19:56:18.162Z
 tags: Writing
 category: Psych
 subCategory: Writing
