@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Must-Have Figma Plugins for Every Designer
-date: 2021-11-11T20:04:09.460Z
+date: 2020-11-15T20:04:09.460Z
 tags: Figma, Plugin
 category: Design
 subCategory: UI&UX

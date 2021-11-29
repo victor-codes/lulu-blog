@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 10 Bad Habits That Mess With Your Creativity
-date: 2021-11-08T18:34:28.870Z
+date: 2021-04-11T18:34:28.870Z
 tags: Creativity, Productivity
 category: Psych
 subCategory: Productivity

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 10 Tips to Relieve Mental Stress
-date: 2021-11-08T18:44:25.789Z
+date: 2021-07-07T18:44:25.789Z
 tags: Productivity
 category: Psych
 subCategory: Tips

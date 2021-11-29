@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Battling emotional demons
-date: 2021-11-09T19:45:39.421Z
+date: 2021-03-17T19:45:39.421Z
 thumbnail: https://miro.medium.com/max/1280/1*q5m26XjRdRVPoUc-2FdJ3g.jpeg
 thumbnailAltText: Photo by Ksenia Chernaya from Pexels
 tags: Emotion
