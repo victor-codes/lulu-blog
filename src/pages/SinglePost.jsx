@@ -26,28 +26,32 @@ const SinglePost = () => {
   let previousPost;
   let nextPost;
 
+  hljs.registerLanguage("css", css);
+  hljs.registerLanguage("xml", xml);
+  hljs.registerLanguage("python", python);
+
   useEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
       const strong = codeRef.current.querySelectorAll("strong");
       const val = codeRef.current.querySelectorAll("img");
 
+      pres.forEach((node) => {
+        hljs.highlightBlock(node);
+      });
+
       strong.forEach((node) => {
         if (node.parentNode) {
           node.parentNode.style.marginBottom = "0px";
         }
       });
+
       val.forEach((node) => {
         node.setAttribute("loading", "lazy");
         if (node.parentNode) {
           node.parentNode.style.textAlign = "center";
           node.parentNode.style.margin = "0";
         }
-      });
-
-      pres.forEach((node) => {
-        hljs.highlightBlock(node);
-        node.appendChild(copyContainer);
       });
     }
   });
@@ -59,13 +63,6 @@ const SinglePost = () => {
       behavior: "smooth",
     });
   }, [slug]);
-  useEffect(() => {
-    window.scrollTo({
-      left: 0,
-      top: 0,
-      behavior: "smooth",
-    });
-  });
 
   useEffect(() => {
     if (postExists) {
@@ -112,18 +109,10 @@ const SinglePost = () => {
 
     return window.scrollTo(0, scroll);
   }
-  hljs.registerLanguage("css", css);
-  hljs.registerLanguage("xml", xml);
-  hljs.registerLanguage("python", python);
 
   let content = fetchedData.content;
 
   const shareTwitter = `https://twitter.com/share?url=${window.location.href}&text=I just read ${fetchedData.title} by @LuluNwenyi`;
-
-  const copyContainer = document.createElement("div");
-  // // copyContainer.innerHTML = `<span>Copy5</span> `;
-
-  // // copyContainer.setAttribute("class", "copy_container");
 
   return (
     <div key={fetchedData.title} className="single_post_footer_bg">

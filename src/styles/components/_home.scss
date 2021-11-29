@@ -15,7 +15,6 @@
     z-index: -10;
   }
   h2 {
-    font-style: normal;
     font-weight: normal;
     font-size: 50px;
     line-height: 81px;
@@ -158,7 +157,6 @@
     backdrop-filter: blur(16px);
     .gradient {
       width: -48.06px !important;
-      // height: 189.94px !important;
       filter: blur(60px);
       right: 0 !important;
       top: 125px !important;
@@ -229,7 +227,6 @@
   }
   .static_style {
     position: sticky;
-
     background: var(--primary-background-blur);
     backdrop-filter: blur(16px);
     top: 83px;

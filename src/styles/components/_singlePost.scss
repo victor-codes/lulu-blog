@@ -44,7 +44,6 @@
     position: absolute;
     width: 384.97px;
     height: 169.15px;
-    // left: 965.03px;
     right: 200px;
     top: 97.68px;
     z-index: -10;
@@ -73,7 +72,6 @@
     }
 
     h2 {
-      font-style: normal;
       font-weight: normal;
       font-size: 40px;
       line-height: 120%;
@@ -127,7 +125,6 @@ figure {
   }
 }
 p {
-  font-style: normal;
   font-weight: normal;
   font-size: 17px;
   line-height: 32px;
@@ -279,14 +276,12 @@ p {
   }
   padding-top: 36px;
   h1 {
-    font-style: normal;
     font-size: 40px;
     line-height: 50px;
     margin: 16px 0 12px;
     color: var(--blog-header-color);
   }
   h2 {
-    font-style: normal;
     font-size: 32px;
     line-height: 52px;
     margin: 24px 0 16px;
@@ -294,19 +289,16 @@ p {
   }
   h3 {
     margin: 16px 0 12px;
-    font-style: normal;
     font-size: 28px;
     line-height: 45px;
     color: var(--blog-header-color);
   }
   h4 {
-    font-style: normal;
     font-size: 24px;
     line-height: 39px;
     color: var(--blog-header-2-color);
   }
   h5 {
-    font-style: normal;
     font-size: 20px;
     line-height: 32px;
     color: var(--blog-header-2-color);
@@ -321,7 +313,6 @@ p {
   ul li,
   cite {
     font-family: "General Sans", sans-serif;
-    font-style: normal;
     font-weight: normal;
     font-size: 17px;
     line-height: 28px;

@@ -68,8 +68,8 @@ const SubCategory = ({ name, handleClick }) => {
               </NavLink>
             ))}
         </div>
-        <div className="less_btn">
-          {!scrollX ? (
+        {!scrollX ? (
+          <div className="less_btn">
             <ChrevonLeft
               onClick={() => {
                 const scroll = document.querySelector(".mobile_nav .container");
@@ -78,12 +78,12 @@ const SubCategory = ({ name, handleClick }) => {
                 return setScrollX(true);
               }}
             />
-          ) : (
-            ""
-          )}
-        </div>
-        <div className="more_btn">
-          {scrollX && (
+          </div>
+        ) : (
+          ""
+        )}
+        {scrollX && (
+          <div className="more_btn">
             <ChrevonRight
               onClick={() => {
                 const scroll = document.querySelector(".mobile_nav .container");
@@ -92,8 +92,8 @@ const SubCategory = ({ name, handleClick }) => {
                 return setScrollX(false);
               }}
             />
-          )}
-        </div>
+          </div>
+        )}
       </section>
     </div>
   );
