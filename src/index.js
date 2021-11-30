@@ -25,7 +25,31 @@ const Load = ({ children }) => {
     <Suspense
       fallback={
         <div className="loading" style={styles}>
-          Welcome to my Blog!
+          <svg
+            className="App-logo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="64"
+            height="64"
+            stroke-width="0.75"
+            stroke="#808080"
+            fill="none"
+            stroke-linejoin="arcs"
+            stroke-linecap="square"
+            viewBox="0 0 24 24"
+          >
+            {" "}
+            <g fill="none" fill-rule="evenodd">
+              <rect
+                width="24"
+                height="24"
+                style={{ stroke: "rgba(0,0,0,0)" }}
+              ></rect>
+              <path
+                d="M12,2 L12,6 M12,18 L12,22 M4.93,4.93 L7.76,7.76 M16.24,16.24 L19.07,19.07 M2,12 L6,12 M18,12 L22,12 M4.93,19.07 L7.76,16.24 M16.24,7.76 L19.07,4.93"
+                stroke="#808080"
+              ></path>
+            </g>
+          </svg>
         </div>
       }
     >
