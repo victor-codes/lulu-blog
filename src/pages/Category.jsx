@@ -84,7 +84,7 @@ const Category = ({ name }) => {
     dev: "On here you can find articles related to Software Devolopment",
     devops: "On here you can find articles related to Cloud and DevOps",
   };
-  
+
   return (
     <div key={name} className="section">
       <Meta
@@ -115,15 +115,17 @@ const Category = ({ name }) => {
           <SubCategory name={name} handleClick={handleClick} />
         </div>
         <section id="articles" className="bg_color_article article__catergory">
-          <div className="article_container max_width">
-            {currentPosts.length > 0 ? (
-              currentPosts.map((post, id) => <Post key={id} post={post} />)
-            ) : (
-              <div className="max_width no_post ">
-                No post yet, come back later :(
-              </div>
-            )}
-          </div>
+          {currentPosts.length > 0 ? (
+            <div className="article_container max_width">
+              {currentPosts.map((post, id) => (
+                <Post key={id} post={post} />
+              ))}
+            </div>
+          ) : (
+            <div className="max_width no_post ">
+              No post yet, come back later :(
+            </div>
+          )}
           {currentPosts.length >= 9 && (
             <div className="paginate">
               <button className="inline_flex">

@@ -11,13 +11,15 @@ import postList from "../data/posts.json";
 import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
 import xml from "highlight.js/lib/languages/xml";
-import css from "highlight.js/lib/languages/css";
 import Meta from "../components/Meta";
 
 const SinglePost = () => {
   const codeRef = useRef();
   const { slug } = useParams();
   const [scroll, setScroll] = useState(0);
+
+  hljs.registerLanguage("xml", xml);
+  hljs.registerLanguage("python", python);
 
   let currentPost;
   let postExists = false;
@@ -26,9 +28,6 @@ const SinglePost = () => {
   let previousPost;
   let nextPost;
 
-  hljs.registerLanguage("css", css);
-  hljs.registerLanguage("xml", xml);
-  hljs.registerLanguage("python", python);
 
   useEffect(() => {
     if (postExists) {
@@ -210,9 +209,9 @@ const SinglePost = () => {
               <a
                 target="_blank"
                 rel="noreferrer noopener"
-                href="mailto:hello@lulu.wtf"
+                href="mailto:hello@lulunwenyi.com"
               >
-                hello@lulu.wtf{" "}
+                hello@lulunwenyi.com
               </a>
             </p>
           </div>

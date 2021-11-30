@@ -239,7 +239,8 @@
 }
 
 .no_post {
-  padding: 24px 33px 0px !important;
+  font-size: $font-size-3;
+  padding: 84px 33px 0px !important;
   text-align: center;
   color: var(--blog-post-primary-text-color);
 }

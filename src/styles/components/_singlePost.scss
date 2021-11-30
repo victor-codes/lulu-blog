@@ -327,7 +327,7 @@ p {
   }
   p img {
     width: 100%;
-    object-fit: fill;
+    object-fit: contain;
     max-width: 540px;
     height: auto;
     max-height: 375px;
