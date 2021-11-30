@@ -16,17 +16,17 @@ description: >-
 ---
 Choosing a great font pair is just like picking a great outfit. There’s a wide range to choose from but we have to consider the occasion because there are special outfits, for special occasions.
 
-One of the major problems I’ve faced as a product designer is font pairing. In some cases, I’ve had to reiterate and create over 5 variations of font pairs to work with. In this article, I highlight the importance of font pairing and tips to match font pairs that work well with each other for better User Experience.
+One of the major problems I’ve faced as a product designer is font pairing. In some cases, I’ve had to reiterate and create over 5 variations of font pairs to work with. In this article, I highlight the importance of font pairing and tips to match font pairs that work well with each other for a better User Experience.
 
 ## The importance of proper font pairing
 
 Font choices set the overall look and feel of a design and selecting the right fonts can mean the difference between a compelling, attractive design, and a boring lifeless one. Here’s why: 
 
-### **1. To improve contrast and make the text visually interesting**
+### 1. To improve contrast and make the text visually interesting
 
 The whole point of pairing fonts is for contrast. Creating contrast in fonts makes it easier for your users to read and differentiate parts of the text like heading and body. Contrasting fonts also help to catch attention more and make your designs visually interesting. 
 
-### **2. Convey the right message and emotion**
+### 2. Convey the right message and emotion
 
 Font choices are a great influence on people’s emotions and thoughts when reading a piece of text. For example, you’re likely to read the texts in the image below, differently. 
 
@@ -34,7 +34,7 @@ Font choices are a great influence on people’s emotions and thoughts when read
 
 [Studies](https://affect.media.mit.edu/pdfs/05.larson-picard.pdf) have revealed that line spacing, book dimensions, and layouts play a huge role in the emotions of a person while reading. It is also noted that script fonts stimulate feelings of humor or love and serif fonts inspire a feeling of maturity. Therefore, to convey the right message in our design, considerable font pairing is vital.
 
-### **3. Ensure readability and legibility**
+### 3. Ensure readability and legibility
 
 It’s also very important to make sure your users can read texts clearly and easily. Your choice of font family, style, colour, size, line-height, and weight, can all affect the legibility, readability, accessibility, and general UX of your design. 
 
