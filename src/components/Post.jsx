@@ -4,7 +4,7 @@ import { ReactComponent as Arrow } from "../assets/arrow-right.svg";
 import { stringToLink, truncateString } from "../utils/helperFunction";
 
 const Post = ({ post }) => {
-  const { tags, title, publishDate, description, category, slug } = post;
+  const { tags, title, publishDate, category, slug, content } = post;
 
   return (
     <Link to={`/${stringToLink(category)}/post/${slug}`}>
@@ -16,7 +16,7 @@ const Post = ({ post }) => {
           <h3>{truncateString(title, 49)}</h3>
           <span className="timestamp">{publishDate}</span>
         </div>
-        <p>{truncateString(description, 150)}</p>
+        <p>{truncateString(content, 150)}</p>
 
         <span className="link">
           READ MORE

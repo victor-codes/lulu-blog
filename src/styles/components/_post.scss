@@ -1,4 +1,8 @@
 a {
+  &:focus {
+    transition-duration: 300ms;
+    opacity: 0.7;
+  }
   .post_article:hover {
     transition-duration: 300ms;
     opacity: 0.7;
@@ -10,23 +14,19 @@ a {
     padding-bottom: 8px;
     .info {
       .tag {
-        font-weight: normal;
         font-size: 12px;
         line-height: 15px;
         letter-spacing: 0.1em;
         color: var(--article-tag-color);
       }
       h3 {
-        font-weight: normal;
         font-size: 24px;
-        min-height: 60px;
+        height: 60px;
         line-height: 30px;
         color: var(--article-primary-color);
         margin: 4px 0;
       }
       .timestamp {
-        font-style: normal;
-        font-weight: normal;
         font-size: 12px;
         line-height: 15px;
         letter-spacing: 0.1em;
@@ -35,18 +35,15 @@ a {
       }
     }
     p {
-      font-style: normal;
-      font-weight: normal;
       font-size: 15px;
       line-height: 24px;
-      min-height: 72px;
+      height: 72px;
       color: var(--article-secondary-color);
       margin: 12px 0 24px;
     }
     .link {
       display: inline-flex;
       align-items: center;
-      font-style: normal;
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;

@@ -15,15 +15,15 @@ footer {
         flex-direction: row;
         margin: 0 0 24px;
         align-items: center;
-        .hr {
+        * {
           width: 100%;
+        }
+        .hr {
           border-bottom: 1px solid var(--suppport-line-color);
           margin-left: $spacing-4;
         }
         h2 {
-          font-weight: normal;
           font-size: $font-size-6;
-          width: 100%;
           max-width: fit-content;
           line-height: 26px;
           letter-spacing: 0.03em;

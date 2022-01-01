@@ -62,7 +62,11 @@ const SubCategory = ({ name, handleClick }) => {
                   handleClick(item);
                 }}
                 activeClassName="active"
-                to={stringToLink(categories[category][item])}
+                to={`${
+                  category === "home"
+                    ? `/${stringToLink(categories[category][item])}`
+                    : stringToLink(categories[category][item])
+                }`}
               >
                 {item}
               </NavLink>

@@ -11,7 +11,6 @@
       width: 100%;
       max-width: 611px;
       h2 {
-        font-weight: normal;
         font-size: 50px;
         line-height: 81px;
         letter-spacing: -0.03em;
@@ -20,7 +19,6 @@
 
       p {
         font-family: "General Sans", sans-serif;
-        font-weight: normal;
         font-size: 18px;
         line-height: 29px;
         margin: -8px 0 24px;
@@ -33,14 +31,15 @@
 
 .absolute {
   position: absolute;
-  z-index: -10;
-  top: 120px;
+  width: 50vw;
+  background-position: right;
+  height: 500px;
   right: 0px;
-  width: 428.06px;
-  height: 489.94px;
-  filter: blur(200px);
-  background: var(--home-gradient-color);
-  opacity: var(--home-gradient-opacity);
+  top: var(--page-top);
+  background-image: var(--home-gradient-color);
+  filter: blur(100px);
+  background-repeat: no-repeat;
+  z-index: -10;
 }
 
 @media screen and (max-width: 1259px) {
@@ -62,16 +61,15 @@
     }
     .not_found {
       div {
+        letter-spacing: -0.03em;
         h2 {
           font-size: 32px;
           line-height: 45px;
-          letter-spacing: -0.03em;
         }
         p {
           font-size: 14px;
           line-height: 23px;
           margin-top: 0px !important;
-          letter-spacing: -0.03em;
         }
       }
     }

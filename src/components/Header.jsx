@@ -74,12 +74,6 @@ const Header = () => {
               <NavLink to="/design">Design</NavLink>
               <NavLink to="/dev">{`Dev </> `}</NavLink>
               <NavLink to="/cloud">Cloud/DevOps</NavLink>
-              {/* <NavLink
-               
-                to="/writing"
-              >
-                Writing
-              </NavLink> */}
               <NavLink to="/resources">Resources</NavLink>
               <NavLink to="/sponsor">Sponsor</NavLink>
             </nav>

@@ -7,8 +7,6 @@
   h2 {
     display: flex;
     align-items: baseline;
-    font-style: normal;
-    font-weight: normal;
     font-size: 50px;
     line-height: 81px;
     letter-spacing: -0.03em;
@@ -24,16 +22,13 @@
       display: flex;
       align-items: center;
       span {
-        font-style: normal;
         color: var(--mobile-nav-text-color);
-        font-weight: normal;
         font-size: 22px;
         line-height: 27px;
       }
     }
   }
   p {
-    font-weight: normal;
     font-size: 18px;
     line-height: 29px;
     letter-spacing: -0.03em;
@@ -81,9 +76,7 @@
 
 .paginate {
   button {
-    background: none;
     cursor: pointer;
-    font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
@@ -105,10 +98,10 @@
     align-items: center;
     justify-items: center;
     a {
-      font-weight: normal;
       font-size: 18px;
       line-height: 26px;
-      padding: 0 2px;text-align: center;
+      padding: 0 2px;
+      text-align: center;
       letter-spacing: 0.03em;
 
       color: var(--paginate-secondary-color);
@@ -126,7 +119,6 @@
   color: var(--paginate-primary-color) !important;
   text-shadow: 0px 2px 50px rgba(0, 0, 0, 0.34);
 }
-
 @media screen and (max-width: 768px) {
   .category_hero {
     margin-top: 83px !important;
@@ -135,13 +127,13 @@
     grid-template-columns: repeat(2, minmax(auto, 394px));
   }
 }
-
 @media screen and (max-width: 500px) {
   .category_hero {
     padding-bottom: 0px !important;
     h2 {
       font-size: 30px;
       line-height: 49px;
+      align-items: stretch;
       div {
         span {
           font-size: 16px;
@@ -159,7 +151,6 @@
   .bg_color_article {
     background: var(--mobile-article-background);
   }
-
   .link {
     gap: 8px !important;
   }
@@ -179,7 +170,6 @@
     gap: 24px;
   }
 }
-
 @media screen and (max-width: 580px) {
   .fixed_category {
     position: sticky;
@@ -202,7 +192,6 @@
     }
   }
 }
-
 .gradient_container {
   position: relative;
   overflow-y: clip;

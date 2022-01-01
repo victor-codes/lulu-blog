@@ -53,5 +53,5 @@ collections:
           label: "Description",
           name: description,
           widget: text,
-          required: true,
+          required: false,
         }

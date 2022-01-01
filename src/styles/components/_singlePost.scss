@@ -72,7 +72,6 @@
     }
 
     h2 {
-      font-weight: normal;
       font-size: 40px;
       line-height: 120%;
       letter-spacing: -0.03em;
@@ -125,7 +124,6 @@ figure {
   }
 }
 p {
-  font-weight: normal;
   font-size: 17px;
   line-height: 32px;
   color: var(--blog-post-primary-text-color);
@@ -204,7 +202,6 @@ p {
   a {
     padding: 16px 8px;
     background-color: var(--blog-contributions-bg-color);
-    width: -webkit-fill-available;
     div {
       display: flex;
       flex-direction: column;
@@ -279,29 +276,33 @@ p {
     font-size: 40px;
     line-height: 50px;
     margin: 16px 0 12px;
-    color: var(--blog-header-color);
   }
   h2 {
     font-size: 32px;
     line-height: 52px;
     margin: 24px 0 16px;
+  }
+  h1,
+  h2,
+  h3 {
     color: var(--blog-header-color);
   }
   h3 {
     margin: 16px 0 12px;
     font-size: 28px;
     line-height: 45px;
-    color: var(--blog-header-color);
+  }
+  h4,
+  h5 {
+    color: var(--blog-header-2-color);
   }
   h4 {
     font-size: 24px;
     line-height: 39px;
-    color: var(--blog-header-2-color);
   }
   h5 {
     font-size: 20px;
     line-height: 32px;
-    color: var(--blog-header-2-color);
   }
   pre {
     width: 100%;
@@ -313,7 +314,6 @@ p {
   ul li,
   cite {
     font-family: "General Sans", sans-serif;
-    font-weight: normal;
     font-size: 17px;
     line-height: 28px;
     color: var(--blog-post-primary-text-color);
@@ -355,7 +355,6 @@ blockquote {
   padding-left: 24px;
   margin: 16px 0 0 24px;
 }
-
 @media screen and (max-width: 540px) {
   .post_content {
     padding-top: 24px !important;

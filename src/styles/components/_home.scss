@@ -15,7 +15,6 @@
     z-index: -10;
   }
   h2 {
-    font-weight: normal;
     font-size: 50px;
     line-height: 81px;
     letter-spacing: -0.03em;
@@ -23,7 +22,6 @@
   }
   p {
     font-family: "General Sans", sans-serif;
-    font-weight: normal;
     font-size: 18px;
     line-height: 29px;
     letter-spacing: -0.03em;
@@ -88,7 +86,6 @@
   button {
     background: none;
     cursor: pointer;
-    font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
@@ -111,8 +108,6 @@
     align-items: center;
     justify-items: center;
     button {
-      font-style: normal;
-      font-weight: normal;
       font-size: 18px;
       line-height: 26px;
       padding: 0 2px;
@@ -126,7 +121,6 @@
   }
 }
 .page {
-  font-style: normal;
   font-weight: bold !important;
   font-size: 18px !important;
   text-align: center;

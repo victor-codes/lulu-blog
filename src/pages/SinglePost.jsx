@@ -28,7 +28,6 @@ const SinglePost = () => {
   let previousPost;
   let nextPost;
 
-
   useEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
