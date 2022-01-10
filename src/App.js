@@ -18,7 +18,6 @@ import Resources from "./pages/Resources";
 function App() {
   return (
     <div className="App">
-      <Meta />
       <Router>
         <Header />
         <Switch>
@@ -38,7 +37,7 @@ function App() {
             <Redirect to="/dev/all" />
           </Route>
           <Route exact path="/dev/:subcategory">
-            <Category name="Dev" key={2} />
+            <Category name="Dev" />
           </Route>
           <Route exact path="/cloud">
             <Redirect to="/cloud/all" />
@@ -47,30 +46,32 @@ function App() {
             <Redirect to="/cloud/all" />
           </Route>
           <Route exact path="/cloud/:subcategory">
-            <Category name="DevOps" key={3} />
+            <Category name="DevOps" />
           </Route>
           <Route exact path="/psych">
             <Redirect to="/psych/all" />
           </Route>
           <Route exact path="/psych/:subcategory">
-            <Category name="Psych" key={4} />
+            <Category name="Psych" />
           </Route>
           <Route exact path="/resources">
             <Redirect to="/resources/all" />
           </Route>
-          <Route exact path="/resources/:subcategory" key={5}>
+          <Route exact path="/sponsor">
+            <Meta title="Sponsor" />
+          </Route>
+          <Route exact path="/resources/:subcategory">
             <Resources />
           </Route>
-          <Route exact path="/sponsor" key={6} />
+          <Route exact path="/sponsor" />
           <Route
             exact
             strict
             path="/:category/post/:slug"
             component={SinglePost}
-            key={7}
           />
-          <Route exact path="*" component={PageNotFound} key={8} />
-          <Route exact path="/404" component={PageNotFound} key={9} />
+          <Route exact path="*" component={PageNotFound} />
+          <Route exact path="/404" component={PageNotFound} />
         </Switch>
       </Router>
     </div>

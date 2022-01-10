@@ -1,25 +1,29 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import { Link, useParams, Redirect } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as CheronRight } from "../assets/chervon-right.svg";
 import { ReactComponent as CheronLeft } from "../assets/chervon-left.svg";
-
 import Footer from "../components/Footer";
 import Markdown from "react-markdown";
 import postList from "../data/posts.json";
-
 import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
 import xml from "highlight.js/lib/languages/xml";
 import Meta from "../components/Meta";
 
+
+const windowScroll = () => {
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 const SinglePost = () => {
   const codeRef = useRef();
   const { slug } = useParams();
   const [scroll, setScroll] = useState(0);
-
-  hljs.registerLanguage("xml", xml);
-  hljs.registerLanguage("python", python);
 
   let currentPost;
   let postExists = false;
@@ -27,12 +31,24 @@ const SinglePost = () => {
 
   let previousPost;
   let nextPost;
+  useLayoutEffect(() => {
+    windowScroll();
+  }, []);
 
   useEffect(() => {
+    hljs.registerLanguage("xml", xml);
+    hljs.registerLanguage("python", python);
+    windowScroll();
+  }, [postExists]);
+
+  useLayoutEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
       const strong = codeRef.current.querySelectorAll("strong");
       const val = codeRef.current.querySelectorAll("img");
+
+      const posEl = document.querySelector(".link").getBoundingClientRect().top;
+      setScroll(posEl);
 
       pres.forEach((node) => {
         hljs.highlightBlock(node);
@@ -52,17 +68,9 @@ const SinglePost = () => {
         }
       });
     }
-  });
+  }, [postExists]);
 
-  useEffect(() => {
-    window.scrollTo({
-      left: 0,
-      top: 0,
-      behavior: "smooth",
-    });
-  }, [slug]);
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
       const a = codeRef.current.querySelectorAll("a");
@@ -91,20 +99,12 @@ const SinglePost = () => {
     nextPost = postList[currentPost + 1];
   });
 
-  useEffect(() => {
-    if (postExists) {
-      const posEl = document.querySelector(".link").getBoundingClientRect().top;
-      setScroll(posEl);
-    }
-  }, [postExists]);
-
   if (!postExists) {
     return <Redirect to="/404" />;
   }
 
   function handleScroll(e) {
     e.preventDefault();
-
     return window.scrollTo(0, scroll);
   }
 
