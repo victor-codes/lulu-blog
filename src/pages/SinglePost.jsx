@@ -31,6 +31,17 @@ const SinglePost = () => {
 
   let previousPost;
   let nextPost;
+
+  postList.forEach((post, id) => {
+    if (slug === post.slug) {
+      currentPost = id;
+      fetchedData = { ...postList[currentPost] };
+      postExists = true;
+    }
+    previousPost = postList[currentPost - 1];
+    nextPost = postList[currentPost + 1];
+  });
+
   useLayoutEffect(() => {
     windowScroll();
   }, []);
@@ -88,16 +99,6 @@ const SinglePost = () => {
       });
     }
   }, [codeRef, postExists]);
-
-  postList.forEach((post, id) => {
-    if (slug === post.slug) {
-      currentPost = id;
-      fetchedData = { ...postList[currentPost] };
-      postExists = true;
-    }
-    previousPost = postList[currentPost - 1];
-    nextPost = postList[currentPost + 1];
-  });
 
   if (!postExists) {
     return <Redirect to="/404" />;
