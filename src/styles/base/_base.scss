@@ -9,22 +9,18 @@ html {
   padding: 0;
   box-sizing: inherit;
   transition: $transition-1;
-}
-*:focus {
-  transition: none;
-}
-html,
-body {
-  min-height: 100%;
-}
-* {
   font-style: normal;
   font-weight: normal;
   font-family: "Cabinet Grotesk", sans-serif;
   scroll-behavior: smooth;
 }
 *:focus {
-  outline: 2px solid #000;
+  outline: none;
+  transition: none;
+}
+html,
+body {
+  min-height: 100%;
 }
 body {
   width: 100%;
