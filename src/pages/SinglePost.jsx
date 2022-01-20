@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import React, { useRef, useState, useLayoutEffect } from "react";
 import { Link, useParams, Redirect } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as CheronRight } from "../assets/chervon-right.svg";
@@ -10,7 +10,6 @@ import hljs from "highlight.js";
 import python from "highlight.js/lib/languages/python";
 import xml from "highlight.js/lib/languages/xml";
 import Meta from "../components/Meta";
-
 
 const windowScroll = () => {
   window.scrollTo({
@@ -42,21 +41,18 @@ const SinglePost = () => {
     nextPost = postList[currentPost + 1];
   });
 
+
   useLayoutEffect(() => {
     windowScroll();
-  }, []);
-
-  useEffect(() => {
     hljs.registerLanguage("xml", xml);
     hljs.registerLanguage("python", python);
-    windowScroll();
-  }, [postExists]);
+  }, [postExists, slug]);
 
   useLayoutEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
       const strong = codeRef.current.querySelectorAll("strong");
-      const val = codeRef.current.querySelectorAll("img");
+      const img = codeRef.current.querySelectorAll("img");
 
       const posEl = document.querySelector(".link").getBoundingClientRect().top;
       setScroll(posEl);
@@ -71,7 +67,7 @@ const SinglePost = () => {
         }
       });
 
-      val.forEach((node) => {
+      img.forEach((node) => {
         node.setAttribute("loading", "lazy");
         if (node.parentNode) {
           node.parentNode.style.textAlign = "center";
@@ -79,7 +75,7 @@ const SinglePost = () => {
         }
       });
     }
-  }, [postExists]);
+  }, [postExists, slug]);
 
   useLayoutEffect(() => {
     if (postExists) {
@@ -94,11 +90,11 @@ const SinglePost = () => {
       });
 
       a.forEach((node) => {
-        node.setAttribute("target", "_blamk");
+        node.setAttribute("target", "_blank");
         node.setAttribute("rel", "noreferrer noopener");
       });
     }
-  }, [codeRef, postExists]);
+  }, [codeRef, postExists, slug]);
 
   if (!postExists) {
     return <Redirect to="/404" />;
