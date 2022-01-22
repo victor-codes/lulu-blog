@@ -75,7 +75,13 @@ const Header = () => {
               <NavLink to="/dev">{`Dev </> `}</NavLink>
               <NavLink to="/cloud">Cloud/DevOps</NavLink>
               <NavLink to="/resources">Resources</NavLink>
-              <NavLink to="/sponsor">Sponsor</NavLink>
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://www.buymeacoffee.com/lulunwenyi"
+              >
+                Sponsor
+              </a>
             </nav>
             {mobileNav && <Close className="menu_icon" onClick={handleClick} />}
             {!mobileNav && <Menu className="menu_icon" onClick={handleClick} />}

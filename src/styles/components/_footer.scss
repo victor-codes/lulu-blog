@@ -25,38 +25,10 @@ footer {
         h2 {
           font-size: $font-size-6;
           max-width: fit-content;
+          font-family: "Satoshi", sans-serif;
           line-height: 26px;
           letter-spacing: 0.03em;
           color: var(--article-primary-color);
-        }
-      }
-      .projects {
-        margin-bottom: 108px;
-        .project_item:last-child {
-          margin-top: 36px;
-        }
-        .project_item {
-          line-height: 26px;
-          display: flex;
-          align-items: center;
-          .left {
-            margin-left: $spacing-4;
-          }
-          p {
-            font-weight: bold;
-            font-size: $font-size-6;
-            line-height: 26px;
-            letter-spacing: -0.03em;
-            color: var(--article-primary-color);
-          }
-          span {
-            letter-spacing: -0.03em;
-            a {
-              font-weight: bold;
-
-              text-decoration: underline;
-            }
-          }
         }
       }
       .support {
@@ -73,14 +45,19 @@ footer {
           font-weight: bold;
           font-size: $font-size-6;
           line-height: 26px;
-          letter-spacing: -0.03em;
+          letter-spacing: 0.03em;
+          font-family: "Satoshi", sans-serif;
+
           color: var(--article-primary-color);
         }
         span {
           letter-spacing: -0.03em;
+          font-family: "Satoshi", sans-serif;
+
           color: var(--article-secondary-color);
 
           a {
+            font-family: "Satoshi", sans-serif;
             color: var(--article-accent-color);
             font-weight: bold;
             text-decoration: underline;

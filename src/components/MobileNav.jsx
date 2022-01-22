@@ -57,15 +57,6 @@ const MobileNav = ({ show, hide }) => {
         >
           Cloud/DevOps
         </NavLink>
-        {/* <NavLink
-          onClick={() => {
-            hide(false);
-          }}
-          activeClassName="mobile_nav_active"
-          to="/writing"
-        >
-          Writing
-        </NavLink> */}
         <NavLink
           onClick={() => {
             hide(false);
@@ -75,15 +66,17 @@ const MobileNav = ({ show, hide }) => {
         >
           Resources
         </NavLink>
-        <NavLink
+        <a
           onClick={() => {
             hide(false);
           }}
           activeClassName="mobile_nav_active"
-          to="/sponsor"
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://www.buymeacoffee.com/lulunwenyi"
         >
           Sponsor
-        </NavLink>
+        </a>
       </nav>
     </motion.div>
   );

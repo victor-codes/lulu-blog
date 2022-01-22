@@ -12,7 +12,6 @@ import PageNotFound from "./pages/PageNotFound";
 import Category from "./pages/Category";
 import SinglePost from "./pages/SinglePost";
 import Header from "./components/Header";
-import Meta from "./components/Meta";
 import Resources from "./pages/Resources";
 
 function App() {
@@ -57,13 +56,9 @@ function App() {
           <Route exact path="/resources">
             <Redirect to="/resources/all" />
           </Route>
-          <Route exact path="/sponsor">
-            <Meta title="Sponsor" />
-          </Route>
           <Route exact path="/resources/:subcategory">
             <Resources />
           </Route>
-          <Route exact path="/sponsor" />
           <Route
             exact
             strict

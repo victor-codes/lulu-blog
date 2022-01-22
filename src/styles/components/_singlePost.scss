@@ -74,7 +74,7 @@
     h2 {
       font-size: 40px;
       line-height: 120%;
-      letter-spacing: -0.03em;
+      letter-spacing: 0.03em;
       width: 100%;
       max-width: 1046px;
       color: var(--paginate-primary-color);
@@ -117,7 +117,7 @@ figure {
   figcaption {
     font-size: 14px;
     line-height: 23px;
-    letter-spacing: -0.03em;
+    letter-spacing: 0.03em;
     color: #7c7676;
     margin-top: 4px;
     text-align: center;
@@ -269,7 +269,8 @@ p {
   h4,
   h5,
   h6 {
-    font-weight: bold !important;
+    font-family: "Satoshi", sans-serif;
+    font-weight: bold;
   }
   padding-top: 36px;
   h1 {
@@ -313,7 +314,7 @@ p {
   ol li,
   ul li,
   cite {
-    font-family: "General Sans", sans-serif;
+    font-family: "Satoshi", sans-serif;
     font-size: 17px;
     line-height: 28px;
     color: var(--blog-post-primary-text-color);

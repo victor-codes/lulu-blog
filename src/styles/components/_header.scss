@@ -33,6 +33,7 @@ header {
       padding: 0px;
 
       .active {
+        text-decoration: underline;
         font-weight: 700;
       }
       a {
@@ -69,7 +70,7 @@ header {
   font-size: 30px;
   margin-right: 12px;
   line-height: 37px;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.03em;
   color: var(--logo-color);
 }
 
