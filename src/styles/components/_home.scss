@@ -15,14 +15,14 @@
     z-index: -10;
   }
   h2 {
-    font-size: 50px;
+    font-size: 3.125rem;
     line-height: 81px;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
   }
   p {
     font-family: "Satoshi", sans-serif;
-    font-size: 18px;
+    font-size: $font-size-4;
     line-height: 29px;
     letter-spacing: -0.03em;
     color: var(--secondary-text-color);
@@ -41,7 +41,7 @@
     align-items: center;
     color: var(--header-text-color);
     svg {
-      margin-right: 12px;
+      margin-right: $spacing-9;
       stroke: var(--header-text-color);
     }
   }
@@ -81,13 +81,13 @@
   justify-content: space-around;
   width: 100%;
   max-width: 461px;
-  padding: 0 24px;
+  padding: 0 $spacing-2;
   margin: 100px auto 0;
   button {
     background: none;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: $font-weight-1;
+    font-size: $spacing-8;
     line-height: 17px;
     letter-spacing: 0.03em;
 
@@ -108,7 +108,7 @@
     align-items: center;
     justify-items: center;
     button {
-      font-size: 18px;
+      font-size: $font-size-4;
       line-height: 26px;
       padding: 0 2px;
       text-align: center;
@@ -121,8 +121,8 @@
   }
 }
 .page {
-  font-weight: bold !important;
-  font-size: 18px !important;
+  font-weight: $font-weight-1 !important;
+  font-size: $font-size-4 !important;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--paginate-primary-color) !important;
@@ -156,12 +156,12 @@
       top: 125px !important;
     }
     h2 {
-      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 49px;
     }
     p {
       margin-top: 0px !important;
-      font-size: 15px;
+      font-size: $font-size-7;
       line-height: 24px;
       padding-bottom: 110px;
     }
@@ -173,17 +173,17 @@
     padding: 130px 33px 0 !important;
   }
   .link {
-    gap: 8px !important;
+    gap: $spacing-6 !important;
   }
   .scroll {
     font-size: 0.75rem !important;
   }
   .left {
-    margin: 0 8px 0 0 !important;
+    margin: 0 $spacing-6 0 0 !important;
   }
   .paginate button {
     svg {
-      margin-left: 8px !important;
+      margin-left: $spacing-6 !important;
     }
   }
   .article_container {

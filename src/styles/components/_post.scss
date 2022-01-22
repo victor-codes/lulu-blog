@@ -14,20 +14,20 @@ a {
     padding-bottom: 8px;
     .info {
       .tag {
-        font-size: 12px;
+        font-size: $font-size-9;
         line-height: 15px;
         letter-spacing: 0.1em;
         color: var(--article-tag-color);
       }
       h3 {
-        font-size: 24px;
+        font-size: $font-size-2;
         height: 60px;
         line-height: 30px;
         color: var(--article-primary-color);
-        margin: 4px 0;
+        margin: $spacing-7 0;
       }
       .timestamp {
-        font-size: 12px;
+        font-size: $font-size-9;
         line-height: 15px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -35,24 +35,25 @@ a {
       }
     }
     p {
-      font-size: 15px;
+      font-size: $font-size-7;
+      font-family: "Satoshi", sans-serif;
       line-height: 24px;
       height: 72px;
       color: var(--article-secondary-color);
-      margin: 12px 0 24px;
+      margin: $spacing-9 0 $spacing-2;
     }
     .link {
       display: inline-flex;
       align-items: center;
-      font-weight: bold;
-      font-size: 14px;
+      font-weight: $font-weight-1;
+      font-size: $font-size-8;
       line-height: 17px;
       letter-spacing: 0.03em;
       text-decoration-line: underline;
       text-underline-offset: 4px;
       color: var(--article-primary-color);
       svg {
-        margin-left: 8px;
+        margin-left: $spacing-6;
         stroke: var(--article-primary-color) !important;
       }
     }
@@ -74,7 +75,7 @@ a {
       margin-bottom: 8px;
     }
     .line_divider {
-      margin-top: 24px !important;
+      margin-top: $spacing-2 !important;
     }
   }
 }

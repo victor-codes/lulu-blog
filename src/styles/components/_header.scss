@@ -34,14 +34,14 @@ header {
 
       .active {
         text-decoration: underline;
-        font-weight: 700;
+        font-weight: $font-weight-1;
       }
       a {
         font-size: $font-size-6;
         line-height: 20px;
         letter-spacing: -0.03em;
         color: var(--header-text-color);
-        padding: 10px;
+        padding: $spacing-5;
         margin-left: 36px;
       }
     }
@@ -67,8 +67,8 @@ header {
 .logo {
   font-family: "Clash Grotesk", sans-serif;
   font-weight: normal;
-  font-size: 30px;
-  margin-right: 12px;
+  font-size: 1.875rem;
+  margin-right: $spacing-9;
   line-height: 37px;
   letter-spacing: 0.03em;
   color: var(--logo-color);

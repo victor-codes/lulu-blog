@@ -11,7 +11,7 @@
     width: 100%;
     max-width: 1220px;
     margin: auto;
-    padding: 27px 24px 24px;
+    padding: 27px $spacing-4 $spacing-4;
 
     display: flex;
     overflow: hidden;
@@ -21,7 +21,7 @@
       margin-right: 16px;
       padding: 0 16px;
       white-space: nowrap;
-      font-size: 16px;
+      font-size: $font-size-6;
       line-height: 20px;
       color: var(--mobile-nav-text-color);
       text-align: center;
@@ -29,7 +29,7 @@
     .active {
       transition: none;
       color: var(--primary-text-color);
-      font-weight: bold;
+      font-weight: $font-weight-1;
     }
   }
   .more_btn {
@@ -98,12 +98,11 @@
   h4,
   h5,
   h6 {
-    font-weight: bold !important;
+    font-weight: $font-weight-1 !important;
   }
   padding: 64px 0 !important;
-  // max-width: 900px !important;
   h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 50px;
     margin: 16px 0 12px;
   }
@@ -111,9 +110,9 @@
     border-bottom: 0.5px solid #eee;
   }
   h2 {
-    font-size: 32px;
+    font-size: 3.125rem;
     line-height: 52px;
-    margin: 24px 0 16px;
+    margin: $spacing-4 0 $spacing-5;
   }
   h1,
   h2,
@@ -121,8 +120,8 @@
     color: var(--blog-header-color);
   }
   h3 {
-    margin: 16px 0 12px;
-    font-size: 28px;
+    margin: $spacing-4 0 $spacing-9;
+    font-size: $font-size-1;
     line-height: 45px;
   }
   h4,
@@ -130,33 +129,33 @@
     color: var(--blog-header-2-color);
   }
   h4 {
-    font-size: 24px;
+    font-size: $font-size-2;
     line-height: 39px;
   }
   h5 {
-    font-size: 20px;
+    font-size: $font-size-3;
     line-height: 32px;
   }
   pre {
     width: 100%;
     max-width: 680px;
-    margin: 32px auto;
+    margin: $spacing-1 auto;
   }
   p,
   ol li,
   ul li,
   cite {
     font-family: "Satoshi", sans-serif;
-    font-size: 17px;
+    font-size: $font-size-5;
     line-height: 28px;
     color: var(--blog-post-primary-text-color);
   }
   ul,
   ol {
-    padding-left: 32px;
+    padding-left: $spacing-1;
   }
   p {
-    margin-bottom: 20px;
+    margin-bottom: $spacing-3;
   }
   p img {
     width: 100%;
@@ -168,58 +167,58 @@
   }
   li strong,
   ul strong {
-    font-size: 17px;
+    font-size: $font-size-5;
   }
   a {
     text-decoration: underline;
   }
   ul li:last-child,
   ol li:last-child {
-    margin-bottom: 24px;
+    margin-bottom: $spacing-4;
   }
   p {
     strong {
-      font-size: 18px;
+      font-size: $font-size-4;
     }
   }
 }
 blockquote {
   border-left: 2px solid var(--blockquote-line-color);
-  padding-left: 24px;
-  margin: 16px 0 0 24px;
+  padding-left: $spacing-4;
+  margin: 16px 0 0 $spacing-4;
 }
 @media screen and (max-width: 540px) {
   .resources_post {
-    padding-top: 24px !important;
+    padding-top: $spacing-4 !important;
     h1 {
-      font-size: 28px;
+      font-size: $font-size-1;
       line-height: 35px;
     }
     h2 {
-      font-size: 24px;
+      font-size: $font-size-2;
       line-height: 39px;
     }
     h3 {
-      font-size: 20px;
+      font-size: $font-size-3;
       line-height: 32px;
     }
     h4 {
-      font-size: 18px;
+      font-size: $font-size-4;
       line-height: 29px;
     }
     h6 {
-      font-size: 16px;
+      font-size: $font-size-6;
       line-height: 26px;
     }
     p {
-      font-size: 16px;
+      font-size: $font-size-6;
       line-height: 30px;
     }
     img {
       margin: 0px auto 16px !important;
     }
     li {
-      font-size: 17px;
+      font-size: $font-size-5;
       line-height: 27px;
       color: var(--blog-list-color) !important;
     }
@@ -229,7 +228,7 @@ blockquote {
     margin: 16px 0px;
   }
   figure {
-    padding-top: 24px;
+    padding-top: $spacing-4;
   }
   .read {
     flex-direction: column;

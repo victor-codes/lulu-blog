@@ -1,18 +1,18 @@
 .category_hero {
   transform: none !important;
-  padding: 204px 24px 87px !important;
+  padding: 204px $spacing-2 87px !important;
   main {
     position: relative;
   }
   h2 {
     display: flex;
     align-items: baseline;
-    font-size: 50px;
+    font-size: 3.125rem;
     line-height: 81px;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
     div {
-      margin-left: 12px;
+      margin-left: $spacing-9;
       svg {
         path {
           fill: var(--mobile-nav-text-color);
@@ -23,13 +23,13 @@
       align-items: center;
       span {
         color: var(--mobile-nav-text-color);
-        font-size: 22px;
+        font-size: 1.375rem;
         line-height: 27px;
       }
     }
   }
   p {
-    font-size: 18px;
+    font-size: $font-size-4;
     line-height: 29px;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
@@ -47,7 +47,7 @@
     align-items: center;
     color: var(--header-text-color);
     svg {
-      margin-right: 12px;
+      margin-right: $spacing-9;
       stroke: var(--header-text-color);
     }
   }
@@ -71,14 +71,14 @@
   grid-template-columns: repeat(3, minmax(auto, 394px));
   grid-row-gap: 64px;
   grid-column-gap: 36px;
-  padding: 47px 24px 0 !important;
+  padding: 47px $spacing-2 0 !important;
 }
 
 .paginate {
   button {
     cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
+    font-weight: $font-weight-1;
+    font-size: $font-size-8;
     line-height: 17px;
     letter-spacing: 0.03em;
 
@@ -86,10 +86,10 @@
     border: none;
     svg {
       stroke: var(--paginate-primary-color);
-      margin-left: 12px;
+      margin-left: $spacing-9;
     }
     .left {
-      margin: 0 12px 0 0;
+      margin: 0 $spacing-9 0 0;
     }
   }
 
@@ -98,7 +98,7 @@
     align-items: center;
     justify-items: center;
     a {
-      font-size: 18px;
+      font-size: $font-size-4;
       line-height: 26px;
       padding: 0 2px;
       text-align: center;
@@ -112,8 +112,8 @@
   }
 }
 .page {
-  font-weight: bold !important;
-  font-size: 18px !important;
+  font-weight: $font-weight-1 !important;
+  font-size: $font-size-4 !important;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--paginate-primary-color) !important;
@@ -131,12 +131,12 @@
   .category_hero {
     padding-bottom: 0px !important;
     h2 {
-      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 49px;
       align-items: stretch;
       div {
         span {
-          font-size: 16px;
+          font-size: $font-size-6;
           line-height: 20px;
         }
       }
@@ -152,22 +152,22 @@
     background: var(--mobile-article-background);
   }
   .link {
-    gap: 8px !important;
+    gap: $spacing-6 !important;
   }
   .scroll {
-    font-size: 0.75rem !important;
+    font-size: $font-size-9 !important;
   }
   .left {
-    margin: 0 8px 0 0 !important;
+    margin: 0 $spacing-6 0 0 !important;
   }
   .paginate button {
     svg {
-      margin-left: 8px !important;
+      margin-left: $spacing-6 !important;
     }
   }
   .article_container {
     grid-template-columns: repeat(1, 1fr);
-    gap: 24px;
+    gap: $spacing-2;
   }
 }
 @media screen and (max-width: 580px) {

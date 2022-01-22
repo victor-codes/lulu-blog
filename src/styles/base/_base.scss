@@ -45,7 +45,11 @@ body {
 }
 a {
   color: inherit;
+  font-family: "Satoshi", sans-serif !important;
   text-decoration: none;
+  span {
+    font-family: "Satoshi", sans-serif !important;
+  }
 }
 .inline_flex {
   display: inline-flex;
