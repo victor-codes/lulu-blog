@@ -30,15 +30,14 @@ const Load = ({ children }) => {
             xmlns="http://www.w3.org/2000/svg"
             width="64"
             height="64"
-            stroke-width="0.75"
+            strokeWidth="0.75"
             stroke="#808080"
             fill="none"
-            stroke-linejoin="arcs"
-            stroke-linecap="square"
+            strokeLinejoin="arcs"
+            strokeLinecap="square"
             viewBox="0 0 24 24"
           >
-            {" "}
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
               <rect
                 width="24"
                 height="24"

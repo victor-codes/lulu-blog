@@ -94,7 +94,7 @@
       font-size: $font-size-9;
       line-height: 19px;
       letter-spacing: 0.03em;
-      margin-right:$spacing-6;
+      margin-right: $spacing-6;
       text-decoration-line: underline;
 
       color: var(--paginate-primary-color);
@@ -227,7 +227,7 @@ p {
     }
     color: var(--paginate-primary-color);
     display: inline-flex;
-    gap:$spacing-6;
+    gap: $spacing-6;
     align-items: center;
   }
 }
@@ -240,6 +240,7 @@ p {
   margin: 33px auto 64px;
   padding: $spacing-4 $spacing-3;
   p {
+    font-family: "Satoshi", sans-serif;
     color: var(--blog-contributions-text-color);
     margin-left: $spacing-4;
   }
@@ -401,6 +402,9 @@ blockquote {
   }
   .read {
     flex-direction: column;
+    .fill {
+      width: -webkit-fill-available;
+    }
     a:last-child {
       margin-top: $spacing-9;
       width: -webkit-fill-available;

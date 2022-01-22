@@ -41,7 +41,6 @@ const SinglePost = () => {
     nextPost = postList[currentPost + 1];
   });
 
-
   useLayoutEffect(() => {
     windowScroll();
     hljs.registerLanguage("xml", xml);
@@ -223,6 +222,7 @@ const SinglePost = () => {
                   }
                   return e.preventDefault();
                 }}
+                className="fill"
                 to={
                   previousPost &&
                   `/${previousPost.category.toLowerCase()}/post/${
