@@ -65,7 +65,7 @@ In AWS, IAM policies have a structure that consists of
 
   * The `sid` is an optional identifier for the statement.
   * `effect` determines whether the statement allows or denies access to the action. Its value is usually “Allow” or “Deny”.
-  * `principal` states the account, user or role to which this policy applies to.
+  * `principal` states the account, user or role to which this policy is applied.
   * `action` is the list of actions that this policy allows or denies.
   * `resource` is the list of resources to which the actions apply.
   * `condition` is used to state the conditions for when this policy will take effect.
