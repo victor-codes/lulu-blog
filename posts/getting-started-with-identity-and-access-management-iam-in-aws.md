@@ -57,6 +57,19 @@ Policies in AWS are classified into Identity-Based Policies, Resource-Based Poli
 
 Many of these policies come in JSON format. For instance, identity-based policies are policies you attach to a user or role. Session policies are JSON policy documents attached when a user assumes a role, Resource-based policies are JSON documents you can attach to a resource, and SCPs are JSON policy documents that you attach to an Organization’s organizational unit.
 
+In AWS, IAM policies have a structure that consists of
+
+* Version — policy language version,
+* id — an optional identifier for the policy,
+* Statement — one or more statements that consist of `sid`, `effect`, `principal`, `action`, `resource`, `condition`.
+
+  * The `sid` is an optional identifier for the statement.
+  * `effect` determines whether the statement allows or denies access to the action. Its value is usually “Allow” or “Deny”.
+  * `principal` states the account, user or role to which this policy applies to.
+  * `action` is the list of actions that this policy allows or denies.
+  * `resource` is the list of resources to which the actions apply.
+  * `condition` is used to state the conditions for when this policy will take effect.
+
 A typical JSON policy in AWS looks like this;
 
 ```json
