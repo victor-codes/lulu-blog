@@ -3,9 +3,9 @@ layout: blog
 title: Getting Started with Identity and Access Management (IAM) in AWS
 date: 2022-02-23T15:31:23.443Z
 tags: AWS
-category: Cloud/DevOps
+category: cloud
 subCategory: AWS
-slug: Getting Started with Identity and Access Management (IAM) in AWS
+slug: getting-started-with-identity-and-access-management-iam-in-aws
 ---
 As cloud practitioners, we should be aware of the importance of IAM, as it is used by all cloud service providers. When attempting to perform an action on AWS, you must first go through IAM to identify yourself and whether or not permission to perform that action has been granted.
 
