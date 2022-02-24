@@ -3,7 +3,7 @@ layout: blog
 title: Getting Started with Identity and Access Management (IAM) in AWS
 date: 2022-02-23T15:31:23.443Z
 tags: AWS
-category: devops
+category: DevOps
 subCategory: AWS
 slug: getting-started-with-identity-and-access-management-iam-in-aws
 ---
