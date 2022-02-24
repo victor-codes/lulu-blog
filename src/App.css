@@ -174,3 +174,9 @@ code.hljs {
   color: var(--hljs-deletion);
   background-color: var(--hljs-deletion-background);
 }
+
+code {
+  background-color: var(--hljs);
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.3rem;
+}

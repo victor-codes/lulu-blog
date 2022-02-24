@@ -5,15 +5,9 @@ import { useParams } from "react-router-dom";
 import SubCategory from "../components/SubCategory";
 import PageNotFound from "./PageNotFound";
 import Meta from "../components/Meta";
+import { ReactComponent as ChervonDown } from "../assets/chervon-down.svg";
 
-const resources = [
-  "All",
-  "Cloud",
-  "Backend",
-  "Web3",
-  "Technical Writing",
-  "Projects",
-];
+const resources = ["Technical Writing", "Cloud", "Backend", "Web3", "Projects"];
 
 const Resources = () => {
   const name = "Resources";
@@ -88,15 +82,196 @@ const Resources = () => {
           <SubCategory name={name} handleClick={handleClick} />
         </div>
         <section id="articles" className="bg_color_article article__catergory">
-          {/* <div className="article_container max_width">
-            {curren name="Resources"tPosts.length > 0 ? (
-              currentPosts.map((post, id) => <Post key={id} post={post} />)
-            ) : (
-                )}
-            </div> */}
-          <div className="max_width no_post ">
-            No resources yet, come back later 🥲
+          <div className="flex maxw-1260 w-full margin-auto links">
+            <div className="maxw-720 w-full links-all grid">
+              <div>
+                <h3>Cloud Computing</h3>
+                <div className="resources_subbeading align-center links_pad pointer links-bg flex justify-between">
+                  <p>{"🔗 "}Cloud Computing Basics</p>
+                  <ChervonDown />
+                </div>
+                <div className="links_item_container flex items-end flex-column">
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3>Virtualization & Containerization</h3>
+
+                <div className="resources_subbeading align-center links_pad pointer links-bg flex justify-between">
+                  <p>{"🔗 "}Cloud Computing Basics</p>
+                  <ChervonDown />
+                </div>
+                <div className="links_item_container flex items-end flex-column">
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                  <div className="link_item w-full links-bg maxw-656">
+                    {"🔗 "}
+                    <a
+                      href="http://sdsd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-underline"
+                    >
+                      Amazon Web Services - Learning and Implementing AWS
+                      Solution
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="quick__links">
+              <h4>QUICK LINKS</h4>
+              <div className="quick__links-padding links-bg">
+                <ul>
+                  <li>
+                    <a
+                      href="http://sdajhkjd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cloud Computing
+                    </a>{" "}
+                    (AWS, GCP, Azure)
+                  </li>
+                  <li>
+                    <a
+                      href="http://sdajhkjd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cloud Computing
+                    </a>{" "}
+                    (AWS, GCP, Azure)
+                  </li>
+                  <li>
+                    <a
+                      href="http://sdajhkjd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cloud Computing
+                    </a>{" "}
+                    (AWS, GCP, Azure)
+                  </li>
+                  <li>
+                    <a
+                      href="http://sdajhkjd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cloud Computing
+                    </a>{" "}
+                    (AWS, GCP, Azure)
+                  </li>
+                  <li>
+                    <a
+                      href="http://sdajhkjd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cloud Computing
+                    </a>{" "}
+                    (AWS, GCP, Azure)
+                  </li>
+                  <li>
+                    <a
+                      href="http://sdajhkjd"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Cloud Computing
+                    </a>{" "}
+                    (AWS, GCP, Azure)
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+
+          {/* <div className="max_width no_post ">
+            No resources yet, come back later 🥲
+          </div> */}
         </section>
       </div>
 

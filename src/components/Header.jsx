@@ -74,7 +74,14 @@ const Header = () => {
               <NavLink to="/design">Design</NavLink>
               <NavLink to="/dev">{`Dev </> `}</NavLink>
               <NavLink to="/cloud">Cloud/DevOps</NavLink>
-              <NavLink to="/resources">Resources</NavLink>
+              {/* <NavLink to="/resources">Resources</NavLink> */}
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://lulunwenyi.notion.site/lulunwenyi/Lu-s-ResourceBank-019bbd1303664268bf2adab4b3b7c9f4"
+              >
+                Resources
+              </a>
               <a
                 target="_blank"
                 rel="noreferrer noopener"
