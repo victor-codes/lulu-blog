@@ -129,3 +129,37 @@ a {
     }
   }
 }
+
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.w-full {
+  width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+.items-end {
+  align-items: flex-end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.text-underline {
+  text-decoration: underline;
+}

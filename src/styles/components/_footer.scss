@@ -46,16 +46,12 @@ footer {
           font-size: $font-size-6;
           line-height: 26px;
           letter-spacing: 0.03em;
-          font-family: "Satoshi", sans-serif;
-
           color: var(--article-primary-color);
         }
         span {
           letter-spacing: -0.03em;
           font-family: "Satoshi", sans-serif;
-
           color: var(--article-secondary-color);
-
           a {
             font-family: "Satoshi", sans-serif;
             color: var(--article-accent-color);
