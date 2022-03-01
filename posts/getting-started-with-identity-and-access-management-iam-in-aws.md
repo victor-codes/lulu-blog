@@ -17,11 +17,11 @@ Identity and Access Management (IAM) is used to secure and control who has acces
 
 With AWS, you can create IAM user accounts, user groups and roles for individuals in your organisation. For instance;
 
-If an organisation, say "\*Orange\*," has different departments that need access to its AWS resources, they can be granted access as \*\*IAM users\*\* and placed in \*\*groups\*\* with the same permissions based on department or resource type. Administrators, developers, cloud architects, and so on. 
+If an organisation, say "**Orange**" has different departments that need access to its AWS resources, they can be granted access as **IAM users** and placed in **groups** with the same permissions based on department or resource type. Administrators, developers, cloud architects, and so on. 
 
 In summary, an IAM user is an entity within an account that has been granted certain permissions to utilise the AWS account's or organisation's resources, whereas IAM user groups are used to provide permissions for a set of IAM users. This makes managing user permissions a little easier.
 
-\*\*IAM roles\*\*, on the other hand, can be used by \*Orange\* to allow access to individuals or programs that require access to its AWS resources. Using roles, access can be granted to people, apps, and services that are not tied with the organisation's AWS account.
+**IAM roles**, on the other hand, can be used by **Orange** to allow access to individuals or programs that require access to its AWS resources. Using roles, access can be granted to people, apps, and services that are not tied with the organisation's AWS account.
 
 An IAM role is a set of permissions that can be assumed by anyone who requires them. This means that anyone, both inside and outside of an organisation, can take on a role. Because roles do not have long-term security credentials, assuming a role gives you temporary security credentials for your role session.
 
@@ -31,7 +31,7 @@ As a security measure, it is recommended to log in as an IAM user rather than a 
 
 To get started with AWS, you can [create a free-tier account](https://aws.amazon.com/free/?trk=ps_a134p000006pkrzAAA&trkCampaign=acq_paid_search_brand&sc_channel=ps&sc_campaign=acquisition_BEN&sc_publisher=Bing&sc_category=core-main&sc_country=BEN&sc_geo=EMEA&sc_outcome=ACQ&sc_detail=%2Baws&sc_content=Brand_Core_aws_bmm&sc_matchtype=p&sc_segment=&sc_medium=ACQ-P|PS-BI|Brand|Desktop|SU|Core-Main|Core|BEN|EN|Text&ef_id=8b466bcd56ca16301ae90a95c1c3d7f9:G:s&s_kwcid=AL!4422!10!71743287147518!71743730462034&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all) that allows you to make use of some AWS resources without incurring any charges for a period of 12 months.
 
-There are a lot of services offered by AWS. To start exploring, [Log in](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Ffromtb%3Dtrue%26hashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_us-east-1_ebf0fab1bbf4def0&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=aNOlpejZzZyWK_phziiMSbsOasDi-zkVdOq7nZ3QaG4&code_challenge_method=SHA-256) to your console as the root user to create an IAM user and group, then select \*\*IAM\*\* under "Security, Identity, and Compliance."
+There are a lot of services offered by AWS. To start exploring, [Log in](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Ffromtb%3Dtrue%26hashArgs%3D%2523%26isauthcode%3Dtrue%26state%3DhashArgsFromTB_us-east-1_ebf0fab1bbf4def0&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=aNOlpejZzZyWK_phziiMSbsOasDi-zkVdOq7nZ3QaG4&code_challenge_method=SHA-256) to your console as the root user to create an IAM user and group, then select **IAM** under "Security, Identity, and Compliance."
 
 ![](/image/screenshot-2021-10-02-at-18.34.23.png)
 
