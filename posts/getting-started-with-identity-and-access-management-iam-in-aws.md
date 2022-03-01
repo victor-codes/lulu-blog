@@ -87,7 +87,7 @@ A typical JSON policy in AWS looks like this;
 }
 ```
 
-This policy above allows an IAM user to have \*\*read-only\*\* access to the IAM console.
+This policy above allows an IAM user to have **read-only** access to the IAM console.
 
 ## Wrapping up
 
