@@ -77,12 +77,12 @@ A typical JSON policy in AWS looks like this;
     "Version": "2012-10-17",
     "Statement": {
         "Effect": "Allow",
-        "Action": \[
-            "iam:Get\*",
-            "iam:List\*",
-            "iam:Generate\*"
+        "Action": [
+            "iam:Get*",
+            "iam:List*",
+            "iam:Generate*"
         ],
-        "Resource": "\*"
+        "Resource": "*"
     }
 }
 ```
