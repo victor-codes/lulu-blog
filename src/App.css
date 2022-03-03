@@ -177,9 +177,10 @@ code.hljs {
 
 code {
   background-color: var(--code-color);
-  color: #E04238; 
+  color: #e04238;
   padding: 0.2rem 0.75rem 0.2rem;
   font-weight: 500;
   line-height: 0.75;
+  font-family: "Satoshi", sans-serif;
   border-radius: 0.3rem;
 }
