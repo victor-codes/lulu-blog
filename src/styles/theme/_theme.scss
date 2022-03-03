@@ -110,6 +110,8 @@
   --home-gradient-opacity: 1;
   --home-gradient-color: url("../../assets/home_light-min.webp");
   --home-hero-top: 50px;
+  --code-color: #f7f7f7;
+
 }
 
 [data-theme="dark"] {
@@ -166,4 +168,5 @@
   --home-gradient-opacity: 0.8;
   --home-gradient-color: url("../../assets/home_dark-min.webp");
   --home-hero-top: 201px;
+  --code-color: #1E1E1E;
 }
