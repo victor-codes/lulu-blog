@@ -3,7 +3,7 @@ layout: blog
 title: Understanding Docker
 date: 2022-03-15T10:14:30.857Z
 tags: "Docker "
-category: cloud
+category: DevOps
 subCategory: Docker
 slug: understanding-docker
 ---
