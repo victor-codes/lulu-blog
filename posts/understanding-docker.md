@@ -31,9 +31,9 @@ Docker, Inc. (the company) started out as a Platform as a Service (PaaS) provide
 
 Docker is commonly known as the software used to create, run, and manage containers on Linux, Unix, and Windows OS. Although, when referring to Docker, there are at least 3 things to be aware of;
 
-- The runtime
-- The daemon/engine
-- The orchestrator
+* The runtime
+* The daemon/engine
+* The orchestrator
 
 ### The runtime
 
@@ -59,8 +59,8 @@ This is a container orchestration tool used to manage clusters of nodes(machines
 
 When you install Docker on your machine, you get two major components;
 
-- Docker client
-- Docker daemon/engine
+* Docker client
+* Docker daemon/engine
 
 To run containers with docker, you need these components and images.
 
@@ -98,9 +98,9 @@ The behind the scenes of how containers are run is quite interesting and simple.
 When you type a command into a Docker CLI, the Docker client converts the command to the appropriate API payload, then POSTs them to the API endpoint exposed by the daemon.
 The API is implemented in the daemon and can be exposed over a local socket or network;
 
-- On Linux- /var/run/docker.sock
-- On Windows - \pipe\docker_engine
-- On MacOS - /var/lib/docker
+* On Linux- /var/run/docker.sock
+* On Windows - \pipe\docker_engine
+* On MacOS - /var/lib/docker
 
 Once the daemon receives the command to create a new container, it makes a call to `containerd`, through a CRUD-Style API. Since `containerd` cannot create containers, it converts the Docker image required into an OCI bundle and tells `runc` to create a new container, using it.
 `runc` then works with the OS Kernel to construct all that's needed to create a container. The container process is started as a child process of `runc`, and as soon as it is started, `runc` exits because its work is done.
@@ -131,12 +131,12 @@ It provides repeatable environments for these different stages, allowing you to 
 
 Seeing some possible use cases of Docker, it's easy to pick up some benefits of using docker. Some of which include;
 
-- Using Docker cuts the cost and resources required to buy and maintain primary infrastructure, allowing teams to be smaller and more effective.
-- Docker solves the "it works on my machine" problem that many developers have faced. It allows compatibility because Docker images would run the same on whatever machine.
-- Deployment time is reduced because Docker doesn't need to boot an OS to get work done.
-- It ensures portability and can be easily moved to cloud service providers, provided that the host OS supports Docker.
-- With Docker, there's room for efficient scalability and maintenance.
-- It ensures that applications and their resources are isolated, making sure each app uses only its delegated resources.
+* Using Docker cuts the cost and resources required to buy and maintain primary infrastructure, allowing teams to be smaller and more effective.
+* Docker solves the "it works on my machine" problem that many developers have faced. It allows compatibility because Docker images would run the same on whatever machine.
+* Deployment time is reduced because Docker doesn't need to boot an OS to get work done.
+* It ensures portability and can be easily moved to cloud service providers, provided that the host OS supports Docker.
+* With Docker, there's room for efficient scalability and maintenance.
+* It ensures that applications and their resources are isolated, making sure each app uses only its delegated resources.
 
 # Wrapping it up
 
