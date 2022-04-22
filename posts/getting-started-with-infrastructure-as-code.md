@@ -48,7 +48,7 @@ Sometimes, it may seem unnecessary to use IaC for less complex infrastructure. H
 
 # Common IaC Tools and Platforms
 
-### **Terraform:**
+### Terraform:
 
 [Terraform by HashiCorp](https://www.terraform.io/) is one of the most used tools for infrastructure as code. It supports its own HashiCorp Language(HCL) that allows you to define providers and resources for your software infrastructure.
 
