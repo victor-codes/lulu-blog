@@ -96,8 +96,6 @@ The adoption of IaC Tools is the first step in streamlining your development wor
 4. Avoid the use of hard-coded variables and secret keys.
 5. Once you begin using Infrastructure as Code, be sure that all modifications are made using the IaC tool only and that no manual changes are made.
 
-
-
 Infrastructure as Code is becoming an essential component of modern application development and deployment pipelines. It unlocks the full potential of cloud computing and frees developers from manual, error-prone operations. It also increases efficiency across the software development lifecycle.
 
 At first, it may seem difficult to get started because of the many tools and different use cases. You would, however, have developed fantastic infrastructure management methods over time.
