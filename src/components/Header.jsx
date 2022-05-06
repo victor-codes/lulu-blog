@@ -43,7 +43,6 @@ const Header = () => {
     setMobileNav(!mobileNav);
   }
 
-  const match = window.matchMedia(`(max-width: 768px)`);
   return (
     <>
       <motion.header
@@ -54,7 +53,9 @@ const Header = () => {
         <div className="header_container">
           <div>
             <div className="mode">
-              <h1 className="logo">LN</h1>
+              <NavLink to="/" className="logo">
+                LN
+              </NavLink>
               <button
                 aria-label="Toggle Theme"
                 style={{ padding: "0 4px" }}
@@ -73,12 +74,11 @@ const Header = () => {
               </NavLink>
               <NavLink to="/design">Design</NavLink>
               <NavLink to="/dev">{`Dev </> `}</NavLink>
-              <NavLink to="/cloud">Cloud/DevOps</NavLink>
-              {/* <NavLink to="/resources">Resources</NavLink> */}
+              <NavLink to="/devops">Cloud/DevOps</NavLink>
               <a
                 target="_blank"
                 rel="noreferrer noopener"
-                href="https://lulunwenyi.notion.site/lulunwenyi/Lu-s-ResourceBank-019bbd1303664268bf2adab4b3b7c9f4"
+                href="https://lulunwenyi.notion.site/resources-221edef5d08c4018a4259eba72a7407d"
               >
                 Resources
               </a>
@@ -96,13 +96,8 @@ const Header = () => {
           <hr className="hidden" />
         </div>
       </motion.header>
-      {match && (
-        <MobileNav
-          key="overlay"
-          hide={(e) => setMobileNav(e)}
-          show={mobileNav}
-        />
-      )}
+
+      <MobileNav key="overlay" hide={(e) => setMobileNav(e)} show={mobileNav} />
     </>
   );
 };

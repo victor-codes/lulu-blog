@@ -53,23 +53,18 @@ const MobileNav = ({ show, hide }) => {
             hide(false);
           }}
           activeClassName="mobile_nav_active"
-          to="/cloud"
+          to="/devops"
         >
           Cloud/DevOps
         </NavLink>
-        <NavLink
-          onClick={() => {
-            hide(false);
-          }}
-          activeClassName="mobile_nav_active"
-          to="/resources"
+        <a
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://lulunwenyi.notion.site/resources-221edef5d08c4018a4259eba72a7407d"
         >
           Resources
-        </NavLink>
+        </a>
         <a
-          onClick={() => {
-            hide(false);
-          }}
           target="_blank"
           rel="noreferrer noopener"
           href="https://www.buymeacoffee.com/lulunwenyi"
