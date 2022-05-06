@@ -1,32 +1,34 @@
-a {
-  &:focus {
+.Post {
+  &:focus,
+  &:hover {
     transition-duration: 300ms;
     opacity: 0.7;
   }
-  .post_article:hover {
-    transition-duration: 300ms;
-    opacity: 0.7;
-  }
-  .post_article {
-    cursor: pointer;
+
+  article {
     width: 100%;
     min-height: 274px;
+    border-bottom: 1px solid var(--article-line-color);
     padding-bottom: 8px;
-    .info {
-      .tag {
+
+    > div {
+      div span {
         font-size: $font-size-9;
         line-height: 15px;
         letter-spacing: 0.1em;
         color: var(--article-tag-color);
       }
+
       h3 {
         font-size: $font-size-2;
         height: 60px;
+        overflow: hidden;
         line-height: 30px;
         color: var(--article-primary-color);
         margin: $spacing-7 0;
       }
-      .timestamp {
+
+      > span {
         font-size: $font-size-9;
         line-height: 15px;
         letter-spacing: 0.1em;
@@ -34,15 +36,16 @@ a {
         color: var(--article-accent-color);
       }
     }
+
     p {
       font-size: $font-size-7;
       font-family: "Satoshi", sans-serif;
       line-height: 24px;
-      height: 72px;
       color: var(--article-secondary-color);
       margin: $spacing-9 0 $spacing-2;
     }
-    .link {
+
+    > span {
       display: inline-flex;
       align-items: center;
       font-weight: $font-weight-1;
@@ -57,24 +60,29 @@ a {
         stroke: var(--article-primary-color) !important;
       }
     }
-    .line_divider {
+
+    .line {
       margin-top: 36px;
-      border-top: 1px solid var(--article-line-color);
     }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .post_article {
+  article {
     padding-bottom: 0px !important;
     min-height: unset !important;
-    .info h3 {
-      min-height: unset !important;
+    
+    > div {
+      h3 {
+        min-height: unset !important;
+      }
     }
+
     a {
       margin-bottom: 8px;
     }
-    .line_divider {
+
+    .line {
       margin-top: $spacing-2 !important;
     }
   }

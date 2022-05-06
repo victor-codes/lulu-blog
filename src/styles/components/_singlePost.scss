@@ -307,6 +307,7 @@ p {
     line-height: 32px;
   }
   pre {
+    position: relative;
     width: 100%;
     max-width: 680px;
     margin: $spacing-2 auto;
@@ -418,5 +419,22 @@ blockquote {
     a {
       background: none;
     }
+  }
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: var(--secondary-background);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.1rem 0.5rem;
+
+  button {
+    background: none;
+    border: none;
+    color: var(--blog-post-primary-text-color);
+    font-size: 1rem;
   }
 }

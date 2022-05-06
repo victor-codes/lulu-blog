@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
 import { Link, useParams, Redirect } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "../assets/arrow-right.svg";
 import { ReactComponent as CheronRight } from "../assets/chervon-right.svg";
@@ -18,6 +18,23 @@ const windowScroll = () => {
     behavior: "smooth",
   });
 };
+
+function copy(text) {
+  const copyBtn = document.createElement("div");
+  const btn = document.createElement("button");
+  copyBtn.classList = "copy-btn";
+  btn.innerText = "Copy";
+
+  btn.addEventListener("click", () => {
+    btn.innerText = "Copied";
+    navigator.clipboard.writeText(text);
+    setTimeout(() => {
+      btn.innerText = "Copy";
+    }, 1500);
+  });
+  copyBtn.appendChild(btn);
+  return copyBtn;
+}
 
 const SinglePost = () => {
   const codeRef = useRef();
@@ -76,6 +93,16 @@ const SinglePost = () => {
     }
   }, [postExists, slug]);
 
+  useEffect(() => {
+    if (postExists) {
+      const pres = codeRef.current.querySelectorAll("pre");
+
+      pres.forEach((node) => {
+        node.appendChild(copy(node.innerText));
+      });
+    }
+  }, [postExists]);
+
   useLayoutEffect(() => {
     if (postExists) {
       const pres = codeRef.current.querySelectorAll("pre");
@@ -95,10 +122,6 @@ const SinglePost = () => {
     }
   }, [codeRef, postExists, slug]);
 
-  if (!postExists) {
-    return <Redirect to="/404" />;
-  }
-
   function handleScroll(e) {
     e.preventDefault();
     return window.scrollTo(0, scroll);
@@ -107,6 +130,10 @@ const SinglePost = () => {
   let content = fetchedData.content;
 
   const shareTwitter = `https://twitter.com/share?url=${window.location.href}&text=I just read ${fetchedData.title} by @LuluNwenyi`;
+
+  if (!postExists) {
+    return <Redirect to="/404" />;
+  }
 
   return (
     <div key={fetchedData.title} className="single_post_footer_bg">
