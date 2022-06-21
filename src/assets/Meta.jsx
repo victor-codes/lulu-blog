@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { truncateString } from "../utils/helperFunction";
 
 const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
-  const defaultImgUrl = "";
+  // const defaultImgUrl = "";
   const defaultDescriptionText = "";
   const trimmedDescription = description && truncateString(description, 150);
 
@@ -16,12 +16,14 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
       <meta charSet="utf-8" />
       <meta rel="canonical" href={canonicalLink} />
       {/* // <!-- Primary Meta Tags --> */}
-      <meta name="title" content={`${title} — Lulu Nwenyi`} />
+      <meta name="title" content={`Blog — Lulu Nwenyi`} />
       <meta
         name="description"
-        content={`${
-          description ? trimmedDescription : defaultDescriptionText
-        } Read more...`}
+        content="Hello! Welcome to my blog. On here, you can find articles on Design, Backend Development, Technical Writing, and More."
+
+        // content={`${
+        //   description ? trimmedDescription : defaultDescriptionText
+        // } Read more...`}
       />
       <link
         rel="apple-touch-icon"
@@ -52,42 +54,47 @@ const Meta = ({ title, description, imageUrl, isBlogPost, canonicalLink }) => {
 
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${window.location.href}`} />
-      <meta property="og:title" content={`${title} — Lulu Nwenyi`} />
+      <meta property="og:url" content="www.lulu.wtf" />
+      <meta property="og:title" content={`Blog — Lulu Nwenyi`} />
       <meta
         property="og:description"
-        content={`${
-          description ? trimmedDescription : defaultDescriptionText
-        } Read more...`}
+        content="Hello! Welcome to my blog. On here, you can find articles on Design, Backend Development, Technical Writing, and More."
+
+        // content={`${
+        //   description ? trimmedDescription : defaultDescriptionText
+        // } Read more...`}
       />
       <meta
         property="og:image"
-        content={`${
-          imageUrl
-            ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
-            : defaultImgUrl
-        }`}
+        content="https://res.cloudinary.com/victorcodes/image/upload/v1655848298/meta-image-min_woayuo.png"
+        // content={`${
+        //   imageUrl
+        //     ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
+        //     : defaultImgUrl
+        // }`}
       />
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={`${window.location.href}`} />
-      <meta property="twitter:title" content={`${title} — Lulu Nwenyi`} />
+      <meta property="twitter:url" content="www.lulu.wtf" />
+      <meta property="twitter:title" content="Blog — Lulu Nwenyi" />
       <meta name="twitter:card" content="summary" />
       <meta
         property="twitter:description"
-        content={`${
-          description ? trimmedDescription : defaultDescriptionText
-        } Read more...`}
+        content="Hello! Welcome to my blog. On here, you can find articles on Design, Backend Development, Technical Writing, and More."
+        // content={`${
+        //   description ? trimmedDescription : defaultDescriptionText
+        // } Read more...`}
       />
       <meta
         property="twitter:image"
-        content={`${
-          imageUrl
-            ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
-            : defaultImgUrl
-        }`}
-      ></meta>
+        content="https://res.cloudinary.com/victorcodes/image/upload/v1655848298/meta-image-min_woayuo.png"
+        //        content={`${
+        //   imageUrl
+        //     ? `https://sad-rosalind-d98e2f.netlify.app/${imageUrl}`
+        //     : defaultImgUrl
+        // }`}
+      />
     </Helmet>
   );
 };
