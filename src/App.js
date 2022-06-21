@@ -38,13 +38,13 @@ function App() {
           <Route exact path="/dev/:subcategory">
             <Category name="Dev" />
           </Route>
-          <Route exact path="/cloud">
-            <Redirect to="/cloud/all" />
+          <Route exact path="/devops">
+            <Redirect to="/devops/all" />
           </Route>
-          <Route exact path="/cloud/devops">
-            <Redirect to="/cloud/all" />
+          <Route exact path="/devops/devops">
+            <Redirect to="/devops/all" />
           </Route>
-          <Route exact path="/cloud/:subcategory">
+          <Route exact path="/devops/:subcategory">
             <Category name="DevOps" />
           </Route>
           <Route exact path="/psych">

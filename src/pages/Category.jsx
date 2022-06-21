@@ -33,6 +33,7 @@ const Category = ({ name }) => {
 
   const convertCategoriesToLowercase = categories[name.toLowerCase()].map(
     (item) => {
+      console.log(item);
       return item.toLowerCase();
     }
   );
@@ -91,9 +92,7 @@ const Category = ({ name }) => {
         title={name === "DevOps" ? "Cloud/DevOps" : name}
         description={metaDesc[name.toLowerCase()]}
         isBlogPost={false}
-        canonicalLink={`https://lulu.wtf/${
-          name === "devops" ? "cloud" : name.toLowerCase()
-        }`}
+        canonicalLink={`https://lulu.wtf/${name.toLowerCase()}`}
       />
 
       <div key={name}>
